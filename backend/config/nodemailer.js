@@ -1,4 +1,3 @@
-// config/nodemailer.js
 const nodemailer = require('nodemailer');
 
 // Create a transporter using Outlook's SMTP settings
@@ -7,8 +6,8 @@ const transporter = nodemailer.createTransport({
   port: 587,                    // SMTP port (587 for STARTTLS)
   secure: false,                // Use STARTTLS encryption
   auth: {
-    user: 'kacper.ryske@outlook.com',  // Replace with your Outlook email
-    pass: 'ubgwnloqafriroit',           // Replace with your Outlook password
+    user: 'email@outlook.com',  // Replace with your Outlook email
+    pass: 'password',           // Replace with your Outlook password
   },
   tls: {
     ciphers: 'TLSv1.2',           // Use the correct TLS version

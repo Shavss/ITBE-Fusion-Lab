@@ -1,4 +1,3 @@
-// models/Contact.js
 const mongoose = require('mongoose');
 
 // Create a schema for the contact form
