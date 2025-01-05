@@ -1,0 +1,14 @@
+// models/Contact.js
+const mongoose = require('mongoose');
+
+// Create a schema for the contact form
+const contactSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  email: { type: String, required: true },
+  message: { type: String, required: true },
+  date: { type: Date, default: Date.now },
+});
+
+const Contact = mongoose.model('Contact', contactSchema);
+
+module.exports = Contact;
