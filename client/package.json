@@ -3,13 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@thatopen/components": "^2.4.3",
+    "@thatopen/components-front": "^2.4.3",
     "cra-template": "1.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1",
-    "three": "^0.172.0",
+    "three": "^0.160.1",
     "three-stdlib": "^2.35.2",
+    "web-ifc": "^0.0.66",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
