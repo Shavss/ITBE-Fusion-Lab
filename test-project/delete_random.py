@@ -51,7 +51,7 @@ def delete_random_vertices(input_file, output_file, keep_ratio=0.5):
 
 # Input and output file paths
 input_ply = "test-project/public/cloud_rgb.ply"
-output_ply = "test-project/public/random.ply"
+output_ply = "test-project/public/random2.ply"
 
 # Delete 50% of vertices
-delete_random_vertices(input_ply, output_ply, keep_ratio=0.5)
+delete_random_vertices(input_ply, output_ply, keep_ratio=0.1)

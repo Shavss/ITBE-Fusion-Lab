@@ -1,8 +1,13 @@
 import React from 'react';
 import Viewer from '../components/Viewer'; // Adjust the path if needed
 import Navbar from '../components/Navbar'; // Import your navigation bar
+import FloatingButton from '../components/FloatingButton'; // Import the floating button
 
 const Home = () => {
+    const handleButtonClick = () => {
+        alert('Archiwalks button clicked!'); // Replace this with your desired functionality
+    };
+
     return (
         <div style={{ width: '100vw', overflowX: 'hidden' }}>
             {/* Fixed Navigation Bar */}
@@ -17,13 +22,9 @@ const Home = () => {
                     width: '100%',
                     height: '100vh', // Full viewport height
                     zIndex: 1,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    background: 'rgba(0, 0, 0, 0.5)', // Optional semi-transparent background
                 }}
             >
+                {/* Render the Viewer only here */}
                 <Viewer />
                 <div
                     style={{
@@ -36,11 +37,12 @@ const Home = () => {
                         background: 'rgba(0, 0, 0, 0.5)', // Semi-transparent background for text
                         padding: '1rem 2rem',
                         borderRadius: '8px',
+                        zIndex: 2, // Ensure it appears above the Viewer
                     }}
                 >
-                    <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>Welcome to My Website</h1>
-                    <p style={{ fontSize: '1.5rem', maxWidth: '600px', margin: '0 auto' }}>
-                        This is a demo page with a cool background!
+                    <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>PaketPost-Areal Vision</h1>
+                    <p style={{ fontSize: '1.25rem', maxWidth: '600px', margin: '0 auto' }}>
+                        Conscious living for sustainable future
                     </p>
                 </div>
             </div>
@@ -86,6 +88,9 @@ const Home = () => {
                     </p>
                 </div>
             </div>
+
+            {/* Floating Button */}
+            <FloatingButton text="Archiwalks" onClick={handleButtonClick} />
         </div>
     );
 };
