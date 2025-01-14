@@ -20,8 +20,8 @@ const MapViewer = () => {
             <iframe
                 src={sceneLink}
                 style={{
-                    width: '90%',
-                    height: '90%',
+                    width: '70%',
+                    height: '70%',
                     border: 'none',
                 }}
                 title="3D Web Map Viewer"
