@@ -1,11 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Viewer from '../components/Viewer'; // Adjust the path if needed
 import Navbar from '../components/Navbar'; // Import your navigation bar
 import FloatingButton from '../components/FloatingButton'; // Import the floating button
 
 const Home = () => {
+    const navigate = useNavigate(); // Initialize the navigation hook
+
     const handleButtonClick = () => {
-        alert('Archiwalks button clicked!'); // Replace this with your desired functionality
+        navigate('/map'); // Navigate to the MapPage
     };
 
     return (
@@ -42,7 +45,7 @@ const Home = () => {
                 >
                     <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>PaketPost-Areal Vision</h1>
                     <p style={{ fontSize: '1.25rem', maxWidth: '600px', margin: '0 auto' }}>
-                        Conscious living for sustainable future
+                        Conscious living for a sustainable future
                     </p>
                 </div>
             </div>

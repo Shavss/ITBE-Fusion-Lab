@@ -55,7 +55,7 @@ const IFCViewer = () => {
     // Function to load the IFC model
     async function loadIfc() {
       try {
-        const file = await fetch('/dummy.ifc');
+        const file = await fetch('/FL_Export.ifc');
         const data = await file.arrayBuffer();
         const buffer = new Uint8Array(data);
 
@@ -110,7 +110,6 @@ const IFCViewer = () => {
 
   return (
     <div>
-      <h1>3D IFC Viewer</h1>
       <div id="container" ref={containerRef} style={{ width: '100%', height: '500px', position: 'relative' }}>
         {/* Stats will be rendered inside this container */}
         <div ref={statsRef} style={{ position: 'absolute', top: '0px', left: '0px' }}></div>
