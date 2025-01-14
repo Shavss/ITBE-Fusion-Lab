@@ -1,0 +1,2576 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Written by 3D City Database Importer/Exporter, version "5.4.0" -->
+<!-- Chair of Geoinformatics, Technical University of Munich -->
+<kml xmlns:xal="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:gx="http://www.google.com/kml/ext/2.2">
+  <Document>
+    <name>PPA CITYGML_Tile_12_25_geometry</name>
+    <open>false</open>
+    <Placemark id="KMLGeom_DEBY_LOD2_4864955_RoofSurface">
+      <name>DEBY_LOD2_4864955_RoofSurface</name>
+      <styleUrl>#RoofSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427476,48.1445635,18.05 11.542773,48.1445616,18.05 11.5427732,48.1445628,18.05 11.5427812,48.1445622,18.05 11.5427986,48.1445609,18.05 11.5427998,48.1445677,18.05 11.5428054,48.1445998,18.05 11.5427878,48.1446011,18.05 11.5427545,48.1446036,18.05 11.5427396,48.1446047,18.05 11.5427377,48.1445935,18.05 11.5427341,48.1445727,18.05 11.5427327,48.1445647,18.05 11.5427476,48.1445635,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+          <innerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427525,48.1445923,18.05 11.5427859,48.1445898,18.05 11.5427823,48.1445691,18.05 11.542749,48.1445716,18.05 11.5427525,48.1445923,18.05</coordinates>
+            </LinearRing>
+          </innerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427823,48.1445691,19.15 11.5427859,48.1445898,19.15 11.5427525,48.1445923,19.15 11.542749,48.1445716,19.15 11.5427823,48.1445691,19.15</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5426204,48.1445732,17.15 11.5427327,48.1445647,17.15 11.5427341,48.1445727,17.15 11.5427377,48.1445935,17.15 11.5427396,48.1446047,17.15 11.5427545,48.1446036,17.15 11.5427878,48.1446011,17.15 11.5428054,48.1445998,17.15 11.5428132,48.1446447,17.15 11.5427961,48.144646,17.15 11.5427978,48.1446566,17.15 11.5427973,48.1446567,17.15 11.5427649,48.1446644,17.15 11.5427504,48.1446678,17.15 11.5427169,48.1446757,17.15 11.5426405,48.1446937,17.15 11.5426382,48.1446816,17.15 11.5426359,48.1446688,17.15 11.5426266,48.1446132,17.15 11.5426212,48.1445811,17.15 11.5426199,48.1445732,17.15 11.5426204,48.1445732,17.15</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_4864955_GroundSurface">
+      <name>DEBY_LOD2_4864955_GroundSurface</name>
+      <styleUrl>#GroundSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428054,48.1445998,0.0 11.5427998,48.1445677,0.0 11.5427986,48.1445609,0.0 11.5427812,48.1445622,0.0 11.5427732,48.1445628,0.0 11.542773,48.1445616,0.0 11.5427476,48.1445635,0.0 11.5427327,48.1445647,0.0 11.5426204,48.1445732,0.0 11.5426199,48.1445732,0.0 11.5426212,48.1445811,0.0 11.5426266,48.1446132,0.0 11.5426359,48.1446688,0.0 11.5426382,48.1446816,0.0 11.5426405,48.1446937,0.0 11.5427169,48.1446757,0.0 11.5427504,48.1446678,0.0 11.5427649,48.1446644,0.0 11.5427973,48.1446567,0.0 11.5427978,48.1446566,0.0 11.5427961,48.144646,0.0 11.5428132,48.1446447,0.0 11.5428054,48.1445998,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_4864955_WallSurface">
+      <name>DEBY_LOD2_4864955_WallSurface</name>
+      <styleUrl>#WallSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5426204,48.1445732,0.0 11.5426204,48.1445732,17.15 11.5426199,48.1445732,17.15 11.5426199,48.1445732,0.0 11.5426204,48.1445732,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427327,48.1445647,18.05 11.5427341,48.1445727,18.05 11.5427377,48.1445935,18.05 11.5427396,48.1446047,18.05 11.5427396,48.1446047,17.15 11.5427377,48.1445935,17.15 11.5427341,48.1445727,17.15 11.5427327,48.1445647,17.15 11.5427327,48.1445647,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427859,48.1445898,18.05 11.5427859,48.1445898,19.15 11.5427823,48.1445691,19.15 11.5427823,48.1445691,18.05 11.5427859,48.1445898,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5426199,48.1445732,17.15 11.5426212,48.1445811,17.15 11.5426266,48.1446132,17.15 11.5426359,48.1446688,17.15 11.5426359,48.1446688,0.0 11.5426266,48.1446132,0.0 11.5426212,48.1445811,0.0 11.5426199,48.1445732,0.0 11.5426199,48.1445732,17.15</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427823,48.1445691,18.05 11.5427823,48.1445691,19.15 11.542749,48.1445716,19.15 11.542749,48.1445716,18.05 11.5427823,48.1445691,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427327,48.1445647,0.0 11.5427476,48.1445635,0.0 11.542773,48.1445616,0.0 11.542773,48.1445616,18.05 11.5427476,48.1445635,18.05 11.5427327,48.1445647,18.05 11.5427327,48.1445647,17.15 11.5426204,48.1445732,17.15 11.5426204,48.1445732,0.0 11.5427327,48.1445647,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.542749,48.1445716,18.05 11.542749,48.1445716,19.15 11.5427525,48.1445923,19.15 11.5427525,48.1445923,18.05 11.542749,48.1445716,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427986,48.1445609,0.0 11.5427998,48.1445677,0.0 11.5428054,48.1445998,0.0 11.5428132,48.1446447,0.0 11.5428132,48.1446447,17.15 11.5428054,48.1445998,17.15 11.5428054,48.1445998,18.05 11.5427998,48.1445677,18.05 11.5427986,48.1445609,18.05 11.5427986,48.1445609,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427978,48.1446566,0.0 11.5427978,48.1446566,17.15 11.5427961,48.144646,17.15 11.5427961,48.144646,0.0 11.5427978,48.1446566,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5426359,48.1446688,17.15 11.5426382,48.1446816,17.15 11.5426405,48.1446937,17.15 11.5426405,48.1446937,0.0 11.5426382,48.1446816,0.0 11.5426359,48.1446688,0.0 11.5426359,48.1446688,17.15</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427545,48.1446036,18.05 11.5427878,48.1446011,18.05 11.5428054,48.1445998,18.05 11.5428054,48.1445998,17.15 11.5427878,48.1446011,17.15 11.5427545,48.1446036,17.15 11.5427396,48.1446047,17.15 11.5427396,48.1446047,18.05 11.5427545,48.1446036,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427169,48.1446757,17.15 11.5427504,48.1446678,17.15 11.5427649,48.1446644,17.15 11.5427973,48.1446567,17.15 11.5427978,48.1446566,17.15 11.5427978,48.1446566,0.0 11.5427973,48.1446567,0.0 11.5427649,48.1446644,0.0 11.5427504,48.1446678,0.0 11.5427169,48.1446757,0.0 11.5426405,48.1446937,0.0 11.5426405,48.1446937,17.15 11.5427169,48.1446757,17.15</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427525,48.1445923,18.05 11.5427525,48.1445923,19.15 11.5427859,48.1445898,19.15 11.5427859,48.1445898,18.05 11.5427525,48.1445923,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427732,48.1445628,0.0 11.5427732,48.1445628,18.05 11.542773,48.1445616,18.05 11.542773,48.1445616,0.0 11.5427732,48.1445628,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427961,48.144646,0.0 11.5427961,48.144646,17.15 11.5428132,48.1446447,17.15 11.5428132,48.1446447,0.0 11.5427961,48.144646,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427812,48.1445622,0.0 11.5427986,48.1445609,0.0 11.5427986,48.1445609,18.05 11.5427812,48.1445622,18.05 11.5427732,48.1445628,18.05 11.5427732,48.1445628,0.0 11.5427812,48.1445622,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_4864956_RoofSurface">
+      <name>DEBY_LOD2_4864956_RoofSurface</name>
+      <styleUrl>#RoofSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428716,48.1445229,17.09 11.5429116,48.1446043,17.09 11.5429197,48.1446209,17.09 11.5429194,48.1446209,17.09 11.5429215,48.1446253,17.09 11.5428139,48.1446489,17.09 11.5428131,48.1446447,17.09 11.5427986,48.1445609,17.09 11.542795,48.1445397,17.09 11.5428716,48.1445229,17.09</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428839,48.1445202,17.89 11.5429121,48.144514,17.89 11.5430026,48.1444941,17.89 11.5430426,48.1445756,17.89 11.5430528,48.1445966,17.89 11.5429725,48.1446142,17.89 11.5429704,48.1446098,17.89 11.5429602,48.144612,17.89 11.5429197,48.1446209,17.89 11.5429116,48.1446043,17.89 11.5428716,48.1445229,17.89 11.5428839,48.1445202,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+          <innerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429239,48.1446016,17.89 11.5429521,48.1445955,17.89 11.5429425,48.144576,17.89 11.5429143,48.1445822,17.89 11.5429239,48.1446016,17.89</coordinates>
+            </LinearRing>
+          </innerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429425,48.144576,18.84 11.5429521,48.1445955,18.84 11.5429239,48.1446016,18.84 11.5429143,48.1445822,18.84 11.5429425,48.144576,18.84</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430205,48.1444902,17.16 11.5430707,48.1445926,17.16 11.543059,48.1445952,17.16 11.5430528,48.1445966,17.16 11.5430426,48.1445756,17.16 11.5430026,48.1444941,17.16 11.5430205,48.1444902,17.16</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_4864956_GroundSurface">
+      <name>DEBY_LOD2_4864956_GroundSurface</name>
+      <styleUrl>#GroundSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430205,48.1444902,0.0 11.5430026,48.1444941,0.0 11.5429121,48.144514,0.0 11.5428839,48.1445202,0.0 11.5428716,48.1445229,0.0 11.542795,48.1445397,0.0 11.5427986,48.1445609,0.0 11.5428131,48.1446447,0.0 11.5428139,48.1446489,0.0 11.5429215,48.1446253,0.0 11.5429194,48.1446209,0.0 11.5429197,48.1446209,0.0 11.5429602,48.144612,0.0 11.5429704,48.1446098,0.0 11.5429725,48.1446142,0.0 11.5430528,48.1445966,0.0 11.543059,48.1445952,0.0 11.5430707,48.1445926,0.0 11.5430205,48.1444902,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_4864956_WallSurface">
+      <name>DEBY_LOD2_4864956_WallSurface</name>
+      <styleUrl>#WallSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427986,48.1445609,0.0 11.5427986,48.1445609,17.09 11.5428131,48.1446447,17.09 11.5428131,48.1446447,0.0 11.5427986,48.1445609,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.542795,48.1445397,0.0 11.542795,48.1445397,17.09 11.5427986,48.1445609,17.09 11.5427986,48.1445609,0.0 11.542795,48.1445397,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430528,48.1445966,17.89 11.5430528,48.1445966,17.16 11.543059,48.1445952,17.16 11.543059,48.1445952,0.0 11.5430528,48.1445966,0.0 11.5429725,48.1446142,0.0 11.5429725,48.1446142,17.89 11.5430528,48.1445966,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428139,48.1446489,0.0 11.5428139,48.1446489,17.09 11.5429215,48.1446253,17.09 11.5429215,48.1446253,0.0 11.5428139,48.1446489,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428716,48.1445229,17.89 11.5429116,48.1446043,17.89 11.5429197,48.1446209,17.89 11.5429197,48.1446209,17.09 11.5429116,48.1446043,17.09 11.5428716,48.1445229,17.09 11.5428716,48.1445229,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429425,48.144576,17.89 11.5429425,48.144576,18.84 11.5429143,48.1445822,18.84 11.5429143,48.1445822,17.89 11.5429425,48.144576,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429143,48.1445822,17.89 11.5429143,48.1445822,18.84 11.5429239,48.1446016,18.84 11.5429239,48.1446016,17.89 11.5429143,48.1445822,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429704,48.1446098,0.0 11.5429704,48.1446098,17.89 11.5429725,48.1446142,17.89 11.5429725,48.1446142,0.0 11.5429704,48.1446098,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429239,48.1446016,17.89 11.5429239,48.1446016,18.84 11.5429521,48.1445955,18.84 11.5429521,48.1445955,17.89 11.5429239,48.1446016,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429215,48.1446253,0.0 11.5429215,48.1446253,17.09 11.5429194,48.1446209,17.09 11.5429194,48.1446209,0.0 11.5429215,48.1446253,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429602,48.144612,17.89 11.5429704,48.1446098,17.89 11.5429704,48.1446098,0.0 11.5429602,48.144612,0.0 11.5429197,48.1446209,0.0 11.5429194,48.1446209,0.0 11.5429194,48.1446209,17.09 11.5429197,48.1446209,17.09 11.5429197,48.1446209,17.89 11.5429602,48.144612,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428716,48.1445229,0.0 11.5428839,48.1445202,0.0 11.5429121,48.144514,0.0 11.5430026,48.1444941,0.0 11.5430205,48.1444902,0.0 11.5430205,48.1444902,17.16 11.5430026,48.1444941,17.16 11.5430026,48.1444941,17.89 11.5429121,48.144514,17.89 11.5428839,48.1445202,17.89 11.5428716,48.1445229,17.89 11.5428716,48.1445229,17.09 11.542795,48.1445397,17.09 11.542795,48.1445397,0.0 11.5428716,48.1445229,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428131,48.1446447,0.0 11.5428131,48.1446447,17.09 11.5428139,48.1446489,17.09 11.5428139,48.1446489,0.0 11.5428131,48.1446447,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429521,48.1445955,17.89 11.5429521,48.1445955,18.84 11.5429425,48.144576,18.84 11.5429425,48.144576,17.89 11.5429521,48.1445955,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430026,48.1444941,17.16 11.5430426,48.1445756,17.16 11.5430528,48.1445966,17.16 11.5430528,48.1445966,17.89 11.5430426,48.1445756,17.89 11.5430026,48.1444941,17.89 11.5430026,48.1444941,17.16</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.543059,48.1445952,0.0 11.543059,48.1445952,17.16 11.5430707,48.1445926,17.16 11.5430707,48.1445926,0.0 11.543059,48.1445952,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430707,48.1445926,0.0 11.5430707,48.1445926,17.16 11.5430205,48.1444902,17.16 11.5430205,48.1444902,0.0 11.5430707,48.1445926,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_8573447_RoofSurface">
+      <name>DEBY_LOD2_8573447_RoofSurface</name>
+      <styleUrl>#RoofSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435843,48.1449419,15.856 11.5439005,48.1448759,15.856 11.5440645,48.1448415,15.856 11.5439454,48.1449694,14.963 11.5439448,48.1449695,14.963 11.5436269,48.1450356,14.966 11.5436258,48.1450359,14.966 11.5434241,48.1449754,15.856 11.5435843,48.1449419,15.856</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5440645,48.1448415,15.856 11.5441089,48.1449356,15.856 11.5442257,48.1451826,15.856 11.5442276,48.1451865,15.856 11.5442661,48.1452676,15.856 11.5440624,48.145217,14.962 11.5440623,48.1452168,14.962 11.5439459,48.1449697,14.965 11.5439458,48.1449693,14.965 11.5439454,48.1449694,14.963 11.5440645,48.1448415,15.856</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5437397,48.1452845,14.962 11.5437398,48.1452847,14.964 11.5437401,48.1452846,14.964 11.5440621,48.1452174,14.966 11.5440625,48.1452173,14.966 11.5440624,48.145217,14.962 11.5442661,48.1452676,15.856 11.5441021,48.145302,15.856 11.5437788,48.1453696,15.856 11.5436186,48.1454031,15.856 11.5437397,48.1452845,14.962</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5436258,48.1450359,14.966 11.5436233,48.1450364,14.98 11.5436236,48.145037,14.98 11.5437396,48.1452843,14.962 11.5437397,48.1452845,14.962 11.5436186,48.1454031,15.856 11.5435969,48.145355,15.856 11.5435832,48.1453252,15.856 11.5435798,48.1453178,15.856 11.543467,48.1450698,15.856 11.5434241,48.1449754,15.856 11.5436258,48.1450359,14.966</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_8573447_GroundSurface">
+      <name>DEBY_LOD2_8573447_GroundSurface</name>
+      <styleUrl>#GroundSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5442276,48.1451865,0.0 11.5442257,48.1451826,0.0 11.5441089,48.1449356,0.0 11.5440645,48.1448415,0.0 11.5439005,48.1448759,0.0 11.5435843,48.1449419,0.0 11.5434241,48.1449754,0.0 11.543467,48.1450698,0.0 11.5435798,48.1453178,0.0 11.5435832,48.1453252,0.0 11.5435969,48.145355,0.0 11.5436186,48.1454031,0.0 11.5437788,48.1453696,0.0 11.5441021,48.145302,0.0 11.5442661,48.1452676,0.0 11.5442276,48.1451865,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+          <innerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5440621,48.1452174,0.0 11.5437401,48.1452846,0.0 11.5437398,48.1452847,0.0 11.5437397,48.1452845,0.0 11.5437396,48.1452843,0.0 11.5436236,48.145037,0.0 11.5436233,48.1450364,0.0 11.5436258,48.1450359,0.0 11.5436269,48.1450356,0.0 11.5439448,48.1449695,0.0 11.5439454,48.1449694,0.0 11.5439458,48.1449693,0.0 11.5439459,48.1449697,0.0 11.5440623,48.1452168,0.0 11.5440624,48.145217,0.0 11.5440625,48.1452173,0.0 11.5440621,48.1452174,0.0</coordinates>
+            </LinearRing>
+          </innerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_8573447_WallSurface">
+      <name>DEBY_LOD2_8573447_WallSurface</name>
+      <styleUrl>#WallSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5437788,48.1453696,15.856 11.5441021,48.145302,15.856 11.5442661,48.1452676,15.856 11.5442661,48.1452676,0.0 11.5441021,48.145302,0.0 11.5437788,48.1453696,0.0 11.5436186,48.1454031,0.0 11.5436186,48.1454031,15.856 11.5437788,48.1453696,15.856</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435843,48.1449419,0.0 11.5439005,48.1448759,0.0 11.5440645,48.1448415,0.0 11.5440645,48.1448415,15.856 11.5439005,48.1448759,15.856 11.5435843,48.1449419,15.856 11.5434241,48.1449754,15.856 11.5434241,48.1449754,0.0 11.5435843,48.1449419,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5437401,48.1452846,0.0 11.5440621,48.1452174,0.0 11.5440625,48.1452173,0.0 11.5440625,48.1452173,14.966 11.5440621,48.1452174,14.966 11.5437401,48.1452846,14.964 11.5437398,48.1452847,14.964 11.5437398,48.1452847,0.0 11.5437401,48.1452846,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5436233,48.1450364,0.0 11.5436236,48.145037,0.0 11.5437396,48.1452843,0.0 11.5437397,48.1452845,0.0 11.5437398,48.1452847,0.0 11.5437398,48.1452847,14.964 11.5437397,48.1452845,14.962 11.5437396,48.1452843,14.962 11.5436236,48.145037,14.98 11.5436233,48.1450364,14.98 11.5436233,48.1450364,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5436258,48.1450359,14.966 11.5436269,48.1450356,14.966 11.5439448,48.1449695,14.963 11.5439454,48.1449694,14.963 11.5439458,48.1449693,14.965 11.5439458,48.1449693,0.0 11.5439454,48.1449694,0.0 11.5439448,48.1449695,0.0 11.5436269,48.1450356,0.0 11.5436258,48.1450359,0.0 11.5436233,48.1450364,0.0 11.5436233,48.1450364,14.98 11.5436258,48.1450359,14.966</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5440645,48.1448415,0.0 11.5441089,48.1449356,0.0 11.5442257,48.1451826,0.0 11.5442276,48.1451865,0.0 11.5442276,48.1451865,15.856 11.5442257,48.1451826,15.856 11.5441089,48.1449356,15.856 11.5440645,48.1448415,15.856 11.5440645,48.1448415,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435969,48.145355,0.0 11.5435969,48.145355,15.856 11.5436186,48.1454031,15.856 11.5436186,48.1454031,0.0 11.5435969,48.145355,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5442661,48.1452676,0.0 11.5442661,48.1452676,15.856 11.5442276,48.1451865,15.856 11.5442276,48.1451865,0.0 11.5442661,48.1452676,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435832,48.1453252,0.0 11.5435832,48.1453252,15.856 11.5435969,48.145355,15.856 11.5435969,48.145355,0.0 11.5435832,48.1453252,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5434241,48.1449754,15.856 11.543467,48.1450698,15.856 11.5435798,48.1453178,15.856 11.5435832,48.1453252,15.856 11.5435832,48.1453252,0.0 11.5435798,48.1453178,0.0 11.543467,48.1450698,0.0 11.5434241,48.1449754,0.0 11.5434241,48.1449754,15.856</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5439458,48.1449693,14.965 11.5439459,48.1449697,14.965 11.5440623,48.1452168,14.962 11.5440624,48.145217,14.962 11.5440625,48.1452173,14.966 11.5440625,48.1452173,0.0 11.5440624,48.145217,0.0 11.5440623,48.1452168,0.0 11.5439459,48.1449697,0.0 11.5439458,48.1449693,0.0 11.5439458,48.1449693,14.965</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_8573446_RoofSurface">
+      <name>DEBY_LOD2_8573446_RoofSurface</name>
+      <styleUrl>#RoofSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429911,48.1450692,15.915 11.5431374,48.1453774,15.916 11.5430633,48.1453933,15.458 11.5429996,48.145407,15.064 11.5429786,48.1454115,14.934 11.5429769,48.1454119,14.924 11.5428752,48.1451973,14.925 11.5429911,48.1450692,15.915</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430385,48.1454151,17.86 11.5430138,48.1454369,17.4 11.5429996,48.145407,17.4 11.5430385,48.1454151,17.86</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5425524,48.1452657,14.924 11.5426691,48.1455107,14.923 11.5425503,48.1456304,15.915 11.5423482,48.1452053,15.916 11.5425524,48.1452657,14.924</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5431182,48.145398,15.74 11.5430704,48.1454083,15.74 11.5430633,48.1453933,15.42 11.5431182,48.145398,15.74</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435831,48.1453252,3.58 11.5435968,48.1453551,3.58 11.543171,48.1454467,3.58 11.5431565,48.1454163,3.58 11.5435831,48.1453252,3.58</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430385,48.1454151,17.86 11.5430775,48.1454232,17.4 11.5430138,48.1454369,17.4 11.5430385,48.1454151,17.86</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429927,48.1454414,14.934 11.5430138,48.1454369,15.065 11.5430775,48.1454232,15.458 11.5431516,48.1454073,15.916 11.5431559,48.1454164,15.916 11.5431565,48.1454163,15.92 11.543171,48.1454467,15.92 11.5431703,48.1454468,15.916 11.5431922,48.1454933,15.915 11.5429912,48.1454421,14.924 11.542991,48.1454418,14.934 11.5429927,48.1454414,14.934</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429786,48.1454115,14.934 11.5429996,48.145407,14.934 11.5430138,48.1454369,14.934 11.5429927,48.1454414,14.934 11.542991,48.1454418,14.934 11.5429769,48.1454119,14.924 11.5429786,48.1454115,14.934</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5431374,48.1453774,15.916 11.5431445,48.1453924,15.916 11.5431516,48.1454073,15.916 11.5430775,48.1454232,15.42 11.5431182,48.145398,15.74 11.5430633,48.1453933,15.42 11.5431374,48.1453774,15.916</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430633,48.1453933,17.4 11.5430704,48.1454083,17.4 11.5430775,48.1454232,17.4 11.5430385,48.1454151,17.86 11.5430633,48.1453933,17.4</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5426691,48.1455107,14.923 11.5426696,48.1455118,14.936 11.5429911,48.1454434,14.937 11.5429917,48.1454432,14.937 11.5429912,48.1454421,14.924 11.5431922,48.1454933,15.915 11.5430312,48.1455279,15.915 11.5426817,48.1456029,15.92 11.5425506,48.145631,15.922 11.5425505,48.1456308,15.92 11.5425503,48.1456304,15.915 11.5426691,48.1455107,14.923</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430633,48.1453933,17.4 11.5430385,48.1454151,17.86 11.5429996,48.145407,17.4 11.5430633,48.1453933,17.4</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428292,48.1451035,15.916 11.5429911,48.1450692,15.915 11.5428752,48.1451973,14.925 11.5425523,48.1452654,14.927 11.5425524,48.1452657,14.924 11.5423482,48.1452053,15.916 11.5428292,48.1451035,15.916</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5431182,48.145398,15.74 11.5430775,48.1454232,15.42 11.5430704,48.1454083,15.74 11.5431182,48.145398,15.74</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_8573446_GroundSurface">
+      <name>DEBY_LOD2_8573446_GroundSurface</name>
+      <styleUrl>#GroundSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435831,48.1453252,0.0 11.5431565,48.1454163,0.0 11.5431559,48.1454164,0.0 11.5431516,48.1454073,0.0 11.5431445,48.1453924,0.0 11.5431374,48.1453774,0.0 11.5429911,48.1450692,0.0 11.5428292,48.1451035,0.0 11.5423482,48.1452053,0.0 11.5425503,48.1456304,0.0 11.5425505,48.1456308,0.0 11.5425506,48.145631,0.0 11.5426817,48.1456029,0.0 11.5430312,48.1455279,0.0 11.5431922,48.1454933,0.0 11.5431703,48.1454468,0.0 11.543171,48.1454467,0.0 11.5435968,48.1453551,0.0 11.5435831,48.1453252,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+          <innerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429911,48.1454434,0.0 11.5426696,48.1455118,0.0 11.5426691,48.1455107,0.0 11.5425524,48.1452657,0.0 11.5425523,48.1452654,0.0 11.5428752,48.1451973,0.0 11.5429769,48.1454119,0.0 11.542991,48.1454418,0.0 11.5429912,48.1454421,0.0 11.5429917,48.1454432,0.0 11.5429911,48.1454434,0.0</coordinates>
+            </LinearRing>
+          </innerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_8573446_WallSurface">
+      <name>DEBY_LOD2_8573446_WallSurface</name>
+      <styleUrl>#WallSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430633,48.1453933,15.42 11.5430633,48.1453933,15.458 11.5431374,48.1453774,15.916 11.5430633,48.1453933,15.42</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430633,48.1453933,15.458 11.5430633,48.1453933,17.4 11.5429996,48.145407,17.4 11.5429996,48.145407,15.064 11.5430633,48.1453933,15.458</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5425523,48.1452654,0.0 11.5425524,48.1452657,0.0 11.5426691,48.1455107,0.0 11.5426696,48.1455118,0.0 11.5426696,48.1455118,14.936 11.5426691,48.1455107,14.923 11.5425524,48.1452657,14.924 11.5425523,48.1452654,14.927 11.5425523,48.1452654,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429911,48.1454434,0.0 11.5429917,48.1454432,0.0 11.5429917,48.1454432,14.937 11.5429911,48.1454434,14.937 11.5426696,48.1455118,14.936 11.5426696,48.1455118,0.0 11.5429911,48.1454434,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429786,48.1454115,14.934 11.5429996,48.145407,15.064 11.5429996,48.145407,14.934 11.5429786,48.1454115,14.934</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5431565,48.1454163,0.0 11.5435831,48.1453252,0.0 11.5435831,48.1453252,3.58 11.5431565,48.1454163,3.58 11.5431565,48.1454163,15.92 11.5431559,48.1454164,15.916 11.5431559,48.1454164,0.0 11.5431565,48.1454163,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430138,48.1454369,14.934 11.5430138,48.1454369,15.065 11.5429927,48.1454414,14.934 11.5430138,48.1454369,14.934</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5431922,48.1454933,0.0 11.5431922,48.1454933,15.915 11.5431703,48.1454468,15.916 11.5431703,48.1454468,0.0 11.5431922,48.1454933,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5425523,48.1452654,0.0 11.5425523,48.1452654,14.927 11.5428752,48.1451973,14.925 11.5428752,48.1451973,0.0 11.5425523,48.1452654,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429911,48.1450692,0.0 11.5431374,48.1453774,0.0 11.5431445,48.1453924,0.0 11.5431516,48.1454073,0.0 11.5431559,48.1454164,0.0 11.5431559,48.1454164,15.916 11.5431516,48.1454073,15.916 11.5431445,48.1453924,15.916 11.5431374,48.1453774,15.916 11.5429911,48.1450692,15.915 11.5429911,48.1450692,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5431516,48.1454073,15.916 11.5430775,48.1454232,15.458 11.5430775,48.1454232,15.42 11.5431516,48.1454073,15.916</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5426817,48.1456029,15.92 11.5430312,48.1455279,15.915 11.5431922,48.1454933,15.915 11.5431922,48.1454933,0.0 11.5430312,48.1455279,0.0 11.5426817,48.1456029,0.0 11.5425506,48.145631,0.0 11.5425506,48.145631,15.922 11.5426817,48.1456029,15.92</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430633,48.1453933,15.458 11.5430633,48.1453933,15.42 11.5430704,48.1454083,15.74 11.5430775,48.1454232,15.42 11.5430775,48.1454232,15.458 11.5430775,48.1454232,17.4 11.5430704,48.1454083,17.4 11.5430633,48.1453933,17.4 11.5430633,48.1453933,15.458</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435968,48.1453551,0.0 11.5435968,48.1453551,3.58 11.5435831,48.1453252,3.58 11.5435831,48.1453252,0.0 11.5435968,48.1453551,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.543171,48.1454467,3.58 11.543171,48.1454467,15.92 11.5431565,48.1454163,15.92 11.5431565,48.1454163,3.58 11.543171,48.1454467,3.58</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430138,48.1454369,15.065 11.5430138,48.1454369,17.4 11.5430775,48.1454232,17.4 11.5430775,48.1454232,15.458 11.5430138,48.1454369,15.065</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5423482,48.1452053,15.916 11.5425503,48.1456304,15.915 11.5425505,48.1456308,15.92 11.5425506,48.145631,15.922 11.5425506,48.145631,0.0 11.5425505,48.1456308,0.0 11.5425503,48.1456304,0.0 11.5423482,48.1452053,0.0 11.5423482,48.1452053,15.916</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.543171,48.1454467,15.92 11.543171,48.1454467,3.58 11.5435968,48.1453551,3.58 11.5435968,48.1453551,0.0 11.543171,48.1454467,0.0 11.5431703,48.1454468,0.0 11.5431703,48.1454468,15.916 11.543171,48.1454467,15.92</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429996,48.145407,14.934 11.5429996,48.145407,15.064 11.5429996,48.145407,17.4 11.5430138,48.1454369,17.4 11.5430138,48.1454369,15.065 11.5430138,48.1454369,14.934 11.5429996,48.145407,14.934</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428752,48.1451973,14.925 11.5429769,48.1454119,14.924 11.542991,48.1454418,14.934 11.5429912,48.1454421,14.924 11.5429917,48.1454432,14.937 11.5429917,48.1454432,0.0 11.5429912,48.1454421,0.0 11.542991,48.1454418,0.0 11.5429769,48.1454119,0.0 11.5428752,48.1451973,0.0 11.5428752,48.1451973,14.925</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428292,48.1451035,0.0 11.5429911,48.1450692,0.0 11.5429911,48.1450692,15.915 11.5428292,48.1451035,15.916 11.5423482,48.1452053,15.916 11.5423482,48.1452053,0.0 11.5428292,48.1451035,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_4864956_RoofSurface">
+      <name>DEBY_LOD2_4864956_RoofSurface</name>
+      <styleUrl>#RoofSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428716,48.1445229,17.09 11.5429116,48.1446043,17.09 11.5429197,48.1446209,17.09 11.5429194,48.1446209,17.09 11.5429215,48.1446253,17.09 11.5428139,48.1446489,17.09 11.5428131,48.1446447,17.09 11.5427986,48.1445609,17.09 11.542795,48.1445397,17.09 11.5428716,48.1445229,17.09</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428839,48.1445202,17.89 11.5429121,48.144514,17.89 11.5430026,48.1444941,17.89 11.5430426,48.1445756,17.89 11.5430528,48.1445966,17.89 11.5429725,48.1446142,17.89 11.5429704,48.1446098,17.89 11.5429602,48.144612,17.89 11.5429197,48.1446209,17.89 11.5429116,48.1446043,17.89 11.5428716,48.1445229,17.89 11.5428839,48.1445202,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+          <innerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429239,48.1446016,17.89 11.5429521,48.1445955,17.89 11.5429425,48.144576,17.89 11.5429143,48.1445822,17.89 11.5429239,48.1446016,17.89</coordinates>
+            </LinearRing>
+          </innerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429425,48.144576,18.84 11.5429521,48.1445955,18.84 11.5429239,48.1446016,18.84 11.5429143,48.1445822,18.84 11.5429425,48.144576,18.84</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430205,48.1444902,17.16 11.5430707,48.1445926,17.16 11.543059,48.1445952,17.16 11.5430528,48.1445966,17.16 11.5430426,48.1445756,17.16 11.5430026,48.1444941,17.16 11.5430205,48.1444902,17.16</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_4864956_GroundSurface">
+      <name>DEBY_LOD2_4864956_GroundSurface</name>
+      <styleUrl>#GroundSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430205,48.1444902,0.0 11.5430026,48.1444941,0.0 11.5429121,48.144514,0.0 11.5428839,48.1445202,0.0 11.5428716,48.1445229,0.0 11.542795,48.1445397,0.0 11.5427986,48.1445609,0.0 11.5428131,48.1446447,0.0 11.5428139,48.1446489,0.0 11.5429215,48.1446253,0.0 11.5429194,48.1446209,0.0 11.5429197,48.1446209,0.0 11.5429602,48.144612,0.0 11.5429704,48.1446098,0.0 11.5429725,48.1446142,0.0 11.5430528,48.1445966,0.0 11.543059,48.1445952,0.0 11.5430707,48.1445926,0.0 11.5430205,48.1444902,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_4864956_WallSurface">
+      <name>DEBY_LOD2_4864956_WallSurface</name>
+      <styleUrl>#WallSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427986,48.1445609,0.0 11.5427986,48.1445609,17.09 11.5428131,48.1446447,17.09 11.5428131,48.1446447,0.0 11.5427986,48.1445609,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.542795,48.1445397,0.0 11.542795,48.1445397,17.09 11.5427986,48.1445609,17.09 11.5427986,48.1445609,0.0 11.542795,48.1445397,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430528,48.1445966,17.89 11.5430528,48.1445966,17.16 11.543059,48.1445952,17.16 11.543059,48.1445952,0.0 11.5430528,48.1445966,0.0 11.5429725,48.1446142,0.0 11.5429725,48.1446142,17.89 11.5430528,48.1445966,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428139,48.1446489,0.0 11.5428139,48.1446489,17.09 11.5429215,48.1446253,17.09 11.5429215,48.1446253,0.0 11.5428139,48.1446489,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428716,48.1445229,17.89 11.5429116,48.1446043,17.89 11.5429197,48.1446209,17.89 11.5429197,48.1446209,17.09 11.5429116,48.1446043,17.09 11.5428716,48.1445229,17.09 11.5428716,48.1445229,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429425,48.144576,17.89 11.5429425,48.144576,18.84 11.5429143,48.1445822,18.84 11.5429143,48.1445822,17.89 11.5429425,48.144576,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429143,48.1445822,17.89 11.5429143,48.1445822,18.84 11.5429239,48.1446016,18.84 11.5429239,48.1446016,17.89 11.5429143,48.1445822,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429704,48.1446098,0.0 11.5429704,48.1446098,17.89 11.5429725,48.1446142,17.89 11.5429725,48.1446142,0.0 11.5429704,48.1446098,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429239,48.1446016,17.89 11.5429239,48.1446016,18.84 11.5429521,48.1445955,18.84 11.5429521,48.1445955,17.89 11.5429239,48.1446016,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429215,48.1446253,0.0 11.5429215,48.1446253,17.09 11.5429194,48.1446209,17.09 11.5429194,48.1446209,0.0 11.5429215,48.1446253,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429602,48.144612,17.89 11.5429704,48.1446098,17.89 11.5429704,48.1446098,0.0 11.5429602,48.144612,0.0 11.5429197,48.1446209,0.0 11.5429194,48.1446209,0.0 11.5429194,48.1446209,17.09 11.5429197,48.1446209,17.09 11.5429197,48.1446209,17.89 11.5429602,48.144612,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428716,48.1445229,0.0 11.5428839,48.1445202,0.0 11.5429121,48.144514,0.0 11.5430026,48.1444941,0.0 11.5430205,48.1444902,0.0 11.5430205,48.1444902,17.16 11.5430026,48.1444941,17.16 11.5430026,48.1444941,17.89 11.5429121,48.144514,17.89 11.5428839,48.1445202,17.89 11.5428716,48.1445229,17.89 11.5428716,48.1445229,17.09 11.542795,48.1445397,17.09 11.542795,48.1445397,0.0 11.5428716,48.1445229,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428131,48.1446447,0.0 11.5428131,48.1446447,17.09 11.5428139,48.1446489,17.09 11.5428139,48.1446489,0.0 11.5428131,48.1446447,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429521,48.1445955,17.89 11.5429521,48.1445955,18.84 11.5429425,48.144576,18.84 11.5429425,48.144576,17.89 11.5429521,48.1445955,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430026,48.1444941,17.16 11.5430426,48.1445756,17.16 11.5430528,48.1445966,17.16 11.5430528,48.1445966,17.89 11.5430426,48.1445756,17.89 11.5430026,48.1444941,17.89 11.5430026,48.1444941,17.16</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.543059,48.1445952,0.0 11.543059,48.1445952,17.16 11.5430707,48.1445926,17.16 11.5430707,48.1445926,0.0 11.543059,48.1445952,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430707,48.1445926,0.0 11.5430707,48.1445926,17.16 11.5430205,48.1444902,17.16 11.5430205,48.1444902,0.0 11.5430707,48.1445926,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_4864955_RoofSurface">
+      <name>DEBY_LOD2_4864955_RoofSurface</name>
+      <styleUrl>#RoofSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427476,48.1445635,18.05 11.542773,48.1445616,18.05 11.5427732,48.1445628,18.05 11.5427812,48.1445622,18.05 11.5427986,48.1445609,18.05 11.5427998,48.1445677,18.05 11.5428054,48.1445998,18.05 11.5427878,48.1446011,18.05 11.5427545,48.1446036,18.05 11.5427396,48.1446047,18.05 11.5427377,48.1445935,18.05 11.5427341,48.1445727,18.05 11.5427327,48.1445647,18.05 11.5427476,48.1445635,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+          <innerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427525,48.1445923,18.05 11.5427859,48.1445898,18.05 11.5427823,48.1445691,18.05 11.542749,48.1445716,18.05 11.5427525,48.1445923,18.05</coordinates>
+            </LinearRing>
+          </innerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427823,48.1445691,19.15 11.5427859,48.1445898,19.15 11.5427525,48.1445923,19.15 11.542749,48.1445716,19.15 11.5427823,48.1445691,19.15</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5426204,48.1445732,17.15 11.5427327,48.1445647,17.15 11.5427341,48.1445727,17.15 11.5427377,48.1445935,17.15 11.5427396,48.1446047,17.15 11.5427545,48.1446036,17.15 11.5427878,48.1446011,17.15 11.5428054,48.1445998,17.15 11.5428132,48.1446447,17.15 11.5427961,48.144646,17.15 11.5427978,48.1446566,17.15 11.5427973,48.1446567,17.15 11.5427649,48.1446644,17.15 11.5427504,48.1446678,17.15 11.5427169,48.1446757,17.15 11.5426405,48.1446937,17.15 11.5426382,48.1446816,17.15 11.5426359,48.1446688,17.15 11.5426266,48.1446132,17.15 11.5426212,48.1445811,17.15 11.5426199,48.1445732,17.15 11.5426204,48.1445732,17.15</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_4864955_GroundSurface">
+      <name>DEBY_LOD2_4864955_GroundSurface</name>
+      <styleUrl>#GroundSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428054,48.1445998,0.0 11.5427998,48.1445677,0.0 11.5427986,48.1445609,0.0 11.5427812,48.1445622,0.0 11.5427732,48.1445628,0.0 11.542773,48.1445616,0.0 11.5427476,48.1445635,0.0 11.5427327,48.1445647,0.0 11.5426204,48.1445732,0.0 11.5426199,48.1445732,0.0 11.5426212,48.1445811,0.0 11.5426266,48.1446132,0.0 11.5426359,48.1446688,0.0 11.5426382,48.1446816,0.0 11.5426405,48.1446937,0.0 11.5427169,48.1446757,0.0 11.5427504,48.1446678,0.0 11.5427649,48.1446644,0.0 11.5427973,48.1446567,0.0 11.5427978,48.1446566,0.0 11.5427961,48.144646,0.0 11.5428132,48.1446447,0.0 11.5428054,48.1445998,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_4864955_WallSurface">
+      <name>DEBY_LOD2_4864955_WallSurface</name>
+      <styleUrl>#WallSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5426204,48.1445732,0.0 11.5426204,48.1445732,17.15 11.5426199,48.1445732,17.15 11.5426199,48.1445732,0.0 11.5426204,48.1445732,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427327,48.1445647,18.05 11.5427341,48.1445727,18.05 11.5427377,48.1445935,18.05 11.5427396,48.1446047,18.05 11.5427396,48.1446047,17.15 11.5427377,48.1445935,17.15 11.5427341,48.1445727,17.15 11.5427327,48.1445647,17.15 11.5427327,48.1445647,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427859,48.1445898,18.05 11.5427859,48.1445898,19.15 11.5427823,48.1445691,19.15 11.5427823,48.1445691,18.05 11.5427859,48.1445898,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5426199,48.1445732,17.15 11.5426212,48.1445811,17.15 11.5426266,48.1446132,17.15 11.5426359,48.1446688,17.15 11.5426359,48.1446688,0.0 11.5426266,48.1446132,0.0 11.5426212,48.1445811,0.0 11.5426199,48.1445732,0.0 11.5426199,48.1445732,17.15</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427823,48.1445691,18.05 11.5427823,48.1445691,19.15 11.542749,48.1445716,19.15 11.542749,48.1445716,18.05 11.5427823,48.1445691,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427327,48.1445647,0.0 11.5427476,48.1445635,0.0 11.542773,48.1445616,0.0 11.542773,48.1445616,18.05 11.5427476,48.1445635,18.05 11.5427327,48.1445647,18.05 11.5427327,48.1445647,17.15 11.5426204,48.1445732,17.15 11.5426204,48.1445732,0.0 11.5427327,48.1445647,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.542749,48.1445716,18.05 11.542749,48.1445716,19.15 11.5427525,48.1445923,19.15 11.5427525,48.1445923,18.05 11.542749,48.1445716,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427986,48.1445609,0.0 11.5427998,48.1445677,0.0 11.5428054,48.1445998,0.0 11.5428132,48.1446447,0.0 11.5428132,48.1446447,17.15 11.5428054,48.1445998,17.15 11.5428054,48.1445998,18.05 11.5427998,48.1445677,18.05 11.5427986,48.1445609,18.05 11.5427986,48.1445609,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427978,48.1446566,0.0 11.5427978,48.1446566,17.15 11.5427961,48.144646,17.15 11.5427961,48.144646,0.0 11.5427978,48.1446566,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5426359,48.1446688,17.15 11.5426382,48.1446816,17.15 11.5426405,48.1446937,17.15 11.5426405,48.1446937,0.0 11.5426382,48.1446816,0.0 11.5426359,48.1446688,0.0 11.5426359,48.1446688,17.15</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427545,48.1446036,18.05 11.5427878,48.1446011,18.05 11.5428054,48.1445998,18.05 11.5428054,48.1445998,17.15 11.5427878,48.1446011,17.15 11.5427545,48.1446036,17.15 11.5427396,48.1446047,17.15 11.5427396,48.1446047,18.05 11.5427545,48.1446036,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427169,48.1446757,17.15 11.5427504,48.1446678,17.15 11.5427649,48.1446644,17.15 11.5427973,48.1446567,17.15 11.5427978,48.1446566,17.15 11.5427978,48.1446566,0.0 11.5427973,48.1446567,0.0 11.5427649,48.1446644,0.0 11.5427504,48.1446678,0.0 11.5427169,48.1446757,0.0 11.5426405,48.1446937,0.0 11.5426405,48.1446937,17.15 11.5427169,48.1446757,17.15</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427525,48.1445923,18.05 11.5427525,48.1445923,19.15 11.5427859,48.1445898,19.15 11.5427859,48.1445898,18.05 11.5427525,48.1445923,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427732,48.1445628,0.0 11.5427732,48.1445628,18.05 11.542773,48.1445616,18.05 11.542773,48.1445616,0.0 11.5427732,48.1445628,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427961,48.144646,0.0 11.5427961,48.144646,17.15 11.5428132,48.1446447,17.15 11.5428132,48.1446447,0.0 11.5427961,48.144646,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427812,48.1445622,0.0 11.5427986,48.1445609,0.0 11.5427986,48.1445609,18.05 11.5427812,48.1445622,18.05 11.5427732,48.1445628,18.05 11.5427732,48.1445628,0.0 11.5427812,48.1445622,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_8573447_RoofSurface">
+      <name>DEBY_LOD2_8573447_RoofSurface</name>
+      <styleUrl>#RoofSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435843,48.1449419,15.856 11.5439005,48.1448759,15.856 11.5440645,48.1448415,15.856 11.5439454,48.1449694,14.963 11.5439448,48.1449695,14.963 11.5436269,48.1450356,14.966 11.5436258,48.1450359,14.966 11.5434241,48.1449754,15.856 11.5435843,48.1449419,15.856</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5440645,48.1448415,15.856 11.5441089,48.1449356,15.856 11.5442257,48.1451826,15.856 11.5442276,48.1451865,15.856 11.5442661,48.1452676,15.856 11.5440624,48.145217,14.962 11.5440623,48.1452168,14.962 11.5439459,48.1449697,14.965 11.5439458,48.1449693,14.965 11.5439454,48.1449694,14.963 11.5440645,48.1448415,15.856</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5437397,48.1452845,14.962 11.5437398,48.1452847,14.964 11.5437401,48.1452846,14.964 11.5440621,48.1452174,14.966 11.5440625,48.1452173,14.966 11.5440624,48.145217,14.962 11.5442661,48.1452676,15.856 11.5441021,48.145302,15.856 11.5437788,48.1453696,15.856 11.5436186,48.1454031,15.856 11.5437397,48.1452845,14.962</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5436258,48.1450359,14.966 11.5436233,48.1450364,14.98 11.5436236,48.145037,14.98 11.5437396,48.1452843,14.962 11.5437397,48.1452845,14.962 11.5436186,48.1454031,15.856 11.5435969,48.145355,15.856 11.5435832,48.1453252,15.856 11.5435798,48.1453178,15.856 11.543467,48.1450698,15.856 11.5434241,48.1449754,15.856 11.5436258,48.1450359,14.966</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_8573447_GroundSurface">
+      <name>DEBY_LOD2_8573447_GroundSurface</name>
+      <styleUrl>#GroundSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5442276,48.1451865,0.0 11.5442257,48.1451826,0.0 11.5441089,48.1449356,0.0 11.5440645,48.1448415,0.0 11.5439005,48.1448759,0.0 11.5435843,48.1449419,0.0 11.5434241,48.1449754,0.0 11.543467,48.1450698,0.0 11.5435798,48.1453178,0.0 11.5435832,48.1453252,0.0 11.5435969,48.145355,0.0 11.5436186,48.1454031,0.0 11.5437788,48.1453696,0.0 11.5441021,48.145302,0.0 11.5442661,48.1452676,0.0 11.5442276,48.1451865,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+          <innerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5440621,48.1452174,0.0 11.5437401,48.1452846,0.0 11.5437398,48.1452847,0.0 11.5437397,48.1452845,0.0 11.5437396,48.1452843,0.0 11.5436236,48.145037,0.0 11.5436233,48.1450364,0.0 11.5436258,48.1450359,0.0 11.5436269,48.1450356,0.0 11.5439448,48.1449695,0.0 11.5439454,48.1449694,0.0 11.5439458,48.1449693,0.0 11.5439459,48.1449697,0.0 11.5440623,48.1452168,0.0 11.5440624,48.145217,0.0 11.5440625,48.1452173,0.0 11.5440621,48.1452174,0.0</coordinates>
+            </LinearRing>
+          </innerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_8573447_WallSurface">
+      <name>DEBY_LOD2_8573447_WallSurface</name>
+      <styleUrl>#WallSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5437788,48.1453696,15.856 11.5441021,48.145302,15.856 11.5442661,48.1452676,15.856 11.5442661,48.1452676,0.0 11.5441021,48.145302,0.0 11.5437788,48.1453696,0.0 11.5436186,48.1454031,0.0 11.5436186,48.1454031,15.856 11.5437788,48.1453696,15.856</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435843,48.1449419,0.0 11.5439005,48.1448759,0.0 11.5440645,48.1448415,0.0 11.5440645,48.1448415,15.856 11.5439005,48.1448759,15.856 11.5435843,48.1449419,15.856 11.5434241,48.1449754,15.856 11.5434241,48.1449754,0.0 11.5435843,48.1449419,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5437401,48.1452846,0.0 11.5440621,48.1452174,0.0 11.5440625,48.1452173,0.0 11.5440625,48.1452173,14.966 11.5440621,48.1452174,14.966 11.5437401,48.1452846,14.964 11.5437398,48.1452847,14.964 11.5437398,48.1452847,0.0 11.5437401,48.1452846,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5436233,48.1450364,0.0 11.5436236,48.145037,0.0 11.5437396,48.1452843,0.0 11.5437397,48.1452845,0.0 11.5437398,48.1452847,0.0 11.5437398,48.1452847,14.964 11.5437397,48.1452845,14.962 11.5437396,48.1452843,14.962 11.5436236,48.145037,14.98 11.5436233,48.1450364,14.98 11.5436233,48.1450364,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5436258,48.1450359,14.966 11.5436269,48.1450356,14.966 11.5439448,48.1449695,14.963 11.5439454,48.1449694,14.963 11.5439458,48.1449693,14.965 11.5439458,48.1449693,0.0 11.5439454,48.1449694,0.0 11.5439448,48.1449695,0.0 11.5436269,48.1450356,0.0 11.5436258,48.1450359,0.0 11.5436233,48.1450364,0.0 11.5436233,48.1450364,14.98 11.5436258,48.1450359,14.966</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5440645,48.1448415,0.0 11.5441089,48.1449356,0.0 11.5442257,48.1451826,0.0 11.5442276,48.1451865,0.0 11.5442276,48.1451865,15.856 11.5442257,48.1451826,15.856 11.5441089,48.1449356,15.856 11.5440645,48.1448415,15.856 11.5440645,48.1448415,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435969,48.145355,0.0 11.5435969,48.145355,15.856 11.5436186,48.1454031,15.856 11.5436186,48.1454031,0.0 11.5435969,48.145355,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5442661,48.1452676,0.0 11.5442661,48.1452676,15.856 11.5442276,48.1451865,15.856 11.5442276,48.1451865,0.0 11.5442661,48.1452676,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435832,48.1453252,0.0 11.5435832,48.1453252,15.856 11.5435969,48.145355,15.856 11.5435969,48.145355,0.0 11.5435832,48.1453252,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5434241,48.1449754,15.856 11.543467,48.1450698,15.856 11.5435798,48.1453178,15.856 11.5435832,48.1453252,15.856 11.5435832,48.1453252,0.0 11.5435798,48.1453178,0.0 11.543467,48.1450698,0.0 11.5434241,48.1449754,0.0 11.5434241,48.1449754,15.856</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5439458,48.1449693,14.965 11.5439459,48.1449697,14.965 11.5440623,48.1452168,14.962 11.5440624,48.145217,14.962 11.5440625,48.1452173,14.966 11.5440625,48.1452173,0.0 11.5440624,48.145217,0.0 11.5440623,48.1452168,0.0 11.5439459,48.1449697,0.0 11.5439458,48.1449693,0.0 11.5439458,48.1449693,14.965</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_8573446_RoofSurface">
+      <name>DEBY_LOD2_8573446_RoofSurface</name>
+      <styleUrl>#RoofSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429911,48.1450692,15.915 11.5431374,48.1453774,15.916 11.5430633,48.1453933,15.458 11.5429996,48.145407,15.064 11.5429786,48.1454115,14.934 11.5429769,48.1454119,14.924 11.5428752,48.1451973,14.925 11.5429911,48.1450692,15.915</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430385,48.1454151,17.86 11.5430138,48.1454369,17.4 11.5429996,48.145407,17.4 11.5430385,48.1454151,17.86</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5425524,48.1452657,14.924 11.5426691,48.1455107,14.923 11.5425503,48.1456304,15.915 11.5423482,48.1452053,15.916 11.5425524,48.1452657,14.924</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5431182,48.145398,15.74 11.5430704,48.1454083,15.74 11.5430633,48.1453933,15.42 11.5431182,48.145398,15.74</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435831,48.1453252,3.58 11.5435968,48.1453551,3.58 11.543171,48.1454467,3.58 11.5431565,48.1454163,3.58 11.5435831,48.1453252,3.58</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430385,48.1454151,17.86 11.5430775,48.1454232,17.4 11.5430138,48.1454369,17.4 11.5430385,48.1454151,17.86</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429927,48.1454414,14.934 11.5430138,48.1454369,15.065 11.5430775,48.1454232,15.458 11.5431516,48.1454073,15.916 11.5431559,48.1454164,15.916 11.5431565,48.1454163,15.92 11.543171,48.1454467,15.92 11.5431703,48.1454468,15.916 11.5431922,48.1454933,15.915 11.5429912,48.1454421,14.924 11.542991,48.1454418,14.934 11.5429927,48.1454414,14.934</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429786,48.1454115,14.934 11.5429996,48.145407,14.934 11.5430138,48.1454369,14.934 11.5429927,48.1454414,14.934 11.542991,48.1454418,14.934 11.5429769,48.1454119,14.924 11.5429786,48.1454115,14.934</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5431374,48.1453774,15.916 11.5431445,48.1453924,15.916 11.5431516,48.1454073,15.916 11.5430775,48.1454232,15.42 11.5431182,48.145398,15.74 11.5430633,48.1453933,15.42 11.5431374,48.1453774,15.916</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430633,48.1453933,17.4 11.5430704,48.1454083,17.4 11.5430775,48.1454232,17.4 11.5430385,48.1454151,17.86 11.5430633,48.1453933,17.4</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5426691,48.1455107,14.923 11.5426696,48.1455118,14.936 11.5429911,48.1454434,14.937 11.5429917,48.1454432,14.937 11.5429912,48.1454421,14.924 11.5431922,48.1454933,15.915 11.5430312,48.1455279,15.915 11.5426817,48.1456029,15.92 11.5425506,48.145631,15.922 11.5425505,48.1456308,15.92 11.5425503,48.1456304,15.915 11.5426691,48.1455107,14.923</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430633,48.1453933,17.4 11.5430385,48.1454151,17.86 11.5429996,48.145407,17.4 11.5430633,48.1453933,17.4</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428292,48.1451035,15.916 11.5429911,48.1450692,15.915 11.5428752,48.1451973,14.925 11.5425523,48.1452654,14.927 11.5425524,48.1452657,14.924 11.5423482,48.1452053,15.916 11.5428292,48.1451035,15.916</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5431182,48.145398,15.74 11.5430775,48.1454232,15.42 11.5430704,48.1454083,15.74 11.5431182,48.145398,15.74</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_8573446_GroundSurface">
+      <name>DEBY_LOD2_8573446_GroundSurface</name>
+      <styleUrl>#GroundSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435831,48.1453252,0.0 11.5431565,48.1454163,0.0 11.5431559,48.1454164,0.0 11.5431516,48.1454073,0.0 11.5431445,48.1453924,0.0 11.5431374,48.1453774,0.0 11.5429911,48.1450692,0.0 11.5428292,48.1451035,0.0 11.5423482,48.1452053,0.0 11.5425503,48.1456304,0.0 11.5425505,48.1456308,0.0 11.5425506,48.145631,0.0 11.5426817,48.1456029,0.0 11.5430312,48.1455279,0.0 11.5431922,48.1454933,0.0 11.5431703,48.1454468,0.0 11.543171,48.1454467,0.0 11.5435968,48.1453551,0.0 11.5435831,48.1453252,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+          <innerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429911,48.1454434,0.0 11.5426696,48.1455118,0.0 11.5426691,48.1455107,0.0 11.5425524,48.1452657,0.0 11.5425523,48.1452654,0.0 11.5428752,48.1451973,0.0 11.5429769,48.1454119,0.0 11.542991,48.1454418,0.0 11.5429912,48.1454421,0.0 11.5429917,48.1454432,0.0 11.5429911,48.1454434,0.0</coordinates>
+            </LinearRing>
+          </innerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_8573446_WallSurface">
+      <name>DEBY_LOD2_8573446_WallSurface</name>
+      <styleUrl>#WallSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430633,48.1453933,15.42 11.5430633,48.1453933,15.458 11.5431374,48.1453774,15.916 11.5430633,48.1453933,15.42</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430633,48.1453933,15.458 11.5430633,48.1453933,17.4 11.5429996,48.145407,17.4 11.5429996,48.145407,15.064 11.5430633,48.1453933,15.458</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5425523,48.1452654,0.0 11.5425524,48.1452657,0.0 11.5426691,48.1455107,0.0 11.5426696,48.1455118,0.0 11.5426696,48.1455118,14.936 11.5426691,48.1455107,14.923 11.5425524,48.1452657,14.924 11.5425523,48.1452654,14.927 11.5425523,48.1452654,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429911,48.1454434,0.0 11.5429917,48.1454432,0.0 11.5429917,48.1454432,14.937 11.5429911,48.1454434,14.937 11.5426696,48.1455118,14.936 11.5426696,48.1455118,0.0 11.5429911,48.1454434,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429786,48.1454115,14.934 11.5429996,48.145407,15.064 11.5429996,48.145407,14.934 11.5429786,48.1454115,14.934</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5431565,48.1454163,0.0 11.5435831,48.1453252,0.0 11.5435831,48.1453252,3.58 11.5431565,48.1454163,3.58 11.5431565,48.1454163,15.92 11.5431559,48.1454164,15.916 11.5431559,48.1454164,0.0 11.5431565,48.1454163,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430138,48.1454369,14.934 11.5430138,48.1454369,15.065 11.5429927,48.1454414,14.934 11.5430138,48.1454369,14.934</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5431922,48.1454933,0.0 11.5431922,48.1454933,15.915 11.5431703,48.1454468,15.916 11.5431703,48.1454468,0.0 11.5431922,48.1454933,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5425523,48.1452654,0.0 11.5425523,48.1452654,14.927 11.5428752,48.1451973,14.925 11.5428752,48.1451973,0.0 11.5425523,48.1452654,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429911,48.1450692,0.0 11.5431374,48.1453774,0.0 11.5431445,48.1453924,0.0 11.5431516,48.1454073,0.0 11.5431559,48.1454164,0.0 11.5431559,48.1454164,15.916 11.5431516,48.1454073,15.916 11.5431445,48.1453924,15.916 11.5431374,48.1453774,15.916 11.5429911,48.1450692,15.915 11.5429911,48.1450692,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5431516,48.1454073,15.916 11.5430775,48.1454232,15.458 11.5430775,48.1454232,15.42 11.5431516,48.1454073,15.916</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5426817,48.1456029,15.92 11.5430312,48.1455279,15.915 11.5431922,48.1454933,15.915 11.5431922,48.1454933,0.0 11.5430312,48.1455279,0.0 11.5426817,48.1456029,0.0 11.5425506,48.145631,0.0 11.5425506,48.145631,15.922 11.5426817,48.1456029,15.92</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430633,48.1453933,15.458 11.5430633,48.1453933,15.42 11.5430704,48.1454083,15.74 11.5430775,48.1454232,15.42 11.5430775,48.1454232,15.458 11.5430775,48.1454232,17.4 11.5430704,48.1454083,17.4 11.5430633,48.1453933,17.4 11.5430633,48.1453933,15.458</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435968,48.1453551,0.0 11.5435968,48.1453551,3.58 11.5435831,48.1453252,3.58 11.5435831,48.1453252,0.0 11.5435968,48.1453551,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.543171,48.1454467,3.58 11.543171,48.1454467,15.92 11.5431565,48.1454163,15.92 11.5431565,48.1454163,3.58 11.543171,48.1454467,3.58</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430138,48.1454369,15.065 11.5430138,48.1454369,17.4 11.5430775,48.1454232,17.4 11.5430775,48.1454232,15.458 11.5430138,48.1454369,15.065</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5423482,48.1452053,15.916 11.5425503,48.1456304,15.915 11.5425505,48.1456308,15.92 11.5425506,48.145631,15.922 11.5425506,48.145631,0.0 11.5425505,48.1456308,0.0 11.5425503,48.1456304,0.0 11.5423482,48.1452053,0.0 11.5423482,48.1452053,15.916</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.543171,48.1454467,15.92 11.543171,48.1454467,3.58 11.5435968,48.1453551,3.58 11.5435968,48.1453551,0.0 11.543171,48.1454467,0.0 11.5431703,48.1454468,0.0 11.5431703,48.1454468,15.916 11.543171,48.1454467,15.92</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429996,48.145407,14.934 11.5429996,48.145407,15.064 11.5429996,48.145407,17.4 11.5430138,48.1454369,17.4 11.5430138,48.1454369,15.065 11.5430138,48.1454369,14.934 11.5429996,48.145407,14.934</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428752,48.1451973,14.925 11.5429769,48.1454119,14.924 11.542991,48.1454418,14.934 11.5429912,48.1454421,14.924 11.5429917,48.1454432,14.937 11.5429917,48.1454432,0.0 11.5429912,48.1454421,0.0 11.542991,48.1454418,0.0 11.5429769,48.1454119,0.0 11.5428752,48.1451973,0.0 11.5428752,48.1451973,14.925</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428292,48.1451035,0.0 11.5429911,48.1450692,0.0 11.5429911,48.1450692,15.915 11.5428292,48.1451035,15.916 11.5423482,48.1452053,15.916 11.5423482,48.1452053,0.0 11.5428292,48.1451035,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_4864955_RoofSurface">
+      <name>DEBY_LOD2_4864955_RoofSurface</name>
+      <styleUrl>#RoofSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427476,48.1445635,18.05 11.542773,48.1445616,18.05 11.5427732,48.1445628,18.05 11.5427812,48.1445622,18.05 11.5427986,48.1445609,18.05 11.5427998,48.1445677,18.05 11.5428054,48.1445998,18.05 11.5427878,48.1446011,18.05 11.5427545,48.1446036,18.05 11.5427396,48.1446047,18.05 11.5427377,48.1445935,18.05 11.5427341,48.1445727,18.05 11.5427327,48.1445647,18.05 11.5427476,48.1445635,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+          <innerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427525,48.1445923,18.05 11.5427859,48.1445898,18.05 11.5427823,48.1445691,18.05 11.542749,48.1445716,18.05 11.5427525,48.1445923,18.05</coordinates>
+            </LinearRing>
+          </innerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427823,48.1445691,19.15 11.5427859,48.1445898,19.15 11.5427525,48.1445923,19.15 11.542749,48.1445716,19.15 11.5427823,48.1445691,19.15</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5426204,48.1445732,17.15 11.5427327,48.1445647,17.15 11.5427341,48.1445727,17.15 11.5427377,48.1445935,17.15 11.5427396,48.1446047,17.15 11.5427545,48.1446036,17.15 11.5427878,48.1446011,17.15 11.5428054,48.1445998,17.15 11.5428132,48.1446447,17.15 11.5427961,48.144646,17.15 11.5427978,48.1446566,17.15 11.5427973,48.1446567,17.15 11.5427649,48.1446644,17.15 11.5427504,48.1446678,17.15 11.5427169,48.1446757,17.15 11.5426405,48.1446937,17.15 11.5426382,48.1446816,17.15 11.5426359,48.1446688,17.15 11.5426266,48.1446132,17.15 11.5426212,48.1445811,17.15 11.5426199,48.1445732,17.15 11.5426204,48.1445732,17.15</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_4864955_GroundSurface">
+      <name>DEBY_LOD2_4864955_GroundSurface</name>
+      <styleUrl>#GroundSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428054,48.1445998,0.0 11.5427998,48.1445677,0.0 11.5427986,48.1445609,0.0 11.5427812,48.1445622,0.0 11.5427732,48.1445628,0.0 11.542773,48.1445616,0.0 11.5427476,48.1445635,0.0 11.5427327,48.1445647,0.0 11.5426204,48.1445732,0.0 11.5426199,48.1445732,0.0 11.5426212,48.1445811,0.0 11.5426266,48.1446132,0.0 11.5426359,48.1446688,0.0 11.5426382,48.1446816,0.0 11.5426405,48.1446937,0.0 11.5427169,48.1446757,0.0 11.5427504,48.1446678,0.0 11.5427649,48.1446644,0.0 11.5427973,48.1446567,0.0 11.5427978,48.1446566,0.0 11.5427961,48.144646,0.0 11.5428132,48.1446447,0.0 11.5428054,48.1445998,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_4864955_WallSurface">
+      <name>DEBY_LOD2_4864955_WallSurface</name>
+      <styleUrl>#WallSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5426204,48.1445732,0.0 11.5426204,48.1445732,17.15 11.5426199,48.1445732,17.15 11.5426199,48.1445732,0.0 11.5426204,48.1445732,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427327,48.1445647,18.05 11.5427341,48.1445727,18.05 11.5427377,48.1445935,18.05 11.5427396,48.1446047,18.05 11.5427396,48.1446047,17.15 11.5427377,48.1445935,17.15 11.5427341,48.1445727,17.15 11.5427327,48.1445647,17.15 11.5427327,48.1445647,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427859,48.1445898,18.05 11.5427859,48.1445898,19.15 11.5427823,48.1445691,19.15 11.5427823,48.1445691,18.05 11.5427859,48.1445898,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5426199,48.1445732,17.15 11.5426212,48.1445811,17.15 11.5426266,48.1446132,17.15 11.5426359,48.1446688,17.15 11.5426359,48.1446688,0.0 11.5426266,48.1446132,0.0 11.5426212,48.1445811,0.0 11.5426199,48.1445732,0.0 11.5426199,48.1445732,17.15</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427823,48.1445691,18.05 11.5427823,48.1445691,19.15 11.542749,48.1445716,19.15 11.542749,48.1445716,18.05 11.5427823,48.1445691,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427327,48.1445647,0.0 11.5427476,48.1445635,0.0 11.542773,48.1445616,0.0 11.542773,48.1445616,18.05 11.5427476,48.1445635,18.05 11.5427327,48.1445647,18.05 11.5427327,48.1445647,17.15 11.5426204,48.1445732,17.15 11.5426204,48.1445732,0.0 11.5427327,48.1445647,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.542749,48.1445716,18.05 11.542749,48.1445716,19.15 11.5427525,48.1445923,19.15 11.5427525,48.1445923,18.05 11.542749,48.1445716,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427986,48.1445609,0.0 11.5427998,48.1445677,0.0 11.5428054,48.1445998,0.0 11.5428132,48.1446447,0.0 11.5428132,48.1446447,17.15 11.5428054,48.1445998,17.15 11.5428054,48.1445998,18.05 11.5427998,48.1445677,18.05 11.5427986,48.1445609,18.05 11.5427986,48.1445609,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427978,48.1446566,0.0 11.5427978,48.1446566,17.15 11.5427961,48.144646,17.15 11.5427961,48.144646,0.0 11.5427978,48.1446566,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5426359,48.1446688,17.15 11.5426382,48.1446816,17.15 11.5426405,48.1446937,17.15 11.5426405,48.1446937,0.0 11.5426382,48.1446816,0.0 11.5426359,48.1446688,0.0 11.5426359,48.1446688,17.15</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427545,48.1446036,18.05 11.5427878,48.1446011,18.05 11.5428054,48.1445998,18.05 11.5428054,48.1445998,17.15 11.5427878,48.1446011,17.15 11.5427545,48.1446036,17.15 11.5427396,48.1446047,17.15 11.5427396,48.1446047,18.05 11.5427545,48.1446036,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427169,48.1446757,17.15 11.5427504,48.1446678,17.15 11.5427649,48.1446644,17.15 11.5427973,48.1446567,17.15 11.5427978,48.1446566,17.15 11.5427978,48.1446566,0.0 11.5427973,48.1446567,0.0 11.5427649,48.1446644,0.0 11.5427504,48.1446678,0.0 11.5427169,48.1446757,0.0 11.5426405,48.1446937,0.0 11.5426405,48.1446937,17.15 11.5427169,48.1446757,17.15</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427525,48.1445923,18.05 11.5427525,48.1445923,19.15 11.5427859,48.1445898,19.15 11.5427859,48.1445898,18.05 11.5427525,48.1445923,18.05</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427732,48.1445628,0.0 11.5427732,48.1445628,18.05 11.542773,48.1445616,18.05 11.542773,48.1445616,0.0 11.5427732,48.1445628,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427961,48.144646,0.0 11.5427961,48.144646,17.15 11.5428132,48.1446447,17.15 11.5428132,48.1446447,0.0 11.5427961,48.144646,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427812,48.1445622,0.0 11.5427986,48.1445609,0.0 11.5427986,48.1445609,18.05 11.5427812,48.1445622,18.05 11.5427732,48.1445628,18.05 11.5427732,48.1445628,0.0 11.5427812,48.1445622,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_4864956_RoofSurface">
+      <name>DEBY_LOD2_4864956_RoofSurface</name>
+      <styleUrl>#RoofSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428716,48.1445229,17.09 11.5429116,48.1446043,17.09 11.5429197,48.1446209,17.09 11.5429194,48.1446209,17.09 11.5429215,48.1446253,17.09 11.5428139,48.1446489,17.09 11.5428131,48.1446447,17.09 11.5427986,48.1445609,17.09 11.542795,48.1445397,17.09 11.5428716,48.1445229,17.09</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428839,48.1445202,17.89 11.5429121,48.144514,17.89 11.5430026,48.1444941,17.89 11.5430426,48.1445756,17.89 11.5430528,48.1445966,17.89 11.5429725,48.1446142,17.89 11.5429704,48.1446098,17.89 11.5429602,48.144612,17.89 11.5429197,48.1446209,17.89 11.5429116,48.1446043,17.89 11.5428716,48.1445229,17.89 11.5428839,48.1445202,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+          <innerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429239,48.1446016,17.89 11.5429521,48.1445955,17.89 11.5429425,48.144576,17.89 11.5429143,48.1445822,17.89 11.5429239,48.1446016,17.89</coordinates>
+            </LinearRing>
+          </innerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429425,48.144576,18.84 11.5429521,48.1445955,18.84 11.5429239,48.1446016,18.84 11.5429143,48.1445822,18.84 11.5429425,48.144576,18.84</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430205,48.1444902,17.16 11.5430707,48.1445926,17.16 11.543059,48.1445952,17.16 11.5430528,48.1445966,17.16 11.5430426,48.1445756,17.16 11.5430026,48.1444941,17.16 11.5430205,48.1444902,17.16</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_4864956_GroundSurface">
+      <name>DEBY_LOD2_4864956_GroundSurface</name>
+      <styleUrl>#GroundSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430205,48.1444902,0.0 11.5430026,48.1444941,0.0 11.5429121,48.144514,0.0 11.5428839,48.1445202,0.0 11.5428716,48.1445229,0.0 11.542795,48.1445397,0.0 11.5427986,48.1445609,0.0 11.5428131,48.1446447,0.0 11.5428139,48.1446489,0.0 11.5429215,48.1446253,0.0 11.5429194,48.1446209,0.0 11.5429197,48.1446209,0.0 11.5429602,48.144612,0.0 11.5429704,48.1446098,0.0 11.5429725,48.1446142,0.0 11.5430528,48.1445966,0.0 11.543059,48.1445952,0.0 11.5430707,48.1445926,0.0 11.5430205,48.1444902,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_4864956_WallSurface">
+      <name>DEBY_LOD2_4864956_WallSurface</name>
+      <styleUrl>#WallSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5427986,48.1445609,0.0 11.5427986,48.1445609,17.09 11.5428131,48.1446447,17.09 11.5428131,48.1446447,0.0 11.5427986,48.1445609,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.542795,48.1445397,0.0 11.542795,48.1445397,17.09 11.5427986,48.1445609,17.09 11.5427986,48.1445609,0.0 11.542795,48.1445397,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430528,48.1445966,17.89 11.5430528,48.1445966,17.16 11.543059,48.1445952,17.16 11.543059,48.1445952,0.0 11.5430528,48.1445966,0.0 11.5429725,48.1446142,0.0 11.5429725,48.1446142,17.89 11.5430528,48.1445966,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428139,48.1446489,0.0 11.5428139,48.1446489,17.09 11.5429215,48.1446253,17.09 11.5429215,48.1446253,0.0 11.5428139,48.1446489,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428716,48.1445229,17.89 11.5429116,48.1446043,17.89 11.5429197,48.1446209,17.89 11.5429197,48.1446209,17.09 11.5429116,48.1446043,17.09 11.5428716,48.1445229,17.09 11.5428716,48.1445229,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429425,48.144576,17.89 11.5429425,48.144576,18.84 11.5429143,48.1445822,18.84 11.5429143,48.1445822,17.89 11.5429425,48.144576,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429143,48.1445822,17.89 11.5429143,48.1445822,18.84 11.5429239,48.1446016,18.84 11.5429239,48.1446016,17.89 11.5429143,48.1445822,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429704,48.1446098,0.0 11.5429704,48.1446098,17.89 11.5429725,48.1446142,17.89 11.5429725,48.1446142,0.0 11.5429704,48.1446098,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429239,48.1446016,17.89 11.5429239,48.1446016,18.84 11.5429521,48.1445955,18.84 11.5429521,48.1445955,17.89 11.5429239,48.1446016,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429215,48.1446253,0.0 11.5429215,48.1446253,17.09 11.5429194,48.1446209,17.09 11.5429194,48.1446209,0.0 11.5429215,48.1446253,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429602,48.144612,17.89 11.5429704,48.1446098,17.89 11.5429704,48.1446098,0.0 11.5429602,48.144612,0.0 11.5429197,48.1446209,0.0 11.5429194,48.1446209,0.0 11.5429194,48.1446209,17.09 11.5429197,48.1446209,17.09 11.5429197,48.1446209,17.89 11.5429602,48.144612,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428716,48.1445229,0.0 11.5428839,48.1445202,0.0 11.5429121,48.144514,0.0 11.5430026,48.1444941,0.0 11.5430205,48.1444902,0.0 11.5430205,48.1444902,17.16 11.5430026,48.1444941,17.16 11.5430026,48.1444941,17.89 11.5429121,48.144514,17.89 11.5428839,48.1445202,17.89 11.5428716,48.1445229,17.89 11.5428716,48.1445229,17.09 11.542795,48.1445397,17.09 11.542795,48.1445397,0.0 11.5428716,48.1445229,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428131,48.1446447,0.0 11.5428131,48.1446447,17.09 11.5428139,48.1446489,17.09 11.5428139,48.1446489,0.0 11.5428131,48.1446447,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429521,48.1445955,17.89 11.5429521,48.1445955,18.84 11.5429425,48.144576,18.84 11.5429425,48.144576,17.89 11.5429521,48.1445955,17.89</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430026,48.1444941,17.16 11.5430426,48.1445756,17.16 11.5430528,48.1445966,17.16 11.5430528,48.1445966,17.89 11.5430426,48.1445756,17.89 11.5430026,48.1444941,17.89 11.5430026,48.1444941,17.16</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.543059,48.1445952,0.0 11.543059,48.1445952,17.16 11.5430707,48.1445926,17.16 11.5430707,48.1445926,0.0 11.543059,48.1445952,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430707,48.1445926,0.0 11.5430707,48.1445926,17.16 11.5430205,48.1444902,17.16 11.5430205,48.1444902,0.0 11.5430707,48.1445926,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_8573447_RoofSurface">
+      <name>DEBY_LOD2_8573447_RoofSurface</name>
+      <styleUrl>#RoofSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435843,48.1449419,15.856 11.5439005,48.1448759,15.856 11.5440645,48.1448415,15.856 11.5439454,48.1449694,14.963 11.5439448,48.1449695,14.963 11.5436269,48.1450356,14.966 11.5436258,48.1450359,14.966 11.5434241,48.1449754,15.856 11.5435843,48.1449419,15.856</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5440645,48.1448415,15.856 11.5441089,48.1449356,15.856 11.5442257,48.1451826,15.856 11.5442276,48.1451865,15.856 11.5442661,48.1452676,15.856 11.5440624,48.145217,14.962 11.5440623,48.1452168,14.962 11.5439459,48.1449697,14.965 11.5439458,48.1449693,14.965 11.5439454,48.1449694,14.963 11.5440645,48.1448415,15.856</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5437397,48.1452845,14.962 11.5437398,48.1452847,14.964 11.5437401,48.1452846,14.964 11.5440621,48.1452174,14.966 11.5440625,48.1452173,14.966 11.5440624,48.145217,14.962 11.5442661,48.1452676,15.856 11.5441021,48.145302,15.856 11.5437788,48.1453696,15.856 11.5436186,48.1454031,15.856 11.5437397,48.1452845,14.962</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5436258,48.1450359,14.966 11.5436233,48.1450364,14.98 11.5436236,48.145037,14.98 11.5437396,48.1452843,14.962 11.5437397,48.1452845,14.962 11.5436186,48.1454031,15.856 11.5435969,48.145355,15.856 11.5435832,48.1453252,15.856 11.5435798,48.1453178,15.856 11.543467,48.1450698,15.856 11.5434241,48.1449754,15.856 11.5436258,48.1450359,14.966</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_8573447_GroundSurface">
+      <name>DEBY_LOD2_8573447_GroundSurface</name>
+      <styleUrl>#GroundSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5442276,48.1451865,0.0 11.5442257,48.1451826,0.0 11.5441089,48.1449356,0.0 11.5440645,48.1448415,0.0 11.5439005,48.1448759,0.0 11.5435843,48.1449419,0.0 11.5434241,48.1449754,0.0 11.543467,48.1450698,0.0 11.5435798,48.1453178,0.0 11.5435832,48.1453252,0.0 11.5435969,48.145355,0.0 11.5436186,48.1454031,0.0 11.5437788,48.1453696,0.0 11.5441021,48.145302,0.0 11.5442661,48.1452676,0.0 11.5442276,48.1451865,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+          <innerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5440621,48.1452174,0.0 11.5437401,48.1452846,0.0 11.5437398,48.1452847,0.0 11.5437397,48.1452845,0.0 11.5437396,48.1452843,0.0 11.5436236,48.145037,0.0 11.5436233,48.1450364,0.0 11.5436258,48.1450359,0.0 11.5436269,48.1450356,0.0 11.5439448,48.1449695,0.0 11.5439454,48.1449694,0.0 11.5439458,48.1449693,0.0 11.5439459,48.1449697,0.0 11.5440623,48.1452168,0.0 11.5440624,48.145217,0.0 11.5440625,48.1452173,0.0 11.5440621,48.1452174,0.0</coordinates>
+            </LinearRing>
+          </innerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_8573447_WallSurface">
+      <name>DEBY_LOD2_8573447_WallSurface</name>
+      <styleUrl>#WallSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5437788,48.1453696,15.856 11.5441021,48.145302,15.856 11.5442661,48.1452676,15.856 11.5442661,48.1452676,0.0 11.5441021,48.145302,0.0 11.5437788,48.1453696,0.0 11.5436186,48.1454031,0.0 11.5436186,48.1454031,15.856 11.5437788,48.1453696,15.856</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435843,48.1449419,0.0 11.5439005,48.1448759,0.0 11.5440645,48.1448415,0.0 11.5440645,48.1448415,15.856 11.5439005,48.1448759,15.856 11.5435843,48.1449419,15.856 11.5434241,48.1449754,15.856 11.5434241,48.1449754,0.0 11.5435843,48.1449419,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5437401,48.1452846,0.0 11.5440621,48.1452174,0.0 11.5440625,48.1452173,0.0 11.5440625,48.1452173,14.966 11.5440621,48.1452174,14.966 11.5437401,48.1452846,14.964 11.5437398,48.1452847,14.964 11.5437398,48.1452847,0.0 11.5437401,48.1452846,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5436233,48.1450364,0.0 11.5436236,48.145037,0.0 11.5437396,48.1452843,0.0 11.5437397,48.1452845,0.0 11.5437398,48.1452847,0.0 11.5437398,48.1452847,14.964 11.5437397,48.1452845,14.962 11.5437396,48.1452843,14.962 11.5436236,48.145037,14.98 11.5436233,48.1450364,14.98 11.5436233,48.1450364,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5436258,48.1450359,14.966 11.5436269,48.1450356,14.966 11.5439448,48.1449695,14.963 11.5439454,48.1449694,14.963 11.5439458,48.1449693,14.965 11.5439458,48.1449693,0.0 11.5439454,48.1449694,0.0 11.5439448,48.1449695,0.0 11.5436269,48.1450356,0.0 11.5436258,48.1450359,0.0 11.5436233,48.1450364,0.0 11.5436233,48.1450364,14.98 11.5436258,48.1450359,14.966</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5440645,48.1448415,0.0 11.5441089,48.1449356,0.0 11.5442257,48.1451826,0.0 11.5442276,48.1451865,0.0 11.5442276,48.1451865,15.856 11.5442257,48.1451826,15.856 11.5441089,48.1449356,15.856 11.5440645,48.1448415,15.856 11.5440645,48.1448415,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435969,48.145355,0.0 11.5435969,48.145355,15.856 11.5436186,48.1454031,15.856 11.5436186,48.1454031,0.0 11.5435969,48.145355,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5442661,48.1452676,0.0 11.5442661,48.1452676,15.856 11.5442276,48.1451865,15.856 11.5442276,48.1451865,0.0 11.5442661,48.1452676,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435832,48.1453252,0.0 11.5435832,48.1453252,15.856 11.5435969,48.145355,15.856 11.5435969,48.145355,0.0 11.5435832,48.1453252,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5434241,48.1449754,15.856 11.543467,48.1450698,15.856 11.5435798,48.1453178,15.856 11.5435832,48.1453252,15.856 11.5435832,48.1453252,0.0 11.5435798,48.1453178,0.0 11.543467,48.1450698,0.0 11.5434241,48.1449754,0.0 11.5434241,48.1449754,15.856</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5439458,48.1449693,14.965 11.5439459,48.1449697,14.965 11.5440623,48.1452168,14.962 11.5440624,48.145217,14.962 11.5440625,48.1452173,14.966 11.5440625,48.1452173,0.0 11.5440624,48.145217,0.0 11.5440623,48.1452168,0.0 11.5439459,48.1449697,0.0 11.5439458,48.1449693,0.0 11.5439458,48.1449693,14.965</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_8573446_RoofSurface">
+      <name>DEBY_LOD2_8573446_RoofSurface</name>
+      <styleUrl>#RoofSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429911,48.1450692,15.915 11.5431374,48.1453774,15.916 11.5430633,48.1453933,15.458 11.5429996,48.145407,15.064 11.5429786,48.1454115,14.934 11.5429769,48.1454119,14.924 11.5428752,48.1451973,14.925 11.5429911,48.1450692,15.915</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430385,48.1454151,17.86 11.5430138,48.1454369,17.4 11.5429996,48.145407,17.4 11.5430385,48.1454151,17.86</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5425524,48.1452657,14.924 11.5426691,48.1455107,14.923 11.5425503,48.1456304,15.915 11.5423482,48.1452053,15.916 11.5425524,48.1452657,14.924</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5431182,48.145398,15.74 11.5430704,48.1454083,15.74 11.5430633,48.1453933,15.42 11.5431182,48.145398,15.74</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435831,48.1453252,3.58 11.5435968,48.1453551,3.58 11.543171,48.1454467,3.58 11.5431565,48.1454163,3.58 11.5435831,48.1453252,3.58</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430385,48.1454151,17.86 11.5430775,48.1454232,17.4 11.5430138,48.1454369,17.4 11.5430385,48.1454151,17.86</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429927,48.1454414,14.934 11.5430138,48.1454369,15.065 11.5430775,48.1454232,15.458 11.5431516,48.1454073,15.916 11.5431559,48.1454164,15.916 11.5431565,48.1454163,15.92 11.543171,48.1454467,15.92 11.5431703,48.1454468,15.916 11.5431922,48.1454933,15.915 11.5429912,48.1454421,14.924 11.542991,48.1454418,14.934 11.5429927,48.1454414,14.934</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429786,48.1454115,14.934 11.5429996,48.145407,14.934 11.5430138,48.1454369,14.934 11.5429927,48.1454414,14.934 11.542991,48.1454418,14.934 11.5429769,48.1454119,14.924 11.5429786,48.1454115,14.934</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5431374,48.1453774,15.916 11.5431445,48.1453924,15.916 11.5431516,48.1454073,15.916 11.5430775,48.1454232,15.42 11.5431182,48.145398,15.74 11.5430633,48.1453933,15.42 11.5431374,48.1453774,15.916</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430633,48.1453933,17.4 11.5430704,48.1454083,17.4 11.5430775,48.1454232,17.4 11.5430385,48.1454151,17.86 11.5430633,48.1453933,17.4</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5426691,48.1455107,14.923 11.5426696,48.1455118,14.936 11.5429911,48.1454434,14.937 11.5429917,48.1454432,14.937 11.5429912,48.1454421,14.924 11.5431922,48.1454933,15.915 11.5430312,48.1455279,15.915 11.5426817,48.1456029,15.92 11.5425506,48.145631,15.922 11.5425505,48.1456308,15.92 11.5425503,48.1456304,15.915 11.5426691,48.1455107,14.923</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430633,48.1453933,17.4 11.5430385,48.1454151,17.86 11.5429996,48.145407,17.4 11.5430633,48.1453933,17.4</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428292,48.1451035,15.916 11.5429911,48.1450692,15.915 11.5428752,48.1451973,14.925 11.5425523,48.1452654,14.927 11.5425524,48.1452657,14.924 11.5423482,48.1452053,15.916 11.5428292,48.1451035,15.916</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5431182,48.145398,15.74 11.5430775,48.1454232,15.42 11.5430704,48.1454083,15.74 11.5431182,48.145398,15.74</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_8573446_GroundSurface">
+      <name>DEBY_LOD2_8573446_GroundSurface</name>
+      <styleUrl>#GroundSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435831,48.1453252,0.0 11.5431565,48.1454163,0.0 11.5431559,48.1454164,0.0 11.5431516,48.1454073,0.0 11.5431445,48.1453924,0.0 11.5431374,48.1453774,0.0 11.5429911,48.1450692,0.0 11.5428292,48.1451035,0.0 11.5423482,48.1452053,0.0 11.5425503,48.1456304,0.0 11.5425505,48.1456308,0.0 11.5425506,48.145631,0.0 11.5426817,48.1456029,0.0 11.5430312,48.1455279,0.0 11.5431922,48.1454933,0.0 11.5431703,48.1454468,0.0 11.543171,48.1454467,0.0 11.5435968,48.1453551,0.0 11.5435831,48.1453252,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+          <innerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429911,48.1454434,0.0 11.5426696,48.1455118,0.0 11.5426691,48.1455107,0.0 11.5425524,48.1452657,0.0 11.5425523,48.1452654,0.0 11.5428752,48.1451973,0.0 11.5429769,48.1454119,0.0 11.542991,48.1454418,0.0 11.5429912,48.1454421,0.0 11.5429917,48.1454432,0.0 11.5429911,48.1454434,0.0</coordinates>
+            </LinearRing>
+          </innerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_8573446_WallSurface">
+      <name>DEBY_LOD2_8573446_WallSurface</name>
+      <styleUrl>#WallSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430633,48.1453933,15.42 11.5430633,48.1453933,15.458 11.5431374,48.1453774,15.916 11.5430633,48.1453933,15.42</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430633,48.1453933,15.458 11.5430633,48.1453933,17.4 11.5429996,48.145407,17.4 11.5429996,48.145407,15.064 11.5430633,48.1453933,15.458</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5425523,48.1452654,0.0 11.5425524,48.1452657,0.0 11.5426691,48.1455107,0.0 11.5426696,48.1455118,0.0 11.5426696,48.1455118,14.936 11.5426691,48.1455107,14.923 11.5425524,48.1452657,14.924 11.5425523,48.1452654,14.927 11.5425523,48.1452654,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429911,48.1454434,0.0 11.5429917,48.1454432,0.0 11.5429917,48.1454432,14.937 11.5429911,48.1454434,14.937 11.5426696,48.1455118,14.936 11.5426696,48.1455118,0.0 11.5429911,48.1454434,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429786,48.1454115,14.934 11.5429996,48.145407,15.064 11.5429996,48.145407,14.934 11.5429786,48.1454115,14.934</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5431565,48.1454163,0.0 11.5435831,48.1453252,0.0 11.5435831,48.1453252,3.58 11.5431565,48.1454163,3.58 11.5431565,48.1454163,15.92 11.5431559,48.1454164,15.916 11.5431559,48.1454164,0.0 11.5431565,48.1454163,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430138,48.1454369,14.934 11.5430138,48.1454369,15.065 11.5429927,48.1454414,14.934 11.5430138,48.1454369,14.934</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5431922,48.1454933,0.0 11.5431922,48.1454933,15.915 11.5431703,48.1454468,15.916 11.5431703,48.1454468,0.0 11.5431922,48.1454933,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5425523,48.1452654,0.0 11.5425523,48.1452654,14.927 11.5428752,48.1451973,14.925 11.5428752,48.1451973,0.0 11.5425523,48.1452654,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429911,48.1450692,0.0 11.5431374,48.1453774,0.0 11.5431445,48.1453924,0.0 11.5431516,48.1454073,0.0 11.5431559,48.1454164,0.0 11.5431559,48.1454164,15.916 11.5431516,48.1454073,15.916 11.5431445,48.1453924,15.916 11.5431374,48.1453774,15.916 11.5429911,48.1450692,15.915 11.5429911,48.1450692,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5431516,48.1454073,15.916 11.5430775,48.1454232,15.458 11.5430775,48.1454232,15.42 11.5431516,48.1454073,15.916</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5426817,48.1456029,15.92 11.5430312,48.1455279,15.915 11.5431922,48.1454933,15.915 11.5431922,48.1454933,0.0 11.5430312,48.1455279,0.0 11.5426817,48.1456029,0.0 11.5425506,48.145631,0.0 11.5425506,48.145631,15.922 11.5426817,48.1456029,15.92</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430633,48.1453933,15.458 11.5430633,48.1453933,15.42 11.5430704,48.1454083,15.74 11.5430775,48.1454232,15.42 11.5430775,48.1454232,15.458 11.5430775,48.1454232,17.4 11.5430704,48.1454083,17.4 11.5430633,48.1453933,17.4 11.5430633,48.1453933,15.458</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5435968,48.1453551,0.0 11.5435968,48.1453551,3.58 11.5435831,48.1453252,3.58 11.5435831,48.1453252,0.0 11.5435968,48.1453551,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.543171,48.1454467,3.58 11.543171,48.1454467,15.92 11.5431565,48.1454163,15.92 11.5431565,48.1454163,3.58 11.543171,48.1454467,3.58</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5430138,48.1454369,15.065 11.5430138,48.1454369,17.4 11.5430775,48.1454232,17.4 11.5430775,48.1454232,15.458 11.5430138,48.1454369,15.065</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5423482,48.1452053,15.916 11.5425503,48.1456304,15.915 11.5425505,48.1456308,15.92 11.5425506,48.145631,15.922 11.5425506,48.145631,0.0 11.5425505,48.1456308,0.0 11.5425503,48.1456304,0.0 11.5423482,48.1452053,0.0 11.5423482,48.1452053,15.916</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.543171,48.1454467,15.92 11.543171,48.1454467,3.58 11.5435968,48.1453551,3.58 11.5435968,48.1453551,0.0 11.543171,48.1454467,0.0 11.5431703,48.1454468,0.0 11.5431703,48.1454468,15.916 11.543171,48.1454467,15.92</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5429996,48.145407,14.934 11.5429996,48.145407,15.064 11.5429996,48.145407,17.4 11.5430138,48.1454369,17.4 11.5430138,48.1454369,15.065 11.5430138,48.1454369,14.934 11.5429996,48.145407,14.934</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428752,48.1451973,14.925 11.5429769,48.1454119,14.924 11.542991,48.1454418,14.934 11.5429912,48.1454421,14.924 11.5429917,48.1454432,14.937 11.5429917,48.1454432,0.0 11.5429912,48.1454421,0.0 11.542991,48.1454418,0.0 11.5429769,48.1454119,0.0 11.5428752,48.1451973,0.0 11.5428752,48.1451973,14.925</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5428292,48.1451035,0.0 11.5429911,48.1450692,0.0 11.5429911,48.1450692,15.915 11.5428292,48.1451035,15.916 11.5423482,48.1452053,15.916 11.5423482,48.1452053,0.0 11.5428292,48.1451035,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Style id="WallSurfaceNormal">
+      <LineStyle>
+        <color>C8666666</color>
+      </LineStyle>
+      <PolyStyle>
+        <color>C8CCCCCC</color>
+      </PolyStyle>
+      <BalloonStyle>
+        <text>$[description]</text>
+      </BalloonStyle>
+    </Style>
+    <Style id="GroundSurfaceNormal">
+      <LineStyle>
+        <color>C8666666</color>
+      </LineStyle>
+      <PolyStyle>
+        <color>C8CCCCCC</color>
+      </PolyStyle>
+      <BalloonStyle>
+        <text>$[description]</text>
+      </BalloonStyle>
+    </Style>
+    <Style id="RoofSurfaceNormal">
+      <LineStyle>
+        <color>C8000099</color>
+      </LineStyle>
+      <PolyStyle>
+        <color>C83333FF</color>
+      </PolyStyle>
+      <BalloonStyle>
+        <text>$[description]</text>
+      </BalloonStyle>
+    </Style>
+    <name>PPA CITYGML_Tile_12_25_geometry</name>
+    <open>false</open>
+  </Document>
+</kml>
