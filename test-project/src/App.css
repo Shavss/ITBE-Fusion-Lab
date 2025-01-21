@@ -1,3 +1,5 @@
+/* App.css */
+
 /* General resets and global styles */
 body, html {
   margin: 0;
@@ -10,7 +12,6 @@ body, html {
   color: black; /* Ensures global font color is black */
 }
 
-
 /* Root container for the app */
 .App {
   display: flex;
@@ -19,35 +20,86 @@ body, html {
   width: 100%;
 }
 
-/* Navbar styling */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  background: #f8f8f8; /* Light gray navbar background */
-  color: black;
+
+.language-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #666;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  z-index: 10;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.navbar a {
-  color: black;
-  text-decoration: none;
-  margin: 0 15px;
-  font-size: 16px;
+  justify-content: center;
+  font-size: 1rem;
   font-weight: bold;
-  transition: color 0.3s;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
 }
 
-.navbar a:hover {
-  color: #007bff; /* Blue highlight color */
+.language-toggle:hover {
+  transform: scale(1.1);
 }
+
+/* Buttons or links inside pages */
+.button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05);
+}
+
+/* Utility classes */
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Loader Overlay */
+.loader-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it's above viewer content but below Navbar */
+}
+
+.spinner {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Optional: Loading text styling */
+/*
+.loading-text {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+*/
 
 /* 3D Viewer-specific container */
 .viewer-container {
@@ -67,24 +119,6 @@ body, html {
   background-color: #f0f0f0; /* Light gray background for IFC Viewer page */
 }
 
-/* Buttons or links inside pages */
-.button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
-
-.button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-}
-
-/* Utility classes */
-.fullscreen {
-  width: 100vw;
-  height: 100vh;
+.map-page {
+  background-color: #e0e0e0; /* Example background for Map page */
 }

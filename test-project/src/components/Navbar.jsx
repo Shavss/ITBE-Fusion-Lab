@@ -90,6 +90,20 @@ const Navbar = () => {
                         IFC Viewer
                     </Link>
                 </li>
+                {/* New Blog Link */}
+                <li>
+                    <Link
+                        to="/blog"
+                        style={{
+                            textDecoration: 'none',
+                            color: isScrolled ? '#333' : '#fff',
+                            fontSize: '1.2rem',
+                            fontWeight: 'bold',
+                        }}
+                    >
+                        Blog
+                    </Link>
+                </li>
             </ul>
 
             {/* For Sale Button */}
@@ -137,6 +151,7 @@ const Navbar = () => {
             </div>
         </nav>
     );
+
 };
 
 export default Navbar;

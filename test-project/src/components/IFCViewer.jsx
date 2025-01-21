@@ -1,3 +1,5 @@
+// src/components/IFCViewer.jsx
+
 import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import * as OBC from "@thatopen/components";
@@ -13,7 +15,7 @@ const panelStyle = `
     z-index: 9999; 
   }
   
-  /* Example style for a small info overlay */
+  /* Style for the info overlay */
   .info-overlay {
     position: absolute;
     top: 10px;
@@ -24,6 +26,57 @@ const panelStyle = `
     border-radius: 4px;
     z-index: 9999;
     pointer-events: none;
+    white-space: pre-line; /* To preserve line breaks */
+  }
+  
+  /* Style for the comments sidebar */
+  .comments-sidebar {
+    width: 300px;
+    height: 100%;
+    overflow-y: auto;
+    background: #f0f0f0;
+    padding: 10px;
+    box-sizing: border-box;
+    border-left: 1px solid #ccc;
+  }
+
+  .comments-container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+  }
+
+  .viewer-container {
+    flex: 1;
+    position: relative;
+  }
+
+  /* Loader Overlay */
+  .loader-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000; /* Ensure it's above viewer content but below Navbar */
+  }
+
+  .spinner {
+      border: 8px solid #f3f3f3; /* Light grey */
+      border-top: 8px solid #3498db; /* Blue */
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
   }
 `;
 
@@ -32,8 +85,15 @@ const IFCViewer = () => {
   const statsRef = useRef(null);
   const infoRef = useRef(null);
 
+  // Store comments as an array of objects { id, name, comment }
+  const [comments, setComments] = useState([]);
+
   // We'll store a "hoverInfo" (string or object) to display in an overlay
   const [hoverInfo, setHoverInfo] = useState("");
+
+  const [isLoading, setIsLoading] = useState(true); // Loading state
+
+  const cleanupRef = useRef(null); // Ref to store cleanup function
 
   useEffect(() => {
     const container = containerRef.current;
@@ -51,7 +111,7 @@ const IFCViewer = () => {
     world.renderer = new OBCF.PostproductionRenderer(components, container);
     world.camera = new OBC.OrthoPerspectiveCamera(components);
 
-    // Enable shadows, etc. (Same as your snippet)
+    // Enable shadows, etc.
     world.renderer.three.shadowMap.enabled = true;
     world.renderer.three.shadowMap.type = THREE.PCFSoftShadowMap;
 
@@ -90,7 +150,7 @@ const IFCViewer = () => {
 
     async function loadIfc() {
       try {
-        const file = await fetch("/FL_Export.ifc");
+        const file = await fetch("/FL_Export.ifc"); // Ensure this path is correct
         const data = await file.arrayBuffer();
         const buffer = new Uint8Array(data);
 
@@ -100,6 +160,22 @@ const IFCViewer = () => {
 
         markMeshShadows(model);
 
+        // Assign uniqueID and name to each mesh
+        model.traverse((child) => {
+          if (child instanceof THREE.Mesh) {
+            // Assign a unique identifier for the construction group
+            if (!child.userData.uniqueID) {
+              // Example: Use mesh name or another property
+              child.userData.uniqueID = child.name || "Unnamed_Group";
+            }
+
+            // Ensure each mesh has a name
+            if (!child.userData.name) {
+              child.userData.name = child.name || "Unnamed element";
+            }
+          }
+        });
+
         // Stats
         const stats = new Stats();
         stats.showPanel(2);
@@ -107,7 +183,7 @@ const IFCViewer = () => {
           statsRef.current.appendChild(stats.dom);
           stats.dom.style.left = "10px";
           stats.dom.style.top = "10px";
-          stats.dom.style.zIndex = "100";
+          stats.dom.style.zIndex = "1000";
         }
         world.renderer.onBeforeUpdate.add(() => stats.begin());
         world.renderer.onAfterUpdate.add(() => stats.end());
@@ -116,10 +192,14 @@ const IFCViewer = () => {
         await world.scene.updateShadows();
 
         // 4) Once model loaded, set up RAYCASTING
-        setupRaycasting(components, world, model);
+        cleanupRef.current = setupRaycasting(components, world, model, setComments, setHoverInfo);
 
+        // Model has loaded, set isLoading to false
+        setIsLoading(false);
       } catch (error) {
         console.error("Error loading IFC model:", error);
+        // Optionally, set isLoading to false or show an error message
+        setIsLoading(false);
       }
     }
     loadIfc();
@@ -137,73 +217,13 @@ const IFCViewer = () => {
     const panel = createCameraPanel(world, () => model);
     container.appendChild(panel);
 
-    /********************************************************
-     * 5) RAYCASTING + Hover Logic
-     ********************************************************/
-    let previousHover = null;
-    let originalMaterials = null;
-
-    function setupRaycasting(components, world, ifcModel) {
-      const raycasters = components.get(OBC.Raycasters);
-      const raycaster = raycasters.get(world);
-    
-      // We'll do mouse hover on the container
-      const container = containerRef.current; 
-      if (!container) return;  // Just a safety check
-    
-      let previousHover = null;    // The mesh we are currently highlighting
-      const highlighter = components.get(OBCF.Highlighter);
-      highlighter.setup({ world });
-      highlighter.zoomToSelection = true;
-    
-      // We'll define a default material and a highlight material
-      const defaultMaterial = new THREE.MeshStandardMaterial({ color: "#ffffff" });
-      const highlightMaterial = new THREE.MeshStandardMaterial({ color: "#BCF124" });
-    
-      container.addEventListener("mousemove", onMouseMove);
-    
-      function onMouseMove() {
-        const result = raycaster.castRay(ifcModel.children);
-      
-        // Revert old highlight if needed, same as before
-        if (previousHover) {
-          const noMeshOrDifferent =
-            !result ||
-            !(result.object instanceof THREE.Mesh) ||
-            (result.object !== previousHover);
-      
-          if (noMeshOrDifferent) {
-            previousHover.material = defaultMaterial;
-            previousHover = null;
-            setHoverInfo("");
-          }
-        }
-      
-        // If there's no new mesh, we're done
-        if (!result || !(result.object instanceof THREE.Mesh)) {
-          return;
-        }
-      
-        const hoveredMesh = result.object;
-      
-        // If it’s a new mesh, highlight and show some info
-        if (hoveredMesh !== previousHover) {
-          hoveredMesh.material = highlightMaterial;
-          previousHover = hoveredMesh;
-      
-          // 1) Retrieve name from userData (if available)
-          const elementName = hoveredMesh.userData.name || "Unnamed element";
-      
-          // 2) Display it in the popup along with the UUID
-          setHoverInfo(`Hovering element: ${elementName}\nUUID: ${hoveredMesh.uuid}`);
-        }
-        // if it’s still the same mesh, do nothing => keep highlight & popup
-      }
-    }
-    
-
-    // 6) Cleanup on unmount
+    // Cleanup function
     return () => {
+      // Remove event listeners added by setupRaycasting
+      if (cleanupRef.current) {
+        cleanupRef.current();
+      }
+
       if (panel && panel.parentNode) {
         panel.parentNode.removeChild(panel);
       }
@@ -225,27 +245,153 @@ const IFCViewer = () => {
         });
       }
     };
-  }, [setHoverInfo]);
+  }, []); // Empty dependency array ensures this runs once
+
+  // Function to set up raycasting with cleanup
+  function setupRaycasting(components, world, ifcModel, setComments, setHoverInfo) {
+    const raycasters = components.get(OBC.Raycasters);
+    const raycaster = raycasters.get(world);
+
+    const container = containerRef.current; 
+    if (!container) return () => {};
+
+    let previousHover = null;
+
+    const defaultMaterial = new THREE.MeshStandardMaterial({ color: "#ffffff" });
+    const highlightMaterial = new THREE.MeshStandardMaterial({ color: "#BCF124" });
+
+    // Event Handlers
+    function onMouseMove(event) {
+      const result = raycaster.castRay(ifcModel.children);
+
+      if (previousHover) {
+        const noMeshOrDifferent =
+          !result ||
+          !(result.object instanceof THREE.Mesh) ||
+          (result.object !== previousHover);
+
+        if (noMeshOrDifferent) {
+          previousHover.material = defaultMaterial;
+          previousHover = null;
+          setHoverInfo("");
+        }
+      }
+
+      if (!result || !(result.object instanceof THREE.Mesh)) {
+        return;
+      }
+
+      const hoveredMesh = result.object;
+
+      if (hoveredMesh !== previousHover) {
+        hoveredMesh.material = highlightMaterial;
+        previousHover = hoveredMesh;
+
+        const elementName = hoveredMesh.userData.name || "Unnamed element";
+        setHoverInfo(`Hovering element: ${elementName}\nUUID: ${hoveredMesh.uuid}`);
+      }
+    }
+
+    function onDoubleClick(event) {
+      // Calculate mouse position in normalized device coordinates (-1 to +1) for both components
+      const rect = container.getBoundingClientRect();
+      const mouseDblClick = new THREE.Vector2(
+        ((event.clientX - rect.left) / rect.width) * 2 - 1,
+        -((event.clientY - rect.top) / rect.height) * 2 + 1
+      );
+
+      // Update the raycaster with the camera and mouse position
+      raycaster.three.setFromCamera(mouseDblClick, world.camera.three);
+
+      // Intersect only with model's children to exclude ground plane
+      const intersectsDbl = raycaster.three.intersectObjects(ifcModel.children, true);
+
+      if (intersectsDbl.length > 0) {
+        const clickedMesh = intersectsDbl[0].object;
+        const elementName = clickedMesh.userData.name || "Unnamed element";
+        const elementUUID = clickedMesh.uuid;
+
+        // Prompt user for a comment
+        const userComment = prompt(`Add a comment for "${elementName}":`);
+        if (userComment) {
+          // Add the comment to the comments state
+          setComments((prevComments) => [
+            ...prevComments,
+            {
+              id: elementUUID,
+              name: elementName,
+              comment: userComment,
+            },
+          ]);
+        }
+      }
+    }
+
+    // Attach Event Listeners
+    container.addEventListener("mousemove", onMouseMove);
+    container.addEventListener("dblclick", onDoubleClick); // Changed from 'click' to 'dblclick'
+
+    // Return Cleanup Function
+    return () => {
+      container.removeEventListener("mousemove", onMouseMove);
+      container.removeEventListener("dblclick", onDoubleClick); // Remove double-click listener
+    };
+  }
 
   return (
-    <div style={{ width: "100%", height: "100%" }}>
+    <div>
       <style>{panelStyle}</style>
 
-      {/* Info overlay for building data */}
-      {hoverInfo && (
-        <div className="info-overlay" ref={infoRef}>
-          {hoverInfo}
-        </div>
-      )}
+      <div className="comments-container">
+        {/* 3D Viewer */}
+        <div className="viewer-container">
+          {/* Info overlay for building data */}
+          {hoverInfo && (
+            <div className="info-overlay" ref={infoRef}>
+              {hoverInfo}
+            </div>
+          )}
 
-      <div
-        ref={containerRef}
-        style={{ width: "100%", height: "90%", position: "relative" }}
-      >
-        <div
-          ref={statsRef}
-          style={{ position: "absolute", top: "0px", left: "0px" }}
-        />
+          {/* Loading Overlay */}
+          {isLoading && (
+            <div className="loader-overlay">
+              <div className="spinner"></div>
+              {/* Optional: Add a loading message */}
+              {/* <div className="loading-text">Loading Model...</div> */}
+            </div>
+          )}
+
+          <div
+            ref={containerRef}
+            className="viewer-content"
+            style={{ width: "100%", height: "100%", position: "relative" }}
+          >
+            <div
+              ref={statsRef}
+              style={{ position: "absolute", top: "0px", left: "0px" }}
+            />
+          </div>
+        </div>
+
+        {/* Comments Sidebar */}
+        <div className="comments-sidebar">
+          <h2>Comments</h2>
+          {comments.length === 0 && <p>No comments yet.</p>}
+          {comments.map((comment, index) => (
+            <div
+              key={index}
+              style={{
+                marginBottom: "10px",
+                padding: "5px",
+                background: "#fff",
+                borderRadius: "4px",
+              }}
+            >
+              <strong>{comment.name}</strong> <em>({comment.id})</em>
+              <p>{comment.comment}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -350,51 +496,6 @@ function createCameraPanel(world, getModel) {
     `;
   });
   return panel;
-}
-
-/************************************************
- * Hover highlighting helpers
- ************************************************/
-
-/** 
- * Clones the material(s) of a mesh so we can revert later.
- */
-function cloneMaterials(mesh) {
-  const origMats = mesh.material;
-  if (Array.isArray(origMats)) {
-    return origMats.map((m) => m.clone());
-  } else {
-    return [origMats.clone()];
-  }
-}
-
-/**
- * Reverts a mesh to its original materials
- */
-function restoreMaterial(mesh, originalMats) {
-  if (!originalMats) return;
-  if (Array.isArray(mesh.material)) {
-    mesh.material.forEach((m) => m.dispose());
-    mesh.material = originalMats;
-  } else {
-    mesh.material.dispose();
-    mesh.material = originalMats[0];
-  }
-}
-
-/**
- * Simple highlight effect: set the material color to bright yellow
- */
-function highlightMesh(mesh) {
-  const mat = mesh.material;
-  if (Array.isArray(mat)) {
-    // If multiple materials, just change them all
-    mat.forEach((m) => {
-      m.color.set("#ffff00"); // yellow
-    });
-  } else {
-    mat.color.set("#ffff00");
-  }
 }
 
 export default IFCViewer;

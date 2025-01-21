@@ -1,3 +1,5 @@
+// src/components/Viewer.jsx
+
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { OrbitControls, PLYLoader } from 'three-stdlib';
@@ -17,6 +19,7 @@ const Viewer = () => {
         let raycaster; 
         let mouse; 
         let handleMouseMove; 
+        let handleDoubleClick; // Reference to double-click handler
 
         // Scene, Camera, Renderer
         const scene = new THREE.Scene();
@@ -141,8 +144,38 @@ const Viewer = () => {
                 });
             };
 
-            renderer.domElement.addEventListener('mousemove', handleMouseMove);
+            // Replace single click with double click
+            handleDoubleClick = (event) => {
+                // Calculate mouse position in normalized device coordinates (-1 to +1) for both components
+                const rect = renderer.domElement.getBoundingClientRect();
+                const mouseDblClick = new THREE.Vector2(
+                    ((event.clientX - rect.left) / rect.width) * 2 - 1,
+                    -((event.clientY - rect.top) / rect.height) * 2 + 1
+                );
 
+                // Update the raycaster with the camera and mouse position
+                raycaster.setFromCamera(mouseDblClick, camera);
+
+                // Intersect only with model's children to exclude ground plane
+                const intersectsDbl = raycaster.intersectObjects(spheres, true);
+
+                if (intersectsDbl.length > 0) {
+                    const clickedSphere = intersectsDbl[0].object;
+                    const spherePosition = clickedSphere.position;
+
+                    // Prompt user for a comment
+                    const userComment = prompt(`Add a comment for this sphere at (${spherePosition.x.toFixed(2)}, ${spherePosition.y.toFixed(2)}, ${spherePosition.z.toFixed(2)}):`);
+                    if (userComment) {
+                        // For demonstration, we'll log the comment. You can extend this to store comments as needed.
+                        console.log(`Comment on sphere at (${spherePosition.x.toFixed(2)}, ${spherePosition.y.toFixed(2)}, ${spherePosition.z.toFixed(2)}): ${userComment}`);
+                        // Optionally, update state or handle the comment as per your application's logic
+                    }
+                }
+            };
+
+            // Attach Event Listeners
+            renderer.domElement.addEventListener('mousemove', handleMouseMove);
+            renderer.domElement.addEventListener('dblclick', handleDoubleClick); // Changed from 'click' to 'dblclick'
 
             const group = new THREE.Group();
             group.add(pointCloud);
@@ -178,6 +211,7 @@ const Viewer = () => {
             window.removeEventListener('resize', handleResize);
             renderer.domElement.removeEventListener('wheel', preventScroll);
             renderer.domElement.removeEventListener('mousemove', handleMouseMove);
+            renderer.domElement.removeEventListener('dblclick', handleDoubleClick); // Remove double-click listener
 
             if (mountRef.current) {
                 mountRef.current.removeChild(renderer.domElement);
@@ -194,13 +228,14 @@ const Viewer = () => {
             if (mouse) mouse = null;
             renderer.dispose();
             scene.clear();
+
             setHoverInfo(null);
 
             if (animationFrameId) {
                 cancelAnimationFrame(animationFrameId);
             }
         };
-    }, []);
+    }, []); // Empty dependency array ensures this runs once
 
     return (
         <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
