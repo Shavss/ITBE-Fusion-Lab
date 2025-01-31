@@ -1,3 +1,6 @@
+/* Import the Be Vietnam font */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;600;700;800&display=swap');
+
 /* CSS Reset */
 * {
   margin: 0;
@@ -5,17 +8,18 @@
   box-sizing: border-box;
 }
 
-/* Root Styles */
-html, body {
+/* Global Styles */
+body, html {
   width: 100%;
   height: 100%;
-  font-family: 'Arial', sans-serif;
-  background-color: black;
-  color: black;
+  font-family: 'Be Vietnam', sans-serif; /* Global font */
+  background-color: white;
+  color: black; /* Global text color */
+  scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
 /* Utility Classes */
-.full-screen {
+.fullscreen {
   width: 100vw;
   height: 100vh;
 }

@@ -1,17 +1,3 @@
-/* App.css */
-
-/* General resets and global styles */
-body, html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  font-family: 'Arial', sans-serif;
-  background-color: white;
-  color: black; /* Ensures global font color is black */
-}
-
 /* Root container for the app */
 .App {
   display: flex;
@@ -20,105 +6,148 @@ body, html {
   width: 100%;
 }
 
-
-.language-toggle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #fff;
-  color: #666;
+/* Bright Overlay */
+.bright-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.9); /* Bright overlay */
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  pointer-events: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  color: #333;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+/* Overlay Animation */
+@keyframes splitOverlay {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.overlay-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+  animation: splitOverlay 1s ease forwards;
+}
+
+.overlay-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+  animation: splitOverlay 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* Interactive Button */
+.interactive-button {
+  background-color: #6EC1E4; /* Match reference site */
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.language-toggle:hover {
+.interactive-button:hover {
   transform: scale(1.1);
+  background-color: #61CE70; /* Accent color on hover */
 }
 
-/* Buttons or links inside pages */
-.button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  transform: scale(1.05);
-}
-
-/* Utility classes */
-.fullscreen {
-  width: 100vw;
-  height: 100vh;
-}
-
-/* Loader Overlay */
-.loader-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000; /* Ensure it's above viewer content but below Navbar */
-}
-
-.spinner {
-    border: 8px solid #f3f3f3; /* Light grey */
-    border-top: 8px solid #3498db; /* Blue */
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Optional: Loading text styling */
-/*
-.loading-text {
-    color: #fff;
-    font-size: 1.5rem;
-    margin-top: 1rem;
-}
-*/
-
-/* 3D Viewer-specific container */
+/* Viewer Container */
 .viewer-container {
   position: relative;
   width: 100%;
-  height: 100vh; /* Full height for pages using the 3D viewer */
-  background-color: transparent; /* Ensure Viewer pages don't have unexpected backgrounds */
-  overflow: hidden; /* Prevent scrollbars */
+  height: 100vh;
+  background-color: transparent;
+  overflow: hidden;
 }
 
-/* Page-specific styles */
-.home-page {
-  background-color: white; /* Specific background for the home page */
+/* Hover effects */
+.hover-effect {
+  transition: transform 0.3s, filter 0.3s;
 }
 
-.ifc-viewer-page {
-  background-color: #f0f0f0; /* Light gray background for IFC Viewer page */
+.hover-effect:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
 }
 
-.map-page {
-  background-color: #e0e0e0; /* Example background for Map page */
+/* Round Button */
+.round-button {
+  background-color: #0f01ea;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  animation: wiggle 0.5s infinite ease-in-out;
+  transition: transform 0.1s ease;
+}
+
+.round-button:hover {
+  transform: scale(1.1);
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+/* Cursor Response Effect */
+.round-button-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  transition: transform 0.1s ease;
 }

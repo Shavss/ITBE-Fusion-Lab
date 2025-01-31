@@ -33,7 +33,7 @@ const IFCViewerPage = () => {
         }}
       >
         {/* IFC Viewer goes here */}
-        <IFCViewer ifcFilePath="/FL_Export.ifc" />
+        <IFCViewer ifcFilePath="/dummy.ifc" />
 
       </div>
 

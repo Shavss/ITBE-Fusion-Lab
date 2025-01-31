@@ -150,7 +150,7 @@ const IFCViewer = () => {
 
     async function loadIfc() {
       try {
-        const file = await fetch("/FL_Export.ifc"); // Ensure this path is correct
+        const file = await fetch("/FL_New-Design-fin02.ifc"); // Ensure this path is correct
         const data = await file.arrayBuffer();
         const buffer = new Uint8Array(data);
 
@@ -188,8 +188,8 @@ const IFCViewer = () => {
         world.renderer.onBeforeUpdate.add(() => stats.begin());
         world.renderer.onAfterUpdate.add(() => stats.end());
 
-        createShadowPlane(world);
-        await world.scene.updateShadows();
+        //createShadowPlane(world);
+        //await world.scene.updateShadows();
 
         // 4) Once model loaded, set up RAYCASTING
         cleanupRef.current = setupRaycasting(components, world, model, setComments, setHoverInfo);
@@ -209,9 +209,9 @@ const IFCViewer = () => {
     });
 
     // Update shadows if camera moves
-    world.camera.controls.addEventListener("update", async () => {
-      await world.scene.updateShadows();
-    });
+    //world.camera.controls.addEventListener("update", async () => {
+    //  await world.scene.updateShadows();
+    //});
 
     // UI Panel
     const panel = createCameraPanel(world, () => model);

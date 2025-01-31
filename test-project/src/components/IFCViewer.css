@@ -1,0 +1,42 @@
+/* src/components/IFCViewer.css */
+
+.ifc-viewer-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    position: relative;
+  }
+  
+  #xeokit-canvas {
+    width: 100%;
+    height: 60vh; /* Adjust as needed */
+    display: block;
+  }
+  
+  .instructions {
+    padding: 10px;
+    background-color: #f8f9fa;
+  }
+  
+  .selected-elements {
+    padding: 10px;
+    overflow-y: auto;
+    height: 35vh; /* Adjust as needed */
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    padding: 8px 12px;
+    border: 1px solid #dee2e6;
+  }
+  
+  .table th {
+    background-color: #e9ecef;
+  }
+  
