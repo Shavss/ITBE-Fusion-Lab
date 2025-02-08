@@ -8,6 +8,7 @@ import TypingCard from '../components/TypingCard';
 import blogPosts from '../data/blogPosts'; // Import blog data
 import Expand from '../components/Expand'; //Import Expand Component
 import IFCViewer_simple from '../components/IFCViewer_simple';
+import ScrollingText from '../components/infinitetext'; // Adjust the path based on your file structure
 
 const Home = () => {
     const navigate = useNavigate();
@@ -62,21 +63,12 @@ const Home = () => {
                         }}
                     >
                         <div style={{ position: 'absolute', bottom: '2rem', left: '3rem' }}>
-                            <h1 style={{ fontSize: '8rem', marginBottom: '2rem', lineHeight: '7rem' }}>
+                            <h1 style={{ fontSize: '7rem', marginBottom: '2rem', lineHeight: '7rem' }}>
                                 PAKETPOST <br /> AREAL VISION
                             </h1>
                         </div>
                         <div>
                             {/* Other Components */}
-                            {/* Typing Card with Custom Message */}
-                            <TypingCard 
-                                message={`
-                                    Welcome to PaketPost Areal Vision!<br>
-                                    Explore the future of urban living in <b>Munich</b> with us.<br>
-                                    Let's determine if we are the right place for your next chapter, whether you are looking for a perfect place for your <b>business</b> or <b>living</b>.
-                                `}
-                                style={{ position: 'absolute', top: '10rem', right: '10rem' }} 
-                            />
 
                         </div>
 
@@ -85,8 +77,8 @@ const Home = () => {
                     <div
                         style={{
                             width: '100%',
-                            height: '100vh',
-                            background: 'rgba(248, 248, 248, 0.8)',
+                            height: '200vh',
+                            background: 'rgba(248, 248, 248, 0.9)',
                             display: 'flex',
                             alignItems: 'flex-start',
                             justifyContent: 'space-between',
@@ -94,40 +86,77 @@ const Home = () => {
                             position: 'relative',
                         }}
                     >
-                        <div style={{ maxWidth: '1000px', textAlign: 'left', color: '#333' }}>
-                            {/* ✅ Normal Paragraph Before Expandable Sections */}
-                            <p style={{ fontSize: '0.9rem', lineHeight: '1.5', marginBottom: '-1rem', marginTop: '-3rem',  maxWidth: "800px", }}>
-                                The future of urban development is shaped by a commitment to sustainability, 
-                                smart technology, and a deep integration of nature into our built environment. 
-                                We are dedicated to creating spaces that promote innovation, efficiency, and well-being. 
-                                Below, you’ll find key aspects of our vision that define the **next generation of city living**.
-                            </p>
+                    <div style={{ maxWidth: '1000px', textAlign: 'left', color: '#000000', position: 'relative' }}>
+                        {/* ✅ Normal Paragraph */}
+                        <p style={{ fontSize: '15px', lineHeight: '23px', marginBottom: '5rem', marginTop: '-3rem', maxWidth: '700px' }}>
+                            The future of urban development is shaped by a commitment to sustainability, 
+                            smart technology, and a deep integration of nature into our built environment. 
+                            We are dedicated to creating spaces that promote innovation, efficiency, and well-being. 
+                            Below, you’ll find key aspects of our vision that define the <b>next generation of city living</b>. 
+                            The future of urban development is shaped by a commitment to sustainability, 
+                            smart technology, and a deep integration of nature into our built environment. 
+                            We are dedicated to creating spaces that promote innovation, efficiency, and well-being. 
+                            Below, you’ll find key aspects of our vision that define the <b>next generation of city living</b>.
+                        </p>
 
-                            <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '-4rem'}}> 
-                                <Expand
-                                    title="GREEN MASTERPLAN"
-                                    content="Our vision for a sustainable future includes innovative energy solutions, smart mobility, and eco-friendly infrastructure. The Green Masterplan integrates nature with urban living to create a healthier, greener, and more livable environment."
-                                />
-                            </div>
-                            <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '-4rem' }}> 
-                                <Expand
-                                    title="SMART INFRASTRUCTURE"
-                                    content="Our masterplan and buildings will be equipped with IoT sensors, enabling real-time data collection for deep analysis and smarter decision-making. These sensors will optimize energy usage, mobility patterns, environmental monitoring, and overall urban efficiency."
-                                />
-                            </div>
-                            <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '-4rem' }}> 
-                                <Expand
-                                    title="STRUCTURE"
-                                    content="Our masterplan and buildings will be equipped with IoT sensors, enabling real-time data collection for deep analysis and smarter decision-making. These sensors will optimize energy usage, mobility patterns, environmental monitoring, and overall urban efficiency."
-                                />
-                            </div>
-                            <div style={{ display: "flex", flexDirection: "column", marginBottom: "-4rem" }}>
-                                <Expand
-                                    title="EXPLORE"
-                                    content={<IFCViewer_simple />}
-                                />
-                            </div>
+                        {/* Right-Aligned Button (Positioned Where the Blue Circle Is) */}
+                        <button
+                            style={{
+                                position: 'absolute',
+                                top: '10px', // Adjust to align vertically
+                                right: '-24.5rem', // Align to the right
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                padding: '0.8rem 1.5rem',
+                                fontSize: '0.9rem', // Adjust font size for single-line text
+                                fontWeight: 'bold',
+                                border: '1px solid black',
+                                borderRadius: '50px',
+                                backgroundColor: 'transparent',
+                                color: 'black',
+                                cursor: 'pointer',
+                                transition: 'all 0.3s ease-in-out',
+                            }}
+                            onMouseEnter={(e) => {
+                                e.target.style.backgroundColor = 'black';
+                                e.target.style.color = 'white';
+                            }}
+                            onMouseLeave={(e) => {
+                                e.target.style.backgroundColor = 'transparent';
+                                e.target.style.color = 'black';
+                            }}
+                        >
+                            EXPLORE THE DEVELOPMENT <span style={{ marginLeft: '0.5rem' }}>&#8594;</span>
+                        </button>
+
+                        {/* Expandable Sections */}
+                        <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '-4rem' }}>
+                            <Expand
+                                title="GREEN MASTERPLAN"
+                                content="Our vision for a sustainable future includes innovative energy solutions, smart mobility, and eco-friendly infrastructure. The Green Masterplan integrates nature with urban living to create a healthier, greener, and more livable environment."
+                                image="/img/placeholder.png"
+                            />
                         </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '-4rem' }}>
+                            <Expand
+                                title="SMART INFRASTRUCTURE"
+                                content="Our masterplan and buildings will be equipped with IoT sensors, enabling real-time data collection for deep analysis and smarter decision-making. These sensors will optimize energy usage, mobility patterns, environmental monitoring, and overall urban efficiency."
+                                image="/img/placeholder.png"
+                            />
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '-4rem' }}>
+                            <Expand
+                                title="STRUCTURE"
+                                content="Our masterplan and buildings will be equipped with IoT sensors, enabling real-time data collection for deep analysis and smarter decision-making. These sensors will optimize energy usage, mobility patterns, environmental monitoring, and overall urban efficiency."
+                                image="/img/placeholder.png"
+                            />
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '-4rem' }}>
+                            <Expand title="EXPLORE" content="EXPLORE" />
+                        </div>
+                    </div>
+
 
                         {/* Big Text: HOW IT WORKS (Positioned in the Right Corner) */}
                         <h2 
@@ -135,35 +164,15 @@ const Home = () => {
                                 position: 'absolute',
                                 bottom: '2rem', // Distance from the bottom
                                 right: '3rem', // Distance from the right
-                                fontSize: '8rem', // Large text size
+                                fontSize: '6rem', // Large text size
                                 fontWeight: 'bold',
-                                color: '#0f01ea', // Adjust color if needed
+                                color: '#000000', // Adjust color if needed
                                 opacity: 1, // Slight transparency for a modern feel
                                 textAlign: 'right',
                             }}
                         >
                             HOW IT WORKS
                         </h2>
-
-                        {/* Image on the Right */}
-                        <div style={{ 
-                            maxWidth: '50%', 
-                            display: 'flex', 
-                            justifyContent: 'flex-end',
-                            paddingLeft: '10rem',
-                            marginTop: '-0.5rem'
-                        }}>
-                            <img 
-                                src="/img/placeholder.png" 
-                                alt="placeholder" 
-                                style={{ 
-                                    width: '100%', 
-                                    maxWidth: '700px', 
-                                    borderRadius: '8px',
-                                    marginRight: 'auto'
-                                }} 
-                            />
-                        </div>
                     </div>
 
 
@@ -184,13 +193,15 @@ const Home = () => {
     {/* Big Header */}
     <h2
         style={{
-            fontSize: '3rem',
+            fontSize: '2rem',
             fontWeight: 'bold',
             maxWidth: '1500px',
             lineHeight: '1.4',
             color: '#000',
             marginBottom: '2rem',
-            marginTop: '-19rem',
+            marginTop: '-25rem',
+            marginLeft: '4rem',
+            marginRight: '4rem',
             textAlign: 'left',
         }}
     >
@@ -333,8 +344,113 @@ Let's determine if we are the right place for your next chapter, whether you are
                             ))}
                         </div>
                     </div>
+
+
+{/* Footer Section */}
+<div
+    style={{
+        width: '100%',
+        backgroundColor: 'rgb(23, 22, 20, 0.9)', // Footer background color
+        color: 'rgb(242, 240, 237)', // Footer font color
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        padding: '3rem 2em',
+    }}
+>
+    {/* Large Title - Replaced with ScrollingText */}
+    <div style={{ width: '100%', marginBottom: '2rem' }}>
+        <ScrollingText />
+    </div>
+
+    {/* Contact Section */}
+    <div
+        style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            width: '100%',
+            height: '400px',
+            maxWidth: '1200px',
+            padding: '4rem',
+            border: '1px solid rgba(242, 240, 237)', // Subtle border for contact
+            borderRadius: '32px',
+        }}
+    >
+        {/* Left Column */}
+        <div style={{ flex: 1, marginRight: '2rem' }}>
+            <img
+                src="/img/logo.png" // Placeholder for your icon
+                alt="Contact Icon"
+                style={{ height: '25%', marginBottom: '1rem' }}
+            />
+            <p style={{fontSize: '13px', lineHeight: '20px' }}>
+            The future of urban development is shaped by a commitment to sustainability, smart technology, and a deep integration of nature into our built environment.
+            </p>
+        </div>
+
+        {/* Right Column */}
+        <div style={{ flex: 1, textAlign: 'right' }}>
+            <h2 style={{ fontSize: '4rem', fontWeight: 'bold', marginBottom: '1rem' }}>CONTACT</h2>
+            <p style={{ fontSize: '15px', lineHeight: '23px', margin: 0 }}>+49 157 33352473</p>
+            <p style={{ fontSize: '15px', lineHeight: '23px', margin: 0 }}>info@paketpostaeral.de</p>
+            <p style={{ fontSize: '15px', lineHeight: '23px', margin: 0 }}>Georg-Lindau-Strasse 12,</p>
+            <p style={{ fontSize: '15px', lineHeight: '23px', margin: 0 }}>80634 Munich</p>
+            <button
+                style={{
+                    marginTop: '1rem',
+                    padding: '0.8rem 1.5rem',
+                    fontSize: '1rem',
+                    fontWeight: 'bold',
+                    color: 'rgb(23, 22, 20)', // Matches background for hover effect
+                    backgroundColor: 'rgb(242, 240, 237)', // Button background
+                    border: 'none',
+                    borderRadius: '50px',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease',
+                }}
+                onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = 'rgb(23, 22, 20)';
+                    e.target.style.color = 'rgb(242, 240, 237)';
+                }}
+                onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = 'rgb(242, 240, 237)';
+                    e.target.style.color = 'rgb(23, 22, 20)';
+                }}
+            >
+                FORM →
+            </button>
+        </div>
+    </div>
+
+    {/* Footer Links */}
+    <div
+        style={{
+            width: '100%',
+            maxWidth: '1200px',
+            marginTop: '2rem',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            paddingTop: '1rem',
+        }}
+    >
+        <p style={{fontSize: '13px', lineHeight: '20px',  margin: 0 }}>© Paket Post Aeral Vision 2025</p>
+        <div style={{ display: 'flex', gap: '1rem' }}>
+            <a href="#" style={{ color: 'rgb(242, 240, 237)', textDecoration: 'none' }}>
+                FACEBOOK
+            </a>
+            <a href="#" style={{ color: 'rgb(242, 240, 237)', textDecoration: 'none' }}>
+                INSTAGRAM
+            </a>
+        </div>
+        <p style={{ fontSize: '13px', lineHeight: '20px', margin: 0 }}>Project author: Group 1</p>
+    </div>
+</div>
+
                 </div>
             )}
+
+ 
 
             {/* Floating Button */}
             <FloatingButton text="Archiwalks" onClick={handleArchiwalksClick} />

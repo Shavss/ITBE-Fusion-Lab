@@ -123,7 +123,7 @@ const Navbar = () => {
                 onMouseOver={(e) => (e.target.style.transform = 'scale(1.05)')}
                 onMouseOut={(e) => (e.target.style.transform = 'scale(1)')}
             >
-                For Sale
+                Login
             </button>
 
             {/* Language Toggle */}
