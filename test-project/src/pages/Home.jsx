@@ -22,6 +22,11 @@ const Home = () => {
         navigate('/map');
     };
 
+    const handleExploreClick = () => {
+        navigate('/ifc-viewer'); // This will navigate to the /IFCviewer route
+    };
+
+
     return (
         <div style={{ width: '100vw', overflowX: 'hidden' }}>
             {/* Fixed Navigation Bar */}
@@ -63,7 +68,7 @@ const Home = () => {
                         }}
                     >
                         <div style={{ position: 'absolute', bottom: '2rem', left: '3rem' }}>
-                            <h1 style={{ fontSize: '7rem', marginBottom: '2rem', lineHeight: '7rem' }}>
+                            <h1 style={{ fontSize: '6.5rem', marginBottom: '-1rem', lineHeight: '7rem' }}>
                                 PAKETPOST <br /> AREAL VISION
                             </h1>
                         </div>
@@ -126,6 +131,7 @@ const Home = () => {
                                 e.target.style.backgroundColor = 'transparent';
                                 e.target.style.color = 'black';
                             }}
+                            onClick={handleExploreClick} // Call the navigation function on click
                         >
                             EXPLORE THE DEVELOPMENT <span style={{ marginLeft: '0.5rem' }}>&#8594;</span>
                         </button>
@@ -181,78 +187,144 @@ const Home = () => {
     style={{
         width: '100%',
         minHeight: '100vh',
-        background: 'rgba(248, 248, 248, 0.8)',
+        background: 'rgba(248, 248, 248, 0.9)',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '4rem 2rem',
+        padding: '6rem 2rem', // Increased top padding for spacing
         textAlign: 'center',
     }}
 >
     {/* Big Header */}
     <h2
         style={{
-            fontSize: '2rem',
+            fontSize: '48px',
             fontWeight: 'bold',
-            maxWidth: '1500px',
-            lineHeight: '1.4',
-            color: '#000',
-            marginBottom: '2rem',
-            marginTop: '-25rem',
-            marginLeft: '4rem',
-            marginRight: '4rem',
-            textAlign: 'left',
-        }}
-    >
-Let's determine if we are the right place for your next chapter, whether you are looking for a perfect place for your business or living.    </h2>
-
-    {/* User Groups Grid */}
-    <div
-        style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '1.5rem',
             maxWidth: '1200px',
-            width: '100%',
+            lineHeight: '58px',
+            color: 'rgb(23, 22, 20)',
+            marginBottom: '4rem', // Increased margin bottom for spacing
+            textAlign: 'left',
+            marginLeft: '-3rem', // Increased margin bottom for spacing
         }}
     >
-        {[
-            {
-                title: 'For Property Managers',
-                description:
-                    'It enhances operational efficiency with features like self-guided virtual tours, remote purchasing, and advanced tools for tenant communication, rent collection, and property maintenance.',
-            },
-            {
-                title: 'For Business Owners',
-                description:
-                    'The website serves as a collaborative hub, offering tools for stakeholder engagement, advertising, and smart dashboards to guide investment decisions and highlight opportunities within the masterplan.',
-            },
-            {
-                title: 'For Renters',
-                description:
-                    'The platform acts as a central hub for neighborhood information, events, and news, while simplifying rental processes like payments, deposits, and maintenance requests.',
-            },
-        ].map((card, index) => (
+        Let's determine if we are the right place for your next chapter, whether you are looking for a perfect place for your business or living.
+    </h2>
+{/* User Groups Grid */}
+<div
+    style={{
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        gap: '2rem',
+        flexWrap: 'wrap',
+        padding: '2rem 2rem',
+    }}
+>
+    {[
+        {
+            title: 'FOR PROPERTY MANAGERS',
+            description:
+                'It Boost operational efficiency with self-guided touring and smart home automation solutions, advanced tools for tenant communication, rent collection, and property maintenance.',
+            image: '/img/for_property.png', 
+        },
+        {
+            title: 'FOR BUSINESS OWNERS',
+            description:
+                'The website serves as a collaborative hub, offering tools for stakeholder engagement, advertising, and smart dashboards to guide investment decisions and highlight opportunities within the masterplan.',
+            image: '/img/business.png', 
+        },
+        {
+            title: 'FOR RENTERS',
+            description:
+                'The platform acts as a central hub for neighborhood information, events, and news, while simplifying rental processes like payments, deposits, and maintenance requests. Search for available rentals and schedule your secure self-guided tour now.',
+            image: '/img/for_renters.png',
+        },
+    ].map((card, index) => (
+        <div
+            key={index}
+            style={{
+                background: '#ffffff',
+                padding: '2rem',
+                borderRadius: '16px',
+                boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+                textAlign: 'center',
+                maxWidth: '400px',
+                width: '100%',
+                minHeight: '500px', // Ensuring all cards have the same height
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                border: '1px solid #ddd',
+                
+            }}
+        >
+            {/* Title */}
+            <h3 style={{ fontSize: '1.0rem', fontWeight: 'bold', color: '#000', textAlign: 'left', width: '100%' }}>
+                {card.title}
+            </h3>
+
+            {/* Image/Diagram Section */}
             <div
-                key={index}
                 style={{
-                    background: '#ffffff',
-                    padding: '1.5rem',
+                    width: '100%',
+                    height: '200px', // Fixed height for diagrams
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
                     borderRadius: '8px',
-                    boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
-                    textAlign: 'center',
+                    backgroundColor: card.image ? 'transparent' : '#e0e0e0', // If image exists, remove background
                 }}
             >
-                <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem', color: '#0f01ea' }}>
-                    {card.title}
-                </h3>
-                <p style={{ fontSize: '1rem', lineHeight: '1.6', color: '#333' }}>
-                    {card.description}
-                </p>
+                {card.image ? (
+                    <img
+                        src={card.image}
+                        alt={card.title}
+                        style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
+                    />
+                ) : (
+                    <span style={{ fontSize: '1rem', color: '#555' }}>Diagram Placeholder</span>
+                )}
             </div>
-        ))}
-    </div>
+
+            {/* Description */}
+            <p style={{ fontSize: '13px', lineHeight: '20px', color: '#333', textAlign: 'left' }}>
+                {card.description}
+            </p>
+
+            {/* Button */}
+            <button
+                style={{
+                    padding: '0.8rem 1.5rem',
+                    fontSize: '1rem',
+                    fontWeight: 'bold',
+                    color: '#fff',
+                    backgroundColor: '#000',
+                    border: '1px solid #000',
+                    borderRadius: '50px',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease-in-out',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                }}
+                onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = '#fff';
+                    e.target.style.color = '#000';
+                }}
+                onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = '#000';
+                    e.target.style.color = '#fff';
+                }}
+            >
+                Learn More →
+            </button>
+        </div>
+    ))}
+</div>
+
 </div>
 
 
@@ -261,7 +333,7 @@ Let's determine if we are the right place for your next chapter, whether you are
     style={{
         width: '100%',
         minHeight: '100vh',
-        background: 'rgba(240, 240, 240, 0.9)',
+        background: 'rgba(248, 248, 248, 0.9)',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -377,24 +449,40 @@ Let's determine if we are the right place for your next chapter, whether you are
         }}
     >
         {/* Left Column */}
-        <div style={{ flex: 1, marginRight: '2rem' }}>
-            <img
-                src="/img/logo.png" // Placeholder for your icon
-                alt="Contact Icon"
-                style={{ height: '25%', marginBottom: '1rem' }}
-            />
-            <p style={{fontSize: '13px', lineHeight: '20px' }}>
+        <div
+        style={{
+            flex: 1,
+            marginRight: '2rem',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between', // Space between the icon and text
+        }}
+    >
+        {/* Icon at the top-left */}
+        <img
+            src="/img/logo.png" // Placeholder for your icon
+            alt="Contact Icon"
+            style={{ height: '40%', width: '20%', marginBottom: '1rem' }}
+        />
+        {/* Text at the bottom */}
+        <p
+            style={{
+                fontSize: '13px',
+                lineHeight: '20px',
+                maxWidth: '300px', // Restrict the width to 200px
+                wordWrap: 'break-word', // Ensure long words are wrapped
+                overflowWrap: 'break-word', // Ensure long content is wrapped
+                marginBottom: 0,
+            }}
+        >
             The future of urban development is shaped by a commitment to sustainability, smart technology, and a deep integration of nature into our built environment.
-            </p>
-        </div>
-
+        </p>
+    </div>
         {/* Right Column */}
-        <div style={{ flex: 1, textAlign: 'right' }}>
-            <h2 style={{ fontSize: '4rem', fontWeight: 'bold', marginBottom: '1rem' }}>CONTACT</h2>
-            <p style={{ fontSize: '15px', lineHeight: '23px', margin: 0 }}>+49 157 33352473</p>
-            <p style={{ fontSize: '15px', lineHeight: '23px', margin: 0 }}>info@paketpostaeral.de</p>
-            <p style={{ fontSize: '15px', lineHeight: '23px', margin: 0 }}>Georg-Lindau-Strasse 12,</p>
-            <p style={{ fontSize: '15px', lineHeight: '23px', margin: 0 }}>80634 Munich</p>
+        <div style={{ flex: 1, textAlign: 'left' }}>
+            <h2 style={{ fontSize: '64px', color: 'rgb(242, 240, 237)' , fontWeight: 'bold', marginBottom: '2rem' }}>CONTACT</h2>
+            <p style={{ fontSize: '15px', color: 'rgb(242, 240, 237)' , lineHeight: '23px', margin: 0 }}>+49 157 33352473&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Georg-Lindau-Strasse 12,</p>
+            <p style={{ fontSize: '15px',color: 'rgb(242, 240, 237)'  , lineHeight: '23px', margin: 0 }}>info@paketpostaeral.de&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;80634 Munich</p>
             <button
                 style={{
                     marginTop: '1rem',
@@ -421,6 +509,7 @@ Let's determine if we are the right place for your next chapter, whether you are
             </button>
         </div>
     </div>
+    
 
     {/* Footer Links */}
     <div
@@ -435,14 +524,7 @@ Let's determine if we are the right place for your next chapter, whether you are
         }}
     >
         <p style={{fontSize: '13px', lineHeight: '20px',  margin: 0 }}>© Paket Post Aeral Vision 2025</p>
-        <div style={{ display: 'flex', gap: '1rem' }}>
-            <a href="#" style={{ color: 'rgb(242, 240, 237)', textDecoration: 'none' }}>
-                FACEBOOK
-            </a>
-            <a href="#" style={{ color: 'rgb(242, 240, 237)', textDecoration: 'none' }}>
-                INSTAGRAM
-            </a>
-        </div>
+
         <p style={{ fontSize: '13px', lineHeight: '20px', margin: 0 }}>Project author: Group 1</p>
     </div>
 </div>
@@ -452,8 +534,8 @@ Let's determine if we are the right place for your next chapter, whether you are
 
  
 
-            {/* Floating Button */}
-            <FloatingButton text="Archiwalks" onClick={handleArchiwalksClick} />
+            {/* Floating Button 
+            <FloatingButton text="Archiwalks" onClick={handleArchiwalksClick} />*/}
 
             {/* Round Button */}
             <RoundButton onClick={toggleOverlays} />
