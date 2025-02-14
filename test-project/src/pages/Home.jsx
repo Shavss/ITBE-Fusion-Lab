@@ -93,7 +93,7 @@ const Home = () => {
                     >
                     <div style={{ maxWidth: '1000px', textAlign: 'left', color: '#000000', position: 'relative' }}>
                         {/* ✅ Normal Paragraph */}
-                        <p style={{ fontSize: '15px', lineHeight: '23px', marginBottom: '5rem', marginTop: '-3rem', maxWidth: '700px' }}>
+                        <p style={{ fontSize: '15px', lineHeight: '23px', marginBottom: '5rem', marginTop: '-1rem', maxWidth: '600px' }}>
                             The future of urban development is shaped by a commitment to sustainability, 
                             smart technology, and a deep integration of nature into our built environment. 
                             We are dedicated to creating spaces that promote innovation, efficiency, and well-being. 
@@ -104,7 +104,7 @@ const Home = () => {
                             Below, you’ll find key aspects of our vision that define the <b>next generation of city living</b>.
                         </p>
 
-                        {/* Right-Aligned Button (Positioned Where the Blue Circle Is) */}
+                        {/* Right-Aligned Button  */}
                         <button
                             style={{
                                 position: 'absolute',
@@ -183,7 +183,7 @@ const Home = () => {
 
 
 {/* Section 2 - User Groups */}
-<div
+<div id = "how-it-works"
     style={{
         width: '100%',
         minHeight: '100vh',
@@ -193,7 +193,7 @@ const Home = () => {
         alignItems: 'center',
         justifyContent: 'center',
         padding: '6rem 2rem', // Increased top padding for spacing
-        textAlign: 'center',
+        textAlign: 'left',
     }}
 >
     {/* Big Header */}
@@ -201,16 +201,30 @@ const Home = () => {
         style={{
             fontSize: '48px',
             fontWeight: 'bold',
-            maxWidth: '1200px',
+            maxWidth: '800px',
             lineHeight: '58px',
             color: 'rgb(23, 22, 20)',
-            marginBottom: '4rem', // Increased margin bottom for spacing
+            marginBottom: '2rem', // Increased margin bottom for spacing
             textAlign: 'left',
-            marginLeft: '-3rem', // Increased margin bottom for spacing
+            marginLeft: '-36rem', // Increased margin bottom for spacing
         }}
     >
-        Let's determine if we are the right place for your next chapter, whether you are looking for a perfect place for your business or living.
+        Let's determine if we are the right place for your next chapter.
     </h2>
+    
+
+    <div
+        style={{
+            fontSize: '15px',
+            lineHeight: '23px',
+            color: '#333',
+            maxWidth: '500px',
+            textAlign: 'left',
+            marginLeft: '-54rem',
+        }}
+    >
+        Wheter you are looking for a place perfect place for your business or living, we offer comprehensive solutions for various user groups. Choose your path and explore the benefits tailored for your needs.
+    </div>
 {/* User Groups Grid */}
 <div
     style={{
@@ -219,7 +233,7 @@ const Home = () => {
         justifyContent: 'center',
         gap: '2rem',
         flexWrap: 'wrap',
-        padding: '2rem 2rem',
+        padding: '4rem 2rem',
     }}
 >
     {[
@@ -328,98 +342,99 @@ const Home = () => {
 </div>
 
 
-{/* NEW SECTION 3 - Latest News (Moved to the correct place) */}
 <div
-    style={{
-        width: '100%',
-        minHeight: '100vh',
-        background: 'rgba(248, 248, 248, 0.9)',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '4rem',
-    }}
->
-    <h2 style={{ fontSize: '2.5rem', marginBottom: '2rem', color: '#333', textAlign: 'center' }}>
-        Latest News
-    </h2>
-
-    <div
-        style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '2rem',
-            maxWidth: '1200px',
-            width: '100%',
-        }}
-    >
-        {blogPosts.map((post) => (
-            <div
-                key={post.id}
+            style={{
+                width: '100%',
+                minHeight: '100vh',
+                background: 'rgba(248, 248, 248, 0.9)',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '4rem'
+            }}
+        >
+            <h2
                 style={{
-                    background: '#ffffff',
-                    padding: '1.5rem',
-                    borderRadius: '8px',
-                    boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
-                    textAlign: 'left',
-                    display: 'flex',
-                    flexDirection: 'column',
+                    fontSize: '48px',
+                    fontWeight: 'bold',
+                    color: 'rgb(23, 22, 20)',
+                    textAlign: 'center',
+                    marginBottom: '10rem',
                 }}
             >
-                {/* Blog Image */}
-                <img 
-                    src={post.image} 
-                    alt={post.title} 
-                    style={{ 
-                        width: '100%', 
-                        height: '200px', 
-                        objectFit: 'cover', 
-                        borderRadius: '8px',
-                        marginBottom: '1rem' 
-                    }} 
-                />
+                LATEST NEWS
+            </h2>
 
-                {/* Blog Title */}
-                <h3 style={{ fontSize: '1.8rem', marginBottom: '0.5rem', color: '#0f01ea' }}>
-                    {post.title}
-                </h3>
-
-                {/* Blog Date */}
-                <p style={{ fontSize: '0.9rem', color: '#777', marginBottom: '1rem' }}>
-                    {post.date}
-                </p>
-
-                {/* Blog Summary */}
-                <p style={{ fontSize: '1rem', lineHeight: '1.6', color: '#333', flexGrow: 1 }}>
-                    {post.summary}
-                </p>
-
-                {/* Read More Button */}
-                <a 
-                    href={`/blog/${post.id}`} 
-                    style={{
-                        marginTop: '1rem',
-                        padding: '0.8rem 1.5rem',
-                        backgroundColor: '#0f01ea',
-                        color: 'white',
-                        textDecoration: 'none',
-                        borderRadius: '8px',
-                        display: 'inline-block',
-                        textAlign: 'center',
-                        fontSize: '1rem',
-                    }}
-                >
-                    Read More
-                </a>
-            </div>
-                            ))}
-                        </div>
+            <div
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+                    gap: '2rem',
+                    maxWidth: '1300px',
+                    width: '100%',
+                }}
+            >
+                {blogPosts.map((post) => (
+                    <div
+                        key={post.id}
+                        style={{
+                            background: 'rgba(248, 248, 248, 1)',
+                            padding: '2rem',
+                            borderRadius: '16px',
+                            boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'space-between',
+                            border: '1px solid #ddd',
+                        }}
+                    >
+                        <img
+                            src={post.image}
+                            alt={post.title}
+                            style={{
+                                width: '100%',
+                                height: '150px',
+                                objectFit: 'cover',
+                                borderRadius: '0px',
+                                marginBottom: '1rem',
+                            }}
+                        />
+                        <h3 style={{ fontSize: '16px', fontWeight: 'bold', color: '#000' }}>{post.title}</h3>
+                        <p style={{ fontSize: '10px', color: '#777' }}>{post.date}</p>
+                        <p style={{ fontSize: '13px', lineHeight: '20px', color: '#333' }}>{post.summary}</p>
+                        <a
+                            href={`/blog/${post.id}`}
+                            style={{
+                                marginTop: '1rem',
+                                padding: '0.8rem 1.5rem',
+                                fontSize: '1rem',
+                                fontWeight: 'bold',
+                                color: '#fff',
+                                backgroundColor: '#000',
+                                borderRadius: '50px',
+                                textDecoration: 'none',
+                                textAlign: 'center',
+                                transition: 'background-color 0.3s, color 0.3s',
+                            }}
+                            onMouseEnter={(e) => {
+                                e.target.style.backgroundColor = '#fff';
+                                e.target.style.color = '#000';
+                            }}
+                            onMouseLeave={(e) => {
+                                e.target.style.backgroundColor = '#000';
+                                e.target.style.color = '#fff';
+                            }}
+                        >
+                            Read More →
+                        </a>
                     </div>
-
+                ))}
+            </div>
+        </div>
 
 {/* Footer Section */}
-<div
+<div id = "contact-us"
     style={{
         width: '100%',
         backgroundColor: 'rgb(23, 22, 20, 0.9)', // Footer background color
@@ -504,6 +519,7 @@ const Home = () => {
                     e.target.style.backgroundColor = 'rgb(242, 240, 237)';
                     e.target.style.color = 'rgb(23, 22, 20)';
                 }}
+                onClick={() => navigate('/contact')} // Navigate to Contact Page
             >
                 FORM →
             </button>

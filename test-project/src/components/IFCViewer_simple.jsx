@@ -51,7 +51,7 @@ const IFCViewerSimple = () => {
     // Load the IFC file
     async function loadIfc() {
       try {
-        const file = await fetch("/FL_New-Design-fin02.ifc"); // Ensure the path is correct
+        const file = await fetch("/test2.ifc"); // Ensure the path is correct
         const data = await file.arrayBuffer();
         const buffer = new Uint8Array(data);
 

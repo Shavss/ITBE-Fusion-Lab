@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import IFCViewer from '../components/IFCViewer'; // Your IFC viewer
+import IFCViewer from '../components/IFCViewer_copy'; // Your IFC viewer
 import Navbar from '../components/Navbar';       // Your fixed nav
 import FloatingButton from '../components/FloatingButton';
 

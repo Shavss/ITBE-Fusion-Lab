@@ -32,7 +32,7 @@ const IFCViewer = () => {
       // Load the IFC model
       const model = ifcLoader.load({
         id: "myModel",
-        src: "/FL_New-Design-fin02.ifc", // Path to your IFC file in public directory
+        src: "/test2.ifc", // Path to your IFC file in public directory
         excludeTypes: ["IfcSpace"],
         edges: true,
       });

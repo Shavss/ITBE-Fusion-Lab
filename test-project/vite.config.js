@@ -5,7 +5,14 @@ import path from 'path';
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 5001,  // Set the Vite development server port to 5001
+    port: 5173,  // Vite development server port
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5001', // Backend URL
+        changeOrigin: true,
+        secure: false,
+      },
+    },
     open: true,
   },
   resolve: {
@@ -17,6 +24,5 @@ export default defineConfig({
     outDir: 'dist',
   },
   publicDir: 'public',
-  // Add this line to serve the 3dwebclient as static assets
   assetsInclude: ['3dcitydb-web-map-2.0.0/**/*'],
 });

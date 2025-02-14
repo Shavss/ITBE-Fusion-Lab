@@ -34,7 +34,7 @@ const panelStyle = `
     width: 300px;
     height: 100%;
     overflow-y: auto;
-    background: #f0f0f0;
+    background: rgb(242, 240, 237);
     padding: 10px;
     box-sizing: border-box;
     border-left: 1px solid #ccc;
@@ -82,61 +82,88 @@ const panelStyle = `
 
 const IFCViewer = () => {
   const containerRef = useRef(null);
-  const statsRef = useRef(null);
   const infoRef = useRef(null);
-
-  // Store comments as an array of objects { id, name, comment }
   const [comments, setComments] = useState([]);
-
-  // We'll store a "hoverInfo" (string or object) to display in an overlay
   const [hoverInfo, setHoverInfo] = useState("");
-
   const [isLoading, setIsLoading] = useState(true); // Loading state
-
   const cleanupRef = useRef(null); // Ref to store cleanup function
+  const userToken = localStorage.getItem('token'); // Get user token for requests
+
+
+  useEffect(() => {
+    fetchUnresolvedRequests();
+  }, []);
+
+  const fetchUnresolvedRequests = async () => {
+    try {
+      const response = await fetch("http://localhost:5001/api/maintenance/unresolved", {
+        headers: {
+          Authorization: `Bearer ${userToken}`,
+        },
+      });
+      const data = await response.json();
+      if (response.ok) {
+        setComments(data);
+      } else {
+        console.error("Error fetching unresolved requests:", data.message);
+      }
+    } catch (error) {
+      console.error("Error fetching unresolved requests:", error);
+    }
+  };
+
+  const submitMaintenanceRequest = async (elementId, elementName, userComment) => {
+    try {
+      const response = await fetch("http://localhost:5001/api/maintenance/create", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${userToken}`,
+        },
+        body: JSON.stringify({
+          elementId,
+          elementName,
+          comment: userComment,
+        }),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        // Add the new request to the list without waiting for re-fetch
+        setComments((prev) => [
+          ...prev,
+          { elementId, elementName, comment: userComment, resolved: false },
+        ]);
+        alert("Maintenance request submitted successfully!");
+      } else {
+        alert("Error submitting maintenance request: " + data.message);
+      }
+    } catch (error) {
+      console.error("Error submitting maintenance request:", error);
+      alert("Failed to submit maintenance request.");
+    }
+  };
+
 
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
-    /********************************************************
-     * 1) Initialize ThatOpen Components
-     ********************************************************/
     const components = new OBC.Components();
     const worlds = components.get(OBC.Worlds);
-
-    // 2) Create a ShadowedScene world
     const world = worlds.create();
-    world.scene = new OBC.ShadowedScene(components);
-    world.renderer = new OBCF.PostproductionRenderer(components, container);
-    world.camera = new OBC.OrthoPerspectiveCamera(components);
 
-    // Enable shadows, etc.
-    world.renderer.three.shadowMap.enabled = true;
-    world.renderer.three.shadowMap.type = THREE.PCFSoftShadowMap;
+    world.scene = new OBC.SimpleScene(components);
+    world.renderer = new OBC.SimpleRenderer(components, container);
+    world.camera = new OBC.SimpleCamera(components);
 
-    world.scene.setup({
-      shadows: {
-        cascade: 1,
-        resolution: 1024
-      },
-    });
-    world.scene.three.background = null;
     components.init();
 
-    world.camera.projection.current = "Perspective";
+    if (world.camera.controls) {
+      world.camera.controls.setLookAt(12, 1.6, 8, 0, 1.6, -10);
+    }
 
-    // Grid
-    const grids = components.get(OBC.Grids);
-    const grid = grids.create(world);
-    world.scene.distanceRenderer.excludedObjects.add(grid.three);
-    world.camera.projection.onChanged.add(() => {
-      grid.fade = (world.camera.projection.current === "Perspective");
-    });
+    world.scene.setup();
 
-    /********************************************************
-     * 3) IFC / Fragments
-     ********************************************************/
     const fragments = components.get(OBC.FragmentsManager);
     const fragmentIfcLoader = components.get(OBC.IfcLoader);
 
@@ -150,7 +177,7 @@ const IFCViewer = () => {
 
     async function loadIfc() {
       try {
-        const file = await fetch("/FL_New-Design-fin02.ifc"); // Ensure this path is correct
+        const file = await fetch("/test2.ifc");
         const data = await file.arrayBuffer();
         const buffer = new Uint8Array(data);
 
@@ -158,183 +185,103 @@ const IFCViewer = () => {
         model.name = "example";
         world.scene.three.add(model);
 
-        markMeshShadows(model);
-
-        // Assign uniqueID and name to each mesh
         model.traverse((child) => {
           if (child instanceof THREE.Mesh) {
-            // Assign a unique identifier for the construction group
             if (!child.userData.uniqueID) {
-              // Example: Use mesh name or another property
               child.userData.uniqueID = child.name || "Unnamed_Group";
             }
-
-            // Ensure each mesh has a name
             if (!child.userData.name) {
               child.userData.name = child.name || "Unnamed element";
             }
           }
         });
 
-        // Stats
-        const stats = new Stats();
-        stats.showPanel(2);
-        if (statsRef.current) {
-          statsRef.current.appendChild(stats.dom);
-          stats.dom.style.left = "10px";
-          stats.dom.style.top = "10px";
-          stats.dom.style.zIndex = "1000";
-        }
-        world.renderer.onBeforeUpdate.add(() => stats.begin());
-        world.renderer.onAfterUpdate.add(() => stats.end());
+        cleanupRef.current = setupRaycasting(
+          components,
+          world,
+          model,
+          submitMaintenanceRequest,
+          setHoverInfo
+        );
 
-        //createShadowPlane(world);
-        //await world.scene.updateShadows();
-
-        // 4) Once model loaded, set up RAYCASTING
-        cleanupRef.current = setupRaycasting(components, world, model, setComments, setHoverInfo);
-
-        // Model has loaded, set isLoading to false
         setIsLoading(false);
       } catch (error) {
         console.error("Error loading IFC model:", error);
-        // Optionally, set isLoading to false or show an error message
         setIsLoading(false);
       }
     }
+
     loadIfc();
 
-    fragments.onFragmentsLoaded.add((loadedModel) => {
-      console.log("Fragments loaded:", loadedModel);
-    });
-
-    // Update shadows if camera moves
-    //world.camera.controls.addEventListener("update", async () => {
-    //  await world.scene.updateShadows();
-    //});
-
-    // UI Panel
-    const panel = createCameraPanel(world, () => model);
-    container.appendChild(panel);
-
-    // Cleanup function
     return () => {
-      // Remove event listeners added by setupRaycasting
       if (cleanupRef.current) {
         cleanupRef.current();
-      }
-
-      if (panel && panel.parentNode) {
-        panel.parentNode.removeChild(panel);
       }
       world.scene.three.clear();
       world.renderer.dispose();
       world.camera.dispose();
       fragmentIfcLoader.cleanUp();
-
-      if (model) {
-        model.traverse((child) => {
-          if (child instanceof THREE.Mesh) {
-            child.geometry.dispose();
-            if (Array.isArray(child.material)) {
-              child.material.forEach((m) => m.dispose());
-            } else {
-              child.material.dispose();
-            }
-          }
-        });
-      }
     };
-  }, []); // Empty dependency array ensures this runs once
+  }, []);
 
-  // Function to set up raycasting with cleanup
-  function setupRaycasting(components, world, ifcModel, setComments, setHoverInfo) {
+  function setupRaycasting(components, world, ifcModel, submitRequest, setHoverInfo) {
     const raycasters = components.get(OBC.Raycasters);
     const raycaster = raycasters.get(world);
 
-    const container = containerRef.current; 
+    const container = containerRef.current;
     if (!container) return () => {};
 
     let previousHover = null;
-
     const defaultMaterial = new THREE.MeshStandardMaterial({ color: "#ffffff" });
     const highlightMaterial = new THREE.MeshStandardMaterial({ color: "#BCF124" });
 
-    // Event Handlers
     function onMouseMove(event) {
       const result = raycaster.castRay(ifcModel.children);
-
       if (previousHover) {
-        const noMeshOrDifferent =
-          !result ||
-          !(result.object instanceof THREE.Mesh) ||
-          (result.object !== previousHover);
-
-        if (noMeshOrDifferent) {
+        if (!result || !(result.object instanceof THREE.Mesh) || result.object !== previousHover) {
           previousHover.material = defaultMaterial;
           previousHover = null;
           setHoverInfo("");
         }
       }
 
-      if (!result || !(result.object instanceof THREE.Mesh)) {
-        return;
-      }
-
-      const hoveredMesh = result.object;
-
-      if (hoveredMesh !== previousHover) {
-        hoveredMesh.material = highlightMaterial;
-        previousHover = hoveredMesh;
-
-        const elementName = hoveredMesh.userData.name || "Unnamed element";
-        setHoverInfo(`Hovering element: ${elementName}\nUUID: ${hoveredMesh.uuid}`);
-      }
-    }
-
-    function onDoubleClick(event) {
-      // Calculate mouse position in normalized device coordinates (-1 to +1) for both components
-      const rect = container.getBoundingClientRect();
-      const mouseDblClick = new THREE.Vector2(
-        ((event.clientX - rect.left) / rect.width) * 2 - 1,
-        -((event.clientY - rect.top) / rect.height) * 2 + 1
-      );
-
-      // Update the raycaster with the camera and mouse position
-      raycaster.three.setFromCamera(mouseDblClick, world.camera.three);
-
-      // Intersect only with model's children to exclude ground plane
-      const intersectsDbl = raycaster.three.intersectObjects(ifcModel.children, true);
-
-      if (intersectsDbl.length > 0) {
-        const clickedMesh = intersectsDbl[0].object;
-        const elementName = clickedMesh.userData.name || "Unnamed element";
-        const elementUUID = clickedMesh.uuid;
-
-        // Prompt user for a comment
-        const userComment = prompt(`Add a comment for "${elementName}":`);
-        if (userComment) {
-          // Add the comment to the comments state
-          setComments((prevComments) => [
-            ...prevComments,
-            {
-              id: elementUUID,
-              name: elementName,
-              comment: userComment,
-            },
-          ]);
+      if (result && result.object instanceof THREE.Mesh) {
+        const hoveredMesh = result.object;
+        if (hoveredMesh !== previousHover) {
+          hoveredMesh.material = highlightMaterial;
+          previousHover = hoveredMesh;
+          setHoverInfo(`Hovering: ${hoveredMesh.userData.name}\nUUID: ${hoveredMesh.uuid}`);
         }
       }
     }
 
-    // Attach Event Listeners
-    container.addEventListener("mousemove", onMouseMove);
-    container.addEventListener("dblclick", onDoubleClick); // Changed from 'click' to 'dblclick'
+    function onDoubleClick(event) {
+      const rect = container.getBoundingClientRect();
+      const mouse = new THREE.Vector2(
+        ((event.clientX - rect.left) / rect.width) * 2 - 1,
+        -((event.clientY - rect.top) / rect.height) * 2 + 1
+      );
 
-    // Return Cleanup Function
-    return () => {
+      raycaster.three.setFromCamera(mouse, world.camera.three);
+      const intersects = raycaster.three.intersectObjects(ifcModel.children, true);
+
+      if (intersects.length > 0) {
+        const clickedMesh = intersects[0].object;
+        const elementName = clickedMesh.userData.name || "Unnamed element";
+        const elementId = clickedMesh.uuid;
+
+        const userComment = prompt(`Add a maintenance request for "${elementName}":`);
+        if (userComment) {
+          submitRequest(elementId, elementName, userComment);
+        }
+      }
+    }
+
+    container.addEventListener("mousemove", onMouseMove);
+    container.addEventListener("dblclick", onDoubleClick); // Remove double-click listener
+   return () => {
       container.removeEventListener("mousemove", onMouseMove);
-      container.removeEventListener("dblclick", onDoubleClick); // Remove double-click listener
+      container.removeEventListener("dblclick", onDoubleClick);
     };
   }
 
@@ -366,17 +313,13 @@ const IFCViewer = () => {
             className="viewer-content"
             style={{ width: "100%", height: "100%", position: "relative" }}
           >
-            <div
-              ref={statsRef}
-              style={{ position: "absolute", top: "0px", left: "0px" }}
-            />
           </div>
         </div>
 
         {/* Comments Sidebar */}
         <div className="comments-sidebar">
-          <h2>Comments</h2>
-          {comments.length === 0 && <p>No comments yet.</p>}
+          <h2>Unresolved maintenance requests</h2>
+          {comments.length === 0 && <p>No maintenance requests yet.</p>}
           {comments.map((comment, index) => (
             <div
               key={index}
@@ -387,8 +330,9 @@ const IFCViewer = () => {
                 borderRadius: "4px",
               }}
             >
-              <strong>{comment.name}</strong> <em>({comment.id})</em>
+              <strong>{comment.elementName}</strong> <em>({comment.elementId})</em>
               <p>{comment.comment}</p>
+              <small>Requested by: {comment.requestedBy?.email || "Unknown"}</small>
             </div>
           ))}
         </div>
@@ -396,40 +340,6 @@ const IFCViewer = () => {
     </div>
   );
 };
-
-/************************************************
- * Shadow code, same as your snippet
- ************************************************/
-function markMeshShadows(object3D) {
-  object3D.traverse((child) => {
-    if (child instanceof THREE.Mesh) {
-      let isOpaque = true;
-      const mats = Array.isArray(child.material)
-        ? child.material
-        : [child.material];
-      for (const mat of mats) {
-        if (mat.opacity < 1) {
-          isOpaque = false;
-          break;
-        }
-      }
-      if (isOpaque) {
-        child.castShadow = true;
-        child.receiveShadow = true;
-      }
-    }
-  });
-}
-
-function createShadowPlane(world) {
-  const planeGeom = new THREE.PlaneGeometry(50, 50);
-  const planeMat = new THREE.MeshLambertMaterial({ color: 0xffffff });
-  const planeMesh = new THREE.Mesh(planeGeom, planeMat);
-  planeMesh.rotation.x = -Math.PI / 2;
-  planeMesh.position.set(0, -1, 0);
-  planeMesh.receiveShadow = true;
-  world.scene.three.add(planeMesh);
-}
 
 /************************************************
  * Camera Panel code

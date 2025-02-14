@@ -10,6 +10,8 @@ import IFCViewerPage from './pages/IFCViewerPage';
 import MapPage from './pages/MapPage'; // Existing MapPage component
 import Blog from './pages/Blog'; // New Blog component
 import FirstBakery from './pages/FirstBakery'; // New Blog Entry component
+import Login from './pages/Login'; // New Blog Entry component
+import Dashboard from './pages/dashboard'; // New Blog Entry component
 
 function App() {
   return (
@@ -67,6 +69,18 @@ function App() {
                   <FirstBakery />
                 </div>
               }
+            />
+            <Route 
+              path="/login" 
+              element={
+                <div className="login-page">
+                  <Login />
+                </div>
+              } 
+            />
+            <Route 
+              path="/dashboard" 
+              element={<Dashboard />} 
             />
             {/* Optional: Add a catch-all route for 404 Not Found */}
             <Route
