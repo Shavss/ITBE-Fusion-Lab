@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Written by 3D City Database Importer/Exporter, version "5.5.0" -->
+<!-- Chair of Geoinformatics, Technical University of Munich -->
+<kml xmlns:xal="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0" xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:gx="http://www.google.com/kml/ext/2.2">
+  <Document>
+    <name>PPHG_citymodel_Tile_30_31_geometry</name>
+    <open>false</open>
+    <Placemark id="KMLGeom_DEBY_LOD2_65292_RoofSurface">
+      <name>DEBY_LOD2_65292_RoofSurface</name>
+      <styleUrl>#RoofSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5536241,48.1662986,3.039 11.5536252,48.1663009,3.039 11.5536684,48.1663904,3.039 11.5536693,48.1663925,3.039 11.5536387,48.1663992,3.039 11.5535933,48.1663052,3.039 11.5536241,48.1662986,3.039</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_65292_GroundSurface">
+      <name>DEBY_LOD2_65292_GroundSurface</name>
+      <styleUrl>#GroundSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5535933,48.1663052,0.0 11.5536387,48.1663992,0.0 11.5536693,48.1663925,0.0 11.5536684,48.1663904,0.0 11.5536252,48.1663009,0.0 11.5536241,48.1662986,0.0 11.5535933,48.1663052,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Placemark id="KMLGeom_DEBY_LOD2_65292_WallSurface">
+      <name>DEBY_LOD2_65292_WallSurface</name>
+      <styleUrl>#WallSurfaceNormal</styleUrl>
+      <MultiGeometry>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5536684,48.1663904,0.0 11.5536684,48.1663904,3.039 11.5536252,48.1663009,3.039 11.5536252,48.1663009,0.0 11.5536684,48.1663904,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5536387,48.1663992,0.0 11.5536387,48.1663992,3.039 11.5536693,48.1663925,3.039 11.5536693,48.1663925,0.0 11.5536387,48.1663992,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5536693,48.1663925,0.0 11.5536693,48.1663925,3.039 11.5536684,48.1663904,3.039 11.5536684,48.1663904,0.0 11.5536693,48.1663925,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5535933,48.1663052,0.0 11.5535933,48.1663052,3.039 11.5536387,48.1663992,3.039 11.5536387,48.1663992,0.0 11.5535933,48.1663052,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5536252,48.1663009,0.0 11.5536252,48.1663009,3.039 11.5536241,48.1662986,3.039 11.5536241,48.1662986,0.0 11.5536252,48.1663009,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+        <Polygon>
+          <altitudeMode>absolute</altitudeMode>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>11.5536241,48.1662986,0.0 11.5536241,48.1662986,3.039 11.5535933,48.1663052,3.039 11.5535933,48.1663052,0.0 11.5536241,48.1662986,0.0</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </MultiGeometry>
+    </Placemark>
+    <Style id="WallSurfaceNormal">
+      <LineStyle>
+        <color>C8666666</color>
+      </LineStyle>
+      <PolyStyle>
+        <color>C8CCCCCC</color>
+      </PolyStyle>
+      <BalloonStyle>
+        <text>$[description]</text>
+      </BalloonStyle>
+    </Style>
+    <Style id="GroundSurfaceNormal">
+      <LineStyle>
+        <color>C8666666</color>
+      </LineStyle>
+      <PolyStyle>
+        <color>C8CCCCCC</color>
+      </PolyStyle>
+      <BalloonStyle>
+        <text>$[description]</text>
+      </BalloonStyle>
+    </Style>
+    <Style id="RoofSurfaceNormal">
+      <LineStyle>
+        <color>C8000099</color>
+      </LineStyle>
+      <PolyStyle>
+        <color>C83333FF</color>
+      </PolyStyle>
+      <BalloonStyle>
+        <text>$[description]</text>
+      </BalloonStyle>
+    </Style>
+    <name>PPHG_citymodel_Tile_30_31_geometry</name>
+    <open>false</open>
+  </Document>
+</kml>

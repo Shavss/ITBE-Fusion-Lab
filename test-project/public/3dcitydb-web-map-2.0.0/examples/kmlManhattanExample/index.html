@@ -122,6 +122,7 @@
     var viewer = new Cesium.Viewer('cesiumContainer', {
         baseLayerPicker: false
     });
+    //setting view extend to rectangular region voer New Work
     var extent = new Cesium.Rectangle.fromDegrees(-74.2554618991863, 40.4984065460536, -73.6992741782758, 40.9147033697977);
     viewer.camera.setView({destination: extent})
 
