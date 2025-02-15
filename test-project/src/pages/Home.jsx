@@ -4,10 +4,8 @@ import Viewer from '../components/Viewer';
 import Navbar from '../components/Navbar';
 import FloatingButton from '../components/FloatingButton';
 import RoundButton from '../components/RoundButton';
-import TypingCard from '../components/TypingCard';
 import blogPosts from '../data/blogPosts'; // Import blog data
 import Expand from '../components/Expand'; //Import Expand Component
-import IFCViewer_simple from '../components/IFCViewer_simple';
 import ScrollingText from '../components/infinitetext'; // Adjust the path based on your file structure
 
 const Home = () => {
@@ -62,7 +60,7 @@ const Home = () => {
                             alignItems: 'flex-end',
                             justifyContent: 'flex-start',
                             color: 'black',
-                            background: 'rgba(248, 248, 248, 0.7)',
+                            background: 'rgba(242, 240, 237, 0.5)',
                             textAlign: 'left',
                             padding: '2erm'
                         }}
@@ -83,7 +81,7 @@ const Home = () => {
                         style={{
                             width: '100%',
                             height: '200vh',
-                            background: 'rgba(248, 248, 248, 0.9)',
+                            background: 'rgba(242, 240, 237, 0.9)',
                             display: 'flex',
                             alignItems: 'flex-start',
                             justifyContent: 'space-between',
@@ -186,8 +184,8 @@ const Home = () => {
 <div id = "how-it-works"
     style={{
         width: '100%',
-        minHeight: '100vh',
-        background: 'rgba(248, 248, 248, 0.9)',
+        height: '100vh',
+        background: 'rgba(242, 240, 237, 0.9)',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -204,7 +202,7 @@ const Home = () => {
             maxWidth: '800px',
             lineHeight: '58px',
             color: 'rgb(23, 22, 20)',
-            marginBottom: '2rem', // Increased margin bottom for spacing
+            marginBottom: '0rem', // Increased margin bottom for spacing
             textAlign: 'left',
             marginLeft: '-36rem', // Increased margin bottom for spacing
         }}
@@ -221,6 +219,8 @@ const Home = () => {
             maxWidth: '500px',
             textAlign: 'left',
             marginLeft: '-54rem',
+            marginBottom: '-1rem',
+            
         }}
     >
         Wheter you are looking for a place perfect place for your business or living, we offer comprehensive solutions for various user groups. Choose your path and explore the benefits tailored for your needs.
@@ -259,14 +259,14 @@ const Home = () => {
         <div
             key={index}
             style={{
-                background: '#ffffff',
+                background: 'rgb(242, 240, 237)',
                 padding: '2rem',
                 borderRadius: '16px',
                 boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
                 textAlign: 'center',
-                maxWidth: '400px',
+                maxWidth: '350px',
                 width: '100%',
-                minHeight: '500px', // Ensuring all cards have the same height
+                minHeight: '400px', // Ensuring all cards have the same height
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
@@ -283,7 +283,7 @@ const Home = () => {
             {/* Image/Diagram Section */}
             <div
                 style={{
-                    width: '100%',
+                    width: '60%',
                     height: '200px', // Fixed height for diagrams
                     display: 'flex',
                     alignItems: 'center',
@@ -310,6 +310,7 @@ const Home = () => {
 
             {/* Button */}
             <button
+                onClick={() => navigate('/form')}
                 style={{
                     padding: '0.8rem 1.5rem',
                     fontSize: '1rem',
@@ -333,7 +334,7 @@ const Home = () => {
                     e.target.style.color = '#fff';
                 }}
             >
-                Learn More →
+                Start →
             </button>
         </div>
     ))}
@@ -346,7 +347,7 @@ const Home = () => {
             style={{
                 width: '100%',
                 minHeight: '100vh',
-                background: 'rgba(248, 248, 248, 0.9)',
+                background: 'rgba(242, 240, 237, 0.9)',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
@@ -372,65 +373,59 @@ const Home = () => {
                     gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
                     gap: '2rem',
                     maxWidth: '1300px',
+                    minHeight: '400px',
                     width: '100%',
                 }}
-            >
+                >
                 {blogPosts.map((post) => (
                     <div
-                        key={post.id}
+                    key={post.id}
+                    onClick={() => navigate(`/blog/${post.id}`)}
+                    onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+                    onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+                    style={{
+                        background: 'rgba(242, 240, 237, 1)',
+                        padding: '1rem',
+                        borderRadius: '16px',
+                        boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'space-between',
+                        border: '1px solid #ddd',
+                        transition: 'transform 0.3s ease',
+                        cursor: 'pointer',
+                    }}
+                    >
+                    <img
+                        src={post.image}
+                        alt={post.title}
                         style={{
-                            background: 'rgba(248, 248, 248, 1)',
-                            padding: '2rem',
-                            borderRadius: '16px',
-                            boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'space-between',
-                            border: '1px solid #ddd',
+                        width: '100%',
+                        height: '180px',
+                        objectFit: 'cover',
+                        borderRadius: '0px',
+                        marginBottom: '1rem',
+                        }}
+                    />
+                    <h3
+                        style={{
+                        fontSize: '16px',
+                        fontWeight: 'bold',
+                        color: '#000',
+                        textAlign: 'left',
+                        width: '100%',
                         }}
                     >
-                        <img
-                            src={post.image}
-                            alt={post.title}
-                            style={{
-                                width: '100%',
-                                height: '150px',
-                                objectFit: 'cover',
-                                borderRadius: '0px',
-                                marginBottom: '1rem',
-                            }}
-                        />
-                        <h3 style={{ fontSize: '16px', fontWeight: 'bold', color: '#000' }}>{post.title}</h3>
-                        <p style={{ fontSize: '10px', color: '#777' }}>{post.date}</p>
-                        <p style={{ fontSize: '13px', lineHeight: '20px', color: '#333' }}>{post.summary}</p>
-                        <a
-                            href={`/blog/${post.id}`}
-                            style={{
-                                marginTop: '1rem',
-                                padding: '0.8rem 1.5rem',
-                                fontSize: '1rem',
-                                fontWeight: 'bold',
-                                color: '#fff',
-                                backgroundColor: '#000',
-                                borderRadius: '50px',
-                                textDecoration: 'none',
-                                textAlign: 'center',
-                                transition: 'background-color 0.3s, color 0.3s',
-                            }}
-                            onMouseEnter={(e) => {
-                                e.target.style.backgroundColor = '#fff';
-                                e.target.style.color = '#000';
-                            }}
-                            onMouseLeave={(e) => {
-                                e.target.style.backgroundColor = '#000';
-                                e.target.style.color = '#fff';
-                            }}
-                        >
-                            Read More →
-                        </a>
+                        {post.title}
+                    </h3>
+                    <p style={{ fontSize: '10px', color: '#777' }}>{post.date}</p>
+                    <p style={{ fontSize: '13px', lineHeight: '20px', color: '#333' }}>
+                        {post.summary}
+                    </p>
                     </div>
                 ))}
-            </div>
+                </div>
+
         </div>
 
 {/* Footer Section */}
@@ -550,11 +545,11 @@ const Home = () => {
 
  
 
-            {/* Floating Button 
-            <FloatingButton text="Archiwalks" onClick={handleArchiwalksClick} />*/}
+            {/* Floating Button */}
+            <FloatingButton text="⬤" onClick={toggleOverlays} />
 
-            {/* Round Button */}
-            <RoundButton onClick={toggleOverlays} />
+            {/* Round Button 
+            <RoundButton onClick={toggleOverlays} />*/}
         </div>
         
     );

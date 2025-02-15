@@ -12,6 +12,7 @@ import Blog from './pages/Blog'; // New Blog component
 import FirstBakery from './pages/FirstBakery'; // New Blog Entry component
 import Login from './pages/Login'; // New Blog Entry component
 import Dashboard from './pages/dashboard'; // New Blog Entry component
+import FormPage from './pages/FormPage'; // New Blog Entry component
 
 function App() {
   return (
@@ -67,6 +68,14 @@ function App() {
               element={
                 <div className="first-bakery-page">
                   <FirstBakery />
+                </div>
+              }
+            />
+            <Route
+              path="/form"
+              element={
+                <div className="form-page">
+                  <FormPage/>
                 </div>
               }
             />

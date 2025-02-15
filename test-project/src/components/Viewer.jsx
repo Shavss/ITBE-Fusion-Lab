@@ -78,6 +78,20 @@ const Viewer = () => {
             scene.add(pointCloud);
             const sphereMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
 
+            // Define custom texts for each sphere
+            const customTexts = [
+                "1. The hall is the defining focal point of the area.",
+                "2. It was built between 1965 and 1969.",
+                "3. It was for a long time the largest self-supporting hall made of precast concrete.",
+                "4. Today, the hall is used by Deutsche Post.",
+                "5. The mail distribution center currently located there is getting a modern new building in the town of Germering, which is currently being built.",
+                "6. The hall consists of two three-cell front arches and 24 normal arches.",
+                "7. The shell construction of the vault is both the supporting structure and the building shell and does not require an additional roof covering.",
+                "8. By developing it into a place for art and culture while preserving the listed industrial monument, the hall will become the pulsating heart of the new city quarter.",
+                "9. The integration of old and new will create a new piece of Munich.",
+                "Such a place of encounter, exchange and communication will be unique in Germany and will enrich the district, the whole of Munich and Bavaria."
+            ];
+
             // Create random spheres above the point cloud
             for (let i = 0; i < 10; i++) {
                 const sphereGeometry = new THREE.SphereGeometry(0.1, 8, 8);
@@ -89,6 +103,10 @@ const Viewer = () => {
                     11, 
                     THREE.MathUtils.randFloat(min.y, max.y)
                 );
+
+                // Assign a custom hover text to each sphere
+                sphere.userData.hoverText = customTexts[i] || `Sphere ${i + 1}`;
+
                 spheres.push(sphere);
                 scene.add(sphere);
             }
@@ -127,7 +145,8 @@ const Viewer = () => {
                     const x = ((screenPosition.x + 1) / 2) * window.innerWidth;
                     const y = (-(screenPosition.y - 1) / 2) * window.innerHeight;
 
-                    setHoverInfo({ position: { x, y }, data: sphere.position });
+                    // Use the custom hover text instead of the sphere's position
+                    setHoverInfo({ position: { x, y }, data: sphere.userData.hoverText });
                 } else {
                     setHoverInfo(null); 
                 }
@@ -142,7 +161,6 @@ const Viewer = () => {
             };
 
             renderer.domElement.addEventListener('mousemove', handleMouseMove);
-
 
             const group = new THREE.Group();
             group.add(pointCloud);
@@ -211,6 +229,7 @@ const Viewer = () => {
                 <div
                     style={{
                         position: 'absolute',
+                        font: 'sans-serif',
                         top: `${hoverInfo.position.y}px`,
                         left: `${hoverInfo.position.x}px`,
                         transform: 'translate(-50%, -100%)',
@@ -220,9 +239,12 @@ const Viewer = () => {
                         borderRadius: '5px',
                         pointerEvents: 'none',
                         zIndex: 1000,
+                        maxWidth: '300px',
+                        fontSize: '13px',
+                        lineHeight: '23px',
                     }}
                 >
-                    x: {hoverInfo.data.x.toFixed(2)}, y: {hoverInfo.data.y.toFixed(2)}, z: {hoverInfo.data.z.toFixed(2)}, ""
+                    {hoverInfo.data}
                 </div>
             )}
 

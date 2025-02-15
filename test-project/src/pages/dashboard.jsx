@@ -8,9 +8,6 @@ import IFCViewer from '../components/IFCViewer';
 // Register required Chart.js components
 Chart.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-// Fix: Define missing style object
-const navigationTabsStyle = { display: 'flex', gap: '0.5rem', marginBottom: '1.5rem' };
-
 const Dashboard = () => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState('');
@@ -35,79 +32,188 @@ const Dashboard = () => {
     fetchUserProfile();
   }, [navigate]);
 
+  // Example data for charts
   const electricityUsage = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-    datasets: [{ label: 'Electricity Usage (kWh)', data: [120, 150, 180, 220, 200, 240], fill: false, borderColor: 'blue' }],
+    datasets: [
+      {
+        label: 'Electricity Usage (kWh)',
+        data: [120, 150, 180, 220, 200, 240],
+        fill: false,
+        borderColor: 'blue',
+      },
+    ],
   };
 
   const heatingUsage = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-    datasets: [{ label: 'Heating Usage (kWh)', data: [300, 280, 260, 250, 240, 220], fill: false, borderColor: 'red' }],
+    datasets: [
+      {
+        label: 'Heating Usage (kWh)',
+        data: [300, 280, 260, 250, 240, 220],
+        fill: false,
+        borderColor: 'red',
+      },
+    ],
   };
 
   return (
-    <div style={{ display: 'flex', height: 'calc(100vh - 60px)', marginTop: '60px', backgroundColor: 'rgb(242, 240, 237)' }}>
+    <div style={dashboardContainerStyle}>
       {/* Left Column (30%) */}
-      <div style={{ width: '30%', padding: '2rem', overflowY: 'auto' }}>
-        <header style={headerStyle}>Current Status</header>
-        <p>Welcome, {user?.email ?? 'Guest'}</p>
-        <button onClick={() => navigate('/login')} style={logoutButtonStyle}>Logout</button>
+      <div style={leftColumnStyle}>
         
-        {/* Navigation Tabs */}
-        <div style={navigationTabsStyle}>
-          <button style={{ padding: '0.5rem', backgroundColor: '#000', color: '#fff', borderRadius: '8px' }}>Building</button>
-          <button style={{ padding: '0.5rem', backgroundColor: '#ccc', borderRadius: '8px' }}>Costs</button>
-          <button style={{ padding: '0.5rem', backgroundColor: '#ccc', borderRadius: '8px' }}>Materials</button>
-          <button style={{ padding: '0.5rem', backgroundColor: '#ccc', borderRadius: '8px' }}>Technology</button>
+        {/* Row 1: Welcome + Logout on the same line */}
+        <div style={userRowStyle}>
+          <p style={{ margin: 0 }}>Welcome, {user?.email ?? 'Guest'}</p>
+          <button onClick={() => navigate('/login')} style={logoutButtonStyle}>
+            Logout
+          </button>
         </div>
+
+        {/* Row 2: Navigation Tabs */}
+        <div style={tabsContainerStyle}>
+          <button style={activeTabStyle}>Overview</button>
+          <button style={tabStyle}>Financials</button>
+          <button style={tabStyle}>Maintenance</button>
+          <button style={tabStyle}>Documents</button>
+        </div>
+
+        {/* Property Info */}
         <section style={contentCardStyle}>
-          <p>Year of Construction:</p>
-          <input placeholder="e.g. 1946" style={inputStyle} />
-          <p>Construction Type:</p>
-          <button style={optionButtonStyle}>Solid</button>
-          <button style={optionButtonStyle}>Skeleton</button>
-          <button style={optionButtonStyle}>Timber Frame</button>
-          <div style={footerButtonStyle}>
-            <button style={secondaryButtonStyle}>Back</button>
-            <button style={primaryButtonStyle}>Next</button>
-          </div>
+          <h3 style={cardHeaderStyle}>Property Info</h3>
+          <p>Year of Construction: <strong>2025</strong></p>
+          <p>Construction Type: <strong>Solid</strong></p>
         </section>
 
+        {/* Rent Payment */}
+        <section style={contentCardStyle}>
+          <h3 style={cardHeaderStyle}>Rent Payment</h3>
+          <p>Status: <strong>Paid</strong></p>
+          <button style={primaryButtonStyle}>View Receipt</button>
+        </section>
 
-        {/* Graphs Section */}
-        <div style={{ marginTop: '2rem' }}>
-          <h3 style={{ textAlign: 'center' }}>Electricity Usage</h3>
-          <Line data={electricityUsage} />
-        </div>
+        {/* Maintenance Requests */}
+        <section style={contentCardStyle}>
+          <h3 style={cardHeaderStyle}>Maintenance</h3>
+          <p>Pending Requests: <strong>2</strong></p>
+          <button style={primaryButtonStyle}>View Requests</button>
+        </section>
 
-        <div style={{ marginTop: '2rem' }}>
-          <h3 style={{ textAlign: 'center' }}>Heating Usage</h3>
-          <Line data={heatingUsage} />
-        </div>
+        {/* Energy Usage (Electricity + Heating in one card) */}
+        <section style={contentCardStyle}>
+          <h3 style={cardHeaderStyle}>Energy Usage</h3>
+          <div style={{ display: 'flex', gap: '1rem' }}>
+            <div style={{ width: '50%' }}>
+              <Line data={electricityUsage} />
+            </div>
+            <div style={{ width: '50%' }}>
+              <Line data={heatingUsage} />
+            </div>
+          </div>
+        </section>
       </div>
 
-      {/* Right Column (70%) */}
-      <div style={{ width: '70%', padding: '1rem' }}>
-        <div style={{ height: '95%', borderRadius: '12px', overflow: 'hidden', backgroundColor: '#fff' }}>
-          <IFCViewer/>
+      {/* Right Column (70%) - IFC Viewer */}
+      <div style={rightColumnStyle}>
+        <div style={viewerWrapperStyle}>
+          <IFCViewer />
         </div>
       </div>
     </div>
   );
 };
 
-const headerStyle = { fontSize: '2rem', fontWeight: 'bold', textAlign: 'center' };
-const logoutButtonStyle = { padding: '0.5rem 1rem', backgroundColor: '#FF9900', color: '#fff', borderRadius: '20px', cursor: 'pointer' };
+/* Inline style objects */
 
-// Styles remain the same as previously defined
-const menuStyle = { display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' };
-const activeTabStyle = { backgroundColor: '#000', color: '#fff', padding: '0.5rem 1rem', borderRadius: '20px' };
-const inactiveTabStyle = { backgroundColor: '#EAEAEA', padding: '0.5rem 1rem', borderRadius: '20px' };
-const contentCardStyle = { padding: '1rem', borderRadius: '12px', backgroundColor: '#F9F9F9' };
-const optionButtonStyle = { padding: '0.5rem 1rem', margin: '0.5rem', borderRadius: '12px', border: '1px solid #ccc' };
-const inputStyle = { padding: '0.5rem', marginBottom: '1rem', borderRadius: '8px', border: '1px solid #ccc', width: '100%' };
-const footerButtonStyle = { display: 'flex', justifyContent: 'space-between', marginTop: '1rem' };
-const primaryButtonStyle = { padding: '0.5rem 1.5rem', backgroundColor: '#FF9900', color: '#fff', borderRadius: '20px' };
-const secondaryButtonStyle = { padding: '0.5rem 1.5rem', backgroundColor: '#E0E0E0', borderRadius: '20px' };
+const dashboardContainerStyle = {
+  display: 'flex',
+  height: 'calc(100vh - 60px)',
+  marginTop: '60px',
+  backgroundColor: 'rgb(242, 240, 237)',
+};
+
+const leftColumnStyle = {
+  width: '30%',
+  padding: '2rem',
+  overflowY: 'auto',
+};
+
+/* 
+   Row 1: "Welcome, user@example.com" on the left 
+   and "Logout" on the far right 
+*/
+const userRowStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  marginBottom: '1rem',
+};
+
+/* Row 2: Navigation tabs in a row */
+const tabsContainerStyle = {
+  display: 'flex',
+  gap: '0.5rem',
+  marginBottom: '1.5rem',
+};
+
+const tabBaseStyle = {
+  padding: '0.5rem 1rem',
+  borderRadius: '8px',
+  cursor: 'pointer',
+  border: 'none',
+};
+
+const activeTabStyle = {
+  ...tabBaseStyle,
+  backgroundColor: '#000',
+  color: '#fff',
+};
+
+const tabStyle = {
+  ...tabBaseStyle,
+  backgroundColor: '#ccc',
+};
+
+const logoutButtonStyle = {
+  ...tabBaseStyle,
+  backgroundColor: '#FF9900',
+  color: '#fff',
+  borderRadius: '20px',
+};
+
+const contentCardStyle = {
+  padding: '1rem',
+  borderRadius: '12px',
+  backgroundColor: '#F9F9F9',
+  marginBottom: '1.5rem',
+  boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+};
+
+const cardHeaderStyle = {
+  marginTop: 0,
+  marginBottom: '0.5rem',
+};
+
+const primaryButtonStyle = {
+  padding: '0.5rem 1.5rem',
+  backgroundColor: '#FF9900',
+  color: '#fff',
+  borderRadius: '20px',
+  cursor: 'pointer',
+  border: 'none',
+  marginTop: '0.5rem',
+};
+
+const rightColumnStyle = {
+  width: '70%',
+  padding: '1rem',
+};
+
+const viewerWrapperStyle = {
+  height: '95%',
+  borderRadius: '12px',
+  overflow: 'hidden',
+  backgroundColor: '#fff',
+};
 
 export default Dashboard;

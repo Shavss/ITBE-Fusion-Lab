@@ -39,7 +39,7 @@ const Login = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'rgb(40, 13, 9)',
+        backgroundColor: 'rgb(242, 240, 237)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         position: 'relative',
@@ -52,7 +52,7 @@ const Login = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          backgroundColor: 'rgba(0, 0, 0, 0.0)',
           zIndex: 1,
         }}
       />
@@ -63,7 +63,7 @@ const Login = () => {
         style={{
           position: 'relative',
           zIndex: 2,
-          backgroundColor: '#rgb(242, 240, 237)',
+          backgroundColor: 'rgb(242, 240, 237)',
           padding: '2rem',
           borderRadius: '16px',
           boxShadow: '0px 6px 15px rgba(0, 0, 0, 0.1)',

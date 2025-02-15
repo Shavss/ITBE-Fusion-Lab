@@ -1,11 +1,10 @@
 // src/components/IFCViewer.jsx
-
 import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import * as OBC from "@thatopen/components";
 import * as BUI from "@thatopen/ui";
 import Stats from "stats.js";
-import * as OBCF from "@thatopen/components-front";
+import * as OBF from "@thatopen/components-front";
 
 const panelStyle = `
   .camera-panel {
@@ -89,7 +88,6 @@ const IFCViewer = () => {
   const cleanupRef = useRef(null); // Ref to store cleanup function
   const userToken = localStorage.getItem('token'); // Get user token for requests
 
-
   useEffect(() => {
     fetchUnresolvedRequests();
   }, []);
@@ -143,59 +141,121 @@ const IFCViewer = () => {
     }
   };
 
-
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
+    BUI.Manager.init();
+    const viewport = containerRef.current;
+    if (!viewport) return;
 
     const components = new OBC.Components();
     const worlds = components.get(OBC.Worlds);
     const world = worlds.create();
+    const sceneComponent = new OBC.SimpleScene(components);
+    sceneComponent.setup();
+    
+    world.scene = sceneComponent;
+    
+    const rendererComponent = new OBC.SimpleRenderer(components, viewport);
+    world.renderer = rendererComponent;
+    const cameraComponent = new OBC.SimpleCamera(components);
+    world.camera = cameraComponent;
+    cameraComponent.controls.setLookAt(0, 0, -2, 0, 0, -4);
+    
 
-    world.scene = new OBC.SimpleScene(components);
-    world.renderer = new OBC.SimpleRenderer(components, container);
-    world.camera = new OBC.SimpleCamera(components);
+    world.scene.three.background = new THREE.Color(0xffffff);
 
     components.init();
 
-    if (world.camera.controls) {
-      world.camera.controls.setLookAt(12, 1.6, 8, 0, 1.6, -10);
-    }
-
-    world.scene.setup();
+    
 
     const fragments = components.get(OBC.FragmentsManager);
     const fragmentIfcLoader = components.get(OBC.IfcLoader);
 
-    fragmentIfcLoader.settings.wasm = {
-      path: "https://unpkg.com/web-ifc@0.0.66/",
-      absolute: true,
-    };
-    fragmentIfcLoader.settings.webIfc.COORDINATE_TO_ORIGIN = true;
-
+    // Setup IFC loader settings
+   
     let model = null;
 
     async function loadIfc() {
       try {
+        const IfcLoader = components.get(OBC.IfcLoader)
+        await IfcLoader.setup()
         const file = await fetch("/test2.ifc");
-        const data = await file.arrayBuffer();
-        const buffer = new Uint8Array(data);
-
-        model = await fragmentIfcLoader.load(buffer);
-        model.name = "example";
+        const buffer = await file.arrayBuffer();
+        const typedArray = new Uint8Array(buffer);
+        const model = await IfcLoader.load(typedArray);
         world.scene.three.add(model);
+        const indexer = components.get(OBC.IfcRelationsIndexer);
+        await indexer.process(model);
+           
+      const baseStyle = { padding: "0.25rem", borderRadius: "0.25rem" };
 
+      const tableDefinition = {
+        Entity: (entity) => {
+          let style = {};
+          if (entity === OBC.IfcCategoryMap[WEBIFC.IFCPROPERTYSET]) {
+            style = {
+              ...baseStyle,
+              backgroundColor: "purple",
+              color: "white",
+            };
+          }
+          if (String(entity).includes("IFCWALL")) {
+            style = {
+              ...baseStyle,
+              backgroundColor: "green",
+              color: "white",
+            };
+          }
+          return BUI.html`<bim-label style=${BUI.styleMap(style)}>${entity}</bim-label>`;
+        },
+        PredefinedType: (type) => {
+          const colors = ["#1c8d83", "#3c1c8d", "#386c19", "#837c24"];
+          const randomIndex = Math.floor(Math.random() * colors.length);
+          const backgroundColor = colors[randomIndex];
+          const style = { ...baseStyle, backgroundColor, color: "white" };
+          return BUI.html`<bim-label style=${BUI.styleMap(style)}>${type}</bim-label>`;
+        },
+        NominalValue: (value) => {
+          let style = {};
+          if (typeof value === "boolean" && value === false) {
+            style = { ...baseStyle, backgroundColor: "#b13535", color: "white" };
+          }
+          if (typeof value === "boolean" && value === true) {
+            style = { ...baseStyle, backgroundColor: "#18882c", color: "white" };
+          }
+          return BUI.html`<bim-label style=${BUI.styleMap(style)}>${value}</bim-label>`;
+        },
+      };
+      
+
+    
+      
+        const modelID = model.modelID;
+
+        // Traverse each mesh, fetch the IFC type, and store it in userData.name
         model.traverse((child) => {
           if (child instanceof THREE.Mesh) {
-            if (!child.userData.uniqueID) {
-              child.userData.uniqueID = child.name || "Unnamed_Group";
-            }
-            if (!child.userData.name) {
-              child.userData.name = child.name || "Unnamed element";
+            const expressID = child.userData.expressID;
+            if (expressID !== undefined) {
+              // Query the IFC properties
+              ifcManager.getItemProperties(modelID, expressID, true).then((props) => {
+                if (props && props.type) {
+                  // e.g. "IFCWALL", "IFCSLAB"
+                  const typeRaw = props.type.replace(/^IFC/i, '');
+                  const niceType = typeRaw.charAt(0) + typeRaw.slice(1).toLowerCase();
+                  child.userData.name = niceType;
+                } else {
+                  // Fallback if no type is available
+                  child.userData.name = `Element #${expressID}`;
+                }
+              });
+            } else {
+              // Fallback if no expressID
+              child.userData.name = child.name || "Wall";
             }
           }
         });
 
+        // Setup raycasting and interactivity
         cleanupRef.current = setupRaycasting(
           components,
           world,
@@ -212,8 +272,10 @@ const IFCViewer = () => {
     }
 
     loadIfc();
+    
 
     return () => {
+      // Cleanup on unmount
       if (cleanupRef.current) {
         cleanupRef.current();
       }
@@ -278,8 +340,8 @@ const IFCViewer = () => {
     }
 
     container.addEventListener("mousemove", onMouseMove);
-    container.addEventListener("dblclick", onDoubleClick); // Remove double-click listener
-   return () => {
+    container.addEventListener("dblclick", onDoubleClick);
+    return () => {
       container.removeEventListener("mousemove", onMouseMove);
       container.removeEventListener("dblclick", onDoubleClick);
     };
@@ -303,8 +365,6 @@ const IFCViewer = () => {
           {isLoading && (
             <div className="loader-overlay">
               <div className="spinner"></div>
-              {/* Optional: Add a loading message */}
-              {/* <div className="loading-text">Loading Model...</div> */}
             </div>
           )}
 
@@ -312,8 +372,7 @@ const IFCViewer = () => {
             ref={containerRef}
             className="viewer-content"
             style={{ width: "100%", height: "100%", position: "relative" }}
-          >
-          </div>
+          />
         </div>
 
         {/* Comments Sidebar */}
@@ -330,19 +389,20 @@ const IFCViewer = () => {
                 borderRadius: "4px",
               }}
             >
-              <strong>{comment.elementName}</strong> <em>({comment.elementId})</em>
+              <strong>{comment.elementName}</strong>
               <p>{comment.comment}</p>
               <small>Requested by: {comment.requestedBy?.email || "Unknown"}</small>
             </div>
           ))}
         </div>
+
       </div>
     </div>
   );
 };
 
 /************************************************
- * Camera Panel code
+ * Camera Panel code (unchanged)
  ************************************************/
 function createCameraPanel(world, getModel) {
   BUI.Manager.init();
