@@ -16,15 +16,15 @@ const PORT = process.env.PORT || 5001;
 app.use(cors());
 app.use(bodyParser.json()); // Parse JSON request bodies
 
-// MongoDB connection using Railway's provided URL
-const mongoURI = process.env.MONGO_URI || 'mongodb://mongo:fEmmCXyvsFxysCTJNKIAqlFoaadwqkch@mongodb.railway.internal:27017';
+// MongoDB connection using MongoDB Atlas
+const mongoURI = process.env.MONGO_URI || 'mongodb+srv://kacperryske:kWYCRIKBiQHTRWvx@fusion.tysi6.mongodb.net/?retryWrites=true&w=majority&appName=Fusion';
 
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-  .then(() => console.log('Connected to MongoDB'))
-  .catch((err) => console.error('Error connecting to MongoDB:', err));
+  .then(() => console.log('Connected to MongoDB Atlas'))
+  .catch((err) => console.error('Error connecting to MongoDB Atlas:', err));
 
 // Register Routes
 app.use('/api', contactRoutes);  // Contact form submissions
@@ -33,6 +33,6 @@ app.use('/api/', dashboardRoutes);
 app.use('/api/maintenance', maintenanceRoutes);
 
 // Start the server
-app.listen(PORT, '::', () => {
-  console.log(`Server running on [::]:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
