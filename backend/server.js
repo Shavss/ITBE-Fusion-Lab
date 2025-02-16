@@ -35,6 +35,7 @@ app.use('/api/', dashboardRoutes);
 app.use('/api/maintenance', maintenanceRoutes);
 
 // Start the server
+// Start the server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
