@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import IFCViewer from '../components/IFCViewer_copy'; // Your IFC viewer
 import Navbar from '../components/Navbar';       // Your fixed nav
 import FloatingButton from '../components/FloatingButton';
+import ThreeFusionEmbed from '../components/ThreeFusionEmbed'; // Import the 3D embed
 
 const IFCViewerPage = () => {
   const navigate = useNavigate();
@@ -21,20 +22,26 @@ const IFCViewerPage = () => {
       {/* 2) Full-height IFC Viewer Section, offset below Nav */}
       <div
         style={{
-          // Keep the viewer below the nav
-          marginTop: '60px', 
-          // The exact margin depends on your Navbar height
-          
+          marginTop: '60px', // Adjust if your navbar is taller
           position: 'relative',
           width: '100%',
-          height: '100vh', // Occupies full viewport
-          // or use calc(100vh - 60px) if you want to exclude nav height from the viewer
+          height: '100vh',
           zIndex: 1,
         }}
       >
-        {/* IFC Viewer goes here */}
+        {/* IFC Viewer */}
         <IFCViewer ifcFilePath="/dummy.ifc" />
+      </div>
 
+      {/* 2.5) Three.js 3D Fusion Embed */}
+      <div
+        style={{
+          width: '100%',
+          height: '100vh',
+          position: 'relative',
+        }}
+      >
+        <ThreeFusionEmbed />
       </div>
 
       {/* 3) Scrollable Section 1 */}
@@ -52,8 +59,8 @@ const IFCViewerPage = () => {
         <div style={{ maxWidth: '800px', textAlign: 'center', color: '#333' }}>
           <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Section 1</h2>
           <p style={{ fontSize: '1.2rem', lineHeight: '1.8' }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, 
-            tortor non aliquet blandit, ligula nulla malesuada lectus, 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Sed euismod, tortor non aliquet blandit, ligula nulla malesuada lectus,
             vitae scelerisque massa risus id justo.
           </p>
         </div>
@@ -80,7 +87,7 @@ const IFCViewerPage = () => {
         </div>
       </div>
 
-      {/* 5) Floating Button (optional) */}
+      {/* 5) Floating Button */}
       <FloatingButton text="Archiwalks" onClick={handleButtonClick} />
     </div>
   );
