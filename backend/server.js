@@ -12,6 +12,8 @@ const maintenanceRoutes = require('./routes/maintenance');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+
+
 // Middleware
 app.use(cors());
 app.use(bodyParser.json()); // Parse JSON request bodies
@@ -34,5 +36,5 @@ app.use('/api/maintenance', maintenanceRoutes);
 
 // Start the server
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
