@@ -16,8 +16,8 @@ const PORT = process.env.PORT || 5001;
 app.use(cors());
 app.use(bodyParser.json()); // Parse JSON request bodies
 
-// MongoDB connection
-const mongoURI = process.env.MONGO_URI || 'mongodb://mongo:UeptQJCpkXzXdgbypfIaWfLnOBzdLcnM@mongodb.railway.internal:27017';
+// MongoDB connection using Railway's provided URL
+const mongoURI = process.env.MONGO_URI || 'mongodb://mongo:fEmmCXyvsFxysCTJNKIAqlFoaadwqkch@mongodb.railway.internal:27017';
 
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
