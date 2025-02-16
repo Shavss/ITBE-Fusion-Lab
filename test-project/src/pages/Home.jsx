@@ -315,7 +315,7 @@ const Home = () => {
                     padding: '0.8rem 1.5rem',
                     fontSize: '1rem',
                     fontWeight: 'bold',
-                    color: '#fff',
+                    color: 'rgb(242, 240, 237)',
                     backgroundColor: '#000',
                     border: '1px solid #000',
                     borderRadius: '50px',
@@ -326,12 +326,12 @@ const Home = () => {
                     gap: '0.5rem',
                 }}
                 onMouseEnter={(e) => {
-                    e.target.style.backgroundColor = '#fff';
+                    e.target.style.backgroundColor = 'rgb(242, 240, 237)';
                     e.target.style.color = '#000';
                 }}
                 onMouseLeave={(e) => {
                     e.target.style.backgroundColor = '#000';
-                    e.target.style.color = '#fff';
+                    e.target.style.color = 'rgb(242, 240, 237)';
                 }}
             >
                 Start →
