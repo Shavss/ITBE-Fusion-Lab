@@ -153,7 +153,7 @@ const Home = () => {
                             <Expand
                                 title="STRUCTURE"
                                 content="Our masterplan and buildings will be equipped with IoT sensors, enabling real-time data collection for deep analysis and smarter decision-making. These sensors will optimize energy usage, mobility patterns, environmental monitoring, and overall urban efficiency."
-                                image="/img/placeholder.png"
+                                image="/img/Picture1.png"
                             />
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '-4rem' }}>
