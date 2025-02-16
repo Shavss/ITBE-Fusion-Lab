@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import IFCViewer from '../components/IFCViewer_copy'; // Your IFC viewer
-import Navbar from '../components/Navbar';       // Your fixed nav
+import Navbar from '../components/Navbar';            // Your fixed nav
 import FloatingButton from '../components/FloatingButton';
-import ThreeFusionEmbed from '../components/ThreeFusionEmbed'; // Import the 3D embed
+import ThreeFusionEmbed from '../components/ThreeFusionEmbed'; // 3D embed
 
 const IFCViewerPage = () => {
   const navigate = useNavigate();
+  const [showOverlay, setShowOverlay] = useState(true);
 
   const handleButtonClick = () => {
     navigate('/map'); 
+  };
+
+  const handleHideOverlay = () => {
+    setShowOverlay(false);
   };
 
   return (
@@ -19,76 +24,64 @@ const IFCViewerPage = () => {
         <Navbar />
       </div>
 
-      {/* 2) Full-height IFC Viewer Section, offset below Nav */}
+      {/* 3) Three.js 3D Fusion Embed */}
       <div
         style={{
-          marginTop: '60px', // Adjust if your navbar is taller
           position: 'relative',
           width: '100%',
           height: '100vh',
-          zIndex: 1,
-        }}
-      >
-        {/* IFC Viewer */}
-        <IFCViewer ifcFilePath="/dummy.ifc" />
-      </div>
-
-      {/* 2.5) Three.js 3D Fusion Embed */}
-      <div
-        style={{
-          width: '100%',
-          height: '100vh',
-          position: 'relative',
+          overflow: 'hidden',
         }}
       >
         <ThreeFusionEmbed />
+
+        {showOverlay && (
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: 'rgba(0, 0, 0, 0.6)', // Dark overlay
+              zIndex: 2,
+            }}
+          >
+            <div
+              style={{
+                background: 'rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(8px)',
+                padding: '2rem',
+                borderRadius: '8px',
+                maxWidth: '400px',
+                textAlign: 'center',
+                color: '#fff',
+              }}
+            >
+              <h2 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>POSTPAKET AREAL VISION</h2>
+              <p style={{ fontSize: '0.9rem', marginBottom: '1.5rem' }}>
+                Here you can interact with the masterplan.  
+                Use your mouse or touch to explore the scene.  
+              </p>
+              <button
+                onClick={handleHideOverlay}
+                style={{
+                  fontSize: '0.9rem',
+                  padding: '0.5rem 1rem',
+                  border: 'none',
+                  borderRadius: '4px',
+                  cursor: 'pointer',
+                }}
+              >
+                Explore
+              </button>
+            </div>
+          </div>
+        )}
       </div>
 
-      {/* 3) Scrollable Section 1 */}
-      <div
-        style={{
-          width: '100%',
-          height: '100vh',
-          background: '#f9f9f9',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '2rem',
-        }}
-      >
-        <div style={{ maxWidth: '800px', textAlign: 'center', color: '#333' }}>
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Section 1</h2>
-          <p style={{ fontSize: '1.2rem', lineHeight: '1.8' }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Sed euismod, tortor non aliquet blandit, ligula nulla malesuada lectus,
-            vitae scelerisque massa risus id justo.
-          </p>
-        </div>
-      </div>
-
-      {/* 4) Scrollable Section 2 */}
-      <div
-        style={{
-          width: '100%',
-          height: '100vh',
-          background: '#e0e0e0',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '2rem',
-        }}
-      >
-        <div style={{ maxWidth: '800px', textAlign: 'center', color: '#333' }}>
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Section 2</h2>
-          <p style={{ fontSize: '1.2rem', lineHeight: '1.8' }}>
-            Phasellus in lacus nec elit pulvinar sodales sit amet nec nunc. 
-            Integer dapibus erat et nulla mollis, at tincidunt risus malesuada.
-          </p>
-        </div>
-      </div>
-
-      {/* 5) Floating Button */}
-      <FloatingButton text="Archiwalks" onClick={handleButtonClick} />
+      {/* 4) Floating Button */}
+      <FloatingButton text="Urbanwalks" onClick={handleButtonClick} />
     </div>
   );
 };

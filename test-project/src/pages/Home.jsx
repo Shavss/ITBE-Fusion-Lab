@@ -8,21 +8,54 @@ import blogPosts from '../data/blogPosts'; // Import blog data
 import Expand from '../components/Expand'; //Import Expand Component
 import ScrollingText from '../components/infinitetext'; // Adjust the path based on your file structure
 
+
 const Home = () => {
     const navigate = useNavigate();
     const [showOverlays, setShowOverlays] = useState(true);
-
+    const [expandedIndex, setExpandedIndex] = useState(null);
+  
     const toggleOverlays = () => {
-        setShowOverlays((prev) => !prev);
+      setShowOverlays((prev) => !prev);
     };
-
-    const handleArchiwalksClick = () => {
-        navigate('/map');
-    };
-
+  
+  
     const handleExploreClick = () => {
-        navigate('/ifc-viewer'); // This will navigate to the /IFCviewer route
+      navigate('/ifc-viewer'); // Navigate to the IFC viewer route
     };
+
+    // Array of expandable sections
+    const expansions = [
+        {
+        title: "DESIGN CONCEPT",
+        content:
+            "The core idea revolves around strengthening public access while creating a harmonious and environmentally responsive urban environment. By stepping down the massing model of the buildings, the design ensures a smooth transition from public spaces at the ground level to semi-public and private areas higher up. Larger, connected public areas encourage social interaction and community activities, while open pathways and plazas replace narrow, isolated corridors. Clear sightlines are established through the repositioning of high-rise buildings, creating open connectivity and visible access points to public amenities. The building heights are staggered to reduce overshadowing and allow more sun exposure, improving daylight potential and reducing noise through buffer zones and green areas.",
+        image: "/img/renders/1739644044157.jpg",
+        },
+        {
+        title: "HARMONY TOWERS",
+        content:
+            "The site offers expansive, interconnected areas that foster vibrant public life. The arrangement of the two high-rise buildings, known as the 'Harmony Towers', eliminates narrow pathways, opening the site visually and physically. These towers are characterized by their rotated and twisted forms, ensuring a unique elevation from every direction and reinforcing the visual appeal of the development. The façade design is responsive to orientation: the south-facing façades have reduced glass ratios to mitigate solar heat gain, while the north-facing façades feature higher glazing ratios to maximize daylight potential. The height staggering creates a visually appealing gradient, softening the skyline.",
+        image: "/img/renders/1739644044452.jpg",
+        },
+        {
+        title: "CULTURAL IDENTITY",
+        content:
+            "To reflect the cultural and historical context of Munich, the project integrates elements inspired by Bavarian identity. The site and building design incorporate blue and white motifs, paying homage to Bavaria’s iconic flag. This distinctive pattern creates a visual contrast with the site’s abundant greenery, enhancing aesthetic appeal and reinforcing a strong local identity.",
+        image: "/img/renders/1739644044639.jpg",
+        },
+        {
+        title: "GREEN DESIGN",
+        content:
+            "The proposal embodies principles of green design, ensuring ecological responsibility and long-term sustainability. Optimized façade materials and glazing ratios tailored to orientation improve energy efficiency, while sustainable, locally sourced materials reduce the project’s carbon footprint. Green roofs and vertical gardens help mitigate the heat island effect and enhance biodiversity, and rainwater harvesting systems are integrated into the landscape design to promote responsible water management.",
+        image: "/img/renders/1739644044825.jpg",
+        },
+        {
+        title: "STRUCTURE",
+        content:
+            "The main challenge in the tower’s design stemmed from the variation in the area of the square-shaped floor slabs along the tower’s height, along with the changes in rotational angles between the slabs. The rotational angles range from 1.5 to 3.5 degrees between floors, giving the tower its dynamic architectural design. To address this challenge, the rotating floor slabs were supported by spiral reinforced concrete at the corners only, while maintaining a vertical core and inner columns. This arrangement, originally inspired by the Evolution Tower in Moscow, was found to be highly efficient in maximizing the usable floor area. In addition to its efficiency in space utilization, the proposed structural system offers significant benefits in reducing torsional effects under gravity and lateral loads. Moreover, it is simpler to construct compared to designs featuring twisting inner columns or a twisting exoskeleton.",
+        image: "/img/Strucutre.png",
+        },
+    ];
 
 
     return (
@@ -76,108 +109,92 @@ const Home = () => {
                         </div>
 
                     </div>
-                    {/* Section 1 */}
-                    <div
-                        style={{
-                            width: '100%',
-                            height: '200vh',
-                            background: 'rgba(242, 240, 237, 0.9)',
-                            display: 'flex',
-                            alignItems: 'flex-start',
-                            justifyContent: 'space-between',
-                            padding: '4rem',
-                            position: 'relative',
-                        }}
-                    >
-                    <div style={{ maxWidth: '1000px', textAlign: 'left', color: '#000000', position: 'relative' }}>
-                        {/* ✅ Normal Paragraph */}
-                        <p style={{ fontSize: '15px', lineHeight: '23px', marginBottom: '5rem', marginTop: '-1rem', maxWidth: '600px' }}>
-                            The future of urban development is shaped by a commitment to sustainability, 
-                            smart technology, and a deep integration of nature into our built environment. 
-                            We are dedicated to creating spaces that promote innovation, efficiency, and well-being. 
-                            Below, you’ll find key aspects of our vision that define the <b>next generation of city living</b>. 
-                            The future of urban development is shaped by a commitment to sustainability, 
-                            smart technology, and a deep integration of nature into our built environment. 
-                            We are dedicated to creating spaces that promote innovation, efficiency, and well-being. 
-                            Below, you’ll find key aspects of our vision that define the <b>next generation of city living</b>.
-                        </p>
+           {/* Section 1 */}
+          <div
+            style={{
+              width: '100%',
+              minHeight: '200vh',
+              background: 'rgba(242, 240, 237, 0.9)',
+              display: 'flex',
+              alignItems: 'flex-start',
+              justifyContent: 'space-between',
+              padding: '4rem',
+              position: 'relative',
+            }}
+          >
+            <div style={{ maxWidth: '1000px', textAlign: 'left', color: '#000', position: 'relative' }}>
+              {/* Normal Paragraph */}
+              <p style={{ fontSize: '15px', lineHeight: '23px', marginBottom: '5rem', marginTop: '-1rem', maxWidth: '600px' }}>
+                The proposed design aims to create a dynamic and inviting urban environment in the heart of Munich by enhancing public access, improving environmental performance, and establishing a strong site identity. The massing model of the building is strategically stepped down to facilitate a continuous flow of public functions, seamlessly connecting the ground level to the uppermost areas of the structures. This concept promotes inclusivity, sustainability, and a unique architectural language. 
+                Below, you’ll find key aspects of our vision that define the <b>next generation of city living</b>.
+              </p>
 
-                        {/* Right-Aligned Button  */}
-                        <button
-                            style={{
-                                position: 'absolute',
-                                top: '10px', // Adjust to align vertically
-                                right: '-24.5rem', // Align to the right
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                padding: '0.8rem 1.5rem',
-                                fontSize: '0.9rem', // Adjust font size for single-line text
-                                fontWeight: 'bold',
-                                border: '1px solid black',
-                                borderRadius: '50px',
-                                backgroundColor: 'transparent',
-                                color: 'black',
-                                cursor: 'pointer',
-                                transition: 'all 0.3s ease-in-out',
-                            }}
-                            onMouseEnter={(e) => {
-                                e.target.style.backgroundColor = 'black';
-                                e.target.style.color = 'white';
-                            }}
-                            onMouseLeave={(e) => {
-                                e.target.style.backgroundColor = 'transparent';
-                                e.target.style.color = 'black';
-                            }}
-                            onClick={handleExploreClick} // Call the navigation function on click
-                        >
-                            EXPLORE THE DEVELOPMENT <span style={{ marginLeft: '0.5rem' }}>&#8594;</span>
-                        </button>
+              {/* Right-Aligned Explore Button */}
+              <button
+                style={{
+                  position: 'absolute',
+                  top: '30px',
+                  right: '-24.5rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '0.8rem 1.5rem',
+                  fontSize: '0.9rem',
+                  fontWeight: 'bold',
+                  border: '1px solid black',
+                  borderRadius: '50px',
+                  backgroundColor: 'transparent',
+                  color: 'black',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease-in-out',
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = 'black';
+                  e.target.style.color = 'white';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = 'transparent';
+                  e.target.style.color = 'black';
+                }}
+                onClick={handleExploreClick}
+              >
+                EXPLORE THE DEVELOPMENT <span style={{ marginLeft: '0.5rem' }}>&#8594;</span>
+              </button>
+            {/* Expandable Sections */}
+            <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '-20rem' }}>
+            {expansions.map((item, idx) => (
+                <Expand
+                key={idx}
+                title={item.title}
+                content={item.content}
+                image={item.image}
+                isExpanded={expandedIndex === idx}
+                onToggle={() => setExpandedIndex(expandedIndex === idx ? null : idx)}
+                />
+            ))}
+            </div>
 
-                        {/* Expandable Sections */}
-                        <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '-4rem' }}>
-                            <Expand
-                                title="GREEN MASTERPLAN"
-                                content="Our vision for a sustainable future includes innovative energy solutions, smart mobility, and eco-friendly infrastructure. The Green Masterplan integrates nature with urban living to create a healthier, greener, and more livable environment."
-                                image="/img/placeholder.png"
-                            />
-                        </div>
-                        <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '-4rem' }}>
-                            <Expand
-                                title="SMART INFRASTRUCTURE"
-                                content="Our masterplan and buildings will be equipped with IoT sensors, enabling real-time data collection for deep analysis and smarter decision-making. These sensors will optimize energy usage, mobility patterns, environmental monitoring, and overall urban efficiency."
-                                image="/img/placeholder.png"
-                            />
-                        </div>
-                        <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '-4rem' }}>
-                            <Expand
-                                title="STRUCTURE"
-                                content="Our masterplan and buildings will be equipped with IoT sensors, enabling real-time data collection for deep analysis and smarter decision-making. These sensors will optimize energy usage, mobility patterns, environmental monitoring, and overall urban efficiency."
-                                image="/img/Picture1.png"
-                            />
-                        </div>
-                        <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '-4rem' }}>
-                            <Expand title="EXPLORE" content="EXPLORE" />
-                        </div>
-                    </div>
+            </div>
 
 
-                        {/* Big Text: HOW IT WORKS (Positioned in the Right Corner) */}
-                        <h2 
-                            style={{
-                                position: 'absolute',
-                                bottom: '2rem', // Distance from the bottom
-                                right: '3rem', // Distance from the right
-                                fontSize: '6rem', // Large text size
-                                fontWeight: 'bold',
-                                color: '#000000', // Adjust color if needed
-                                opacity: 1, // Slight transparency for a modern feel
-                                textAlign: 'right',
-                            }}
-                        >
-                            HOW IT WORKS
-                        </h2>
-                    </div>
+
+
+    {/* Big Text: HOW IT WORKS (Positioned in the Right Corner) */}
+    <h2 
+        style={{
+            position: 'absolute',
+            bottom: '2rem', // Distance from the bottom
+            right: '3rem', // Distance from the right
+            fontSize: '6rem', // Large text size
+            fontWeight: 'bold',
+            color: '#000000', // Adjust color if needed
+            opacity: 1, // Slight transparency for a modern feel
+            textAlign: 'right',
+        }}
+    >
+        HOW IT WORKS
+    </h2>
+</div>
 
 
 {/* Section 2 - User Groups */}

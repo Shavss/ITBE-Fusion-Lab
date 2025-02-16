@@ -1,18 +1,33 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 
-const Expand = ({ title = "Section Title", content, image }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+const Expand = ({ 
+  title = "Section Title", 
+  content, 
+  image,
+  isExpanded,           // Boolean: is this section open?
+  onToggle             // Function: called when user clicks the header
+}) => {
   const contentRef = useRef(null);
 
-  const toggleContent = () => {
-    setIsExpanded(!isExpanded);
+  // Instead of local state, we just call onToggle when user clicks the heading
+  const handleClick = () => {
+    if (onToggle) {
+      onToggle();
+    }
   };
 
   return (
-    <div style={{ width: "139%", textAlign: "left", padding: "1rem 0" }}>
+    <div
+      style={{
+        width: "136%",
+        textAlign: "left",
+        padding: "1rem 0",
+        marginBottom: "-2rem",
+      }}
+    >
       {/* Clickable Header */}
       <h3
-        onClick={toggleContent}
+        onClick={handleClick}
         style={{
           fontSize: "3rem",
           fontWeight: "bold",
@@ -71,13 +86,20 @@ const Expand = ({ title = "Section Title", content, image }) => {
 
           {/* Right Side - Image */}
           {image && (
-            <div style={{ flex: 1, maxWidth: "60%" }}>
+            <div
+              style={{
+                flex: 1,
+                maxWidth: "60%",
+                display: "flex",
+                justifyContent: "flex-end",
+              }}
+            >
               <img
                 src={image}
                 alt={title}
                 style={{
-                  width: "100%",
-                  maxHeight: "350px",
+                  width: "80%",
+                  maxHeight: "500px",
                   objectFit: "cover",
                   borderRadius: "0px",
                   opacity: isExpanded ? 1 : 0,
