@@ -17,12 +17,7 @@ app.use(cors());
 app.use(bodyParser.json()); // Parse JSON request bodies
 
 // MongoDB connection
-const mongoURI = process.env.MONGO_URI || 'mongodb://mongo:UeptQJCpkXzXdgbypfIaWfLnOBzdLcnM@mongodb.railway.internal:27017';
-
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect('mongodb://localhost:27017/vision') 
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error('Error connecting to MongoDB:', err));
 
@@ -33,6 +28,6 @@ app.use('/api/', dashboardRoutes);
 app.use('/api/maintenance', maintenanceRoutes);
 
 // Start the server
-app.listen(PORT, '::', () => {
-  console.log(`Server running on [::]:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
