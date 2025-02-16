@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - Fusion
+name: Build and deploy Node.js app to Azure Web App - Fusionlab
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
+          node-version: '20.x'
 
       - name: npm install and build
         working-directory: backend
@@ -29,10 +29,9 @@ jobs:
           npm install
           npm run build --if-present
 
-
-
       - name: Zip artifact for deployment
         run: zip release.zip ./backend/* -r
+
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -62,16 +61,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_9BECB8E2C04245629E205C213CE362F4 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_8336A1D09C014C78A39C0152E83B9987 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_2978DD9EE3844AADBB31B6BDD9461364 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_0A8A5738ADC2443ABCE5E9A5A59E8C8E }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_8E2273898F4A4E88A99451C360BE44EE }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_911C3483247743BBA9E6F1388A96C6D6 }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'Fusion'
+          app-name: 'Fusionlab'
           slot-name: 'Production'
           package: ./backend
-
           
