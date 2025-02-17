@@ -1,4 +1,5 @@
 // server.js (backend)
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
@@ -9,8 +10,9 @@ const dashboardRoutes = require('./routes/dashboard');
 const { authRouter } = require('./routes/auth');
 const maintenanceRoutes = require('./routes/maintenance');
 
+
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 5001;
 
 
 
@@ -19,7 +21,7 @@ app.use(cors());
 app.use(bodyParser.json()); // Parse JSON request bodies
 
 // MongoDB connection using MongoDB Atlas
-const mongoURI = process.env.MONGO_URI || 'mongodb+srv://kacperryske:kWYCRIKBiQHTRWvx@fusion.tysi6.mongodb.net/?retryWrites=true&w=majority&appName=Fusion';
+const mongoURI = process.env.MONGO_URI;
 
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
