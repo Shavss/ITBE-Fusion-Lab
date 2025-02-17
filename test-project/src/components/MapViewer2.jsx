@@ -3,7 +3,7 @@ import React from "react";
 const MapViewer = () => {
   // Replace with your actual map link if needed
   const cityDbSceneLink =
-    "http://ppaiasok.eastus.azurecontainer.io:8000/3dwebclient/?t=3DCityDB-Web-Map-Client...";
+    "https://tu-muenchen.maps.arcgis.com/apps/webappviewer3d/index.html?id=dca3455341f645dfa6fc157ef1a55239";
 
   return (
     <div style={{ width: "100%", height: "80vh" }}>

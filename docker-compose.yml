@@ -1,6 +1,13 @@
-
-
 services:
+  frontend:
+    build:
+      context: ./test-project
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"  # Maps port 3000 on your machine to port 80 in the container
+    environment:
+      - VITE_API_URL=http://localhost:5001  # Or use your actual backend URL when deploying
+
   backend:
     build:
       context: ./backend

@@ -4,7 +4,7 @@ const MapViewer = () => {
     const [activeViewer, setActiveViewer] = useState("3dcitydb"); // Default to 3D CityDB Viewer
 
     const cityDbSceneLink = "http://ppaiasok.eastus.azurecontainer.io:8000/3dwebclient/?t=3DCityDB-Web-Map-Client...";
-    const arcGisSceneLink = "https://www.deepl.com/de/write"; // Replace with your ArcGIS viewer link
+    const arcGisSceneLink = "https://tu-muenchen.maps.arcgis.com/apps/webappviewer3d/index.html?id=dca3455341f645dfa6fc157ef1a55239"; // Replace with your ArcGIS viewer link
 
     return (
         <div style={{ textAlign: "center", padding: "20px" }}>
