@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig(({ mode }) => {
-  const backendUrl = process.env.VITE_BACKEND_URL || 'http://localhost:5001';
+  const backendUrl = process.env.VITE_BACKEND_URL || 'https://fusionlab2-d0fddybseka5awea.germanywestcentral-01.azurewebsites.net';
 
   return {
     plugins: [react()],
