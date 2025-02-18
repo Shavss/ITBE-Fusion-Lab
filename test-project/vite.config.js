@@ -8,7 +8,7 @@ export default defineConfig({
     port: 5173,  // Vite development server port
     proxy: {
       '/api': {
-        target: 'http://localhost:5001', // Backend URL
+        target: 'https://fusionlab2-d0fddybseka5awea.germanywestcentral-01.azurewebsites.net', // Backend URL
         changeOrigin: true,
         secure: false,
       },

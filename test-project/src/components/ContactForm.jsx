@@ -22,8 +22,8 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('Sending...');
-    const baseUrl = process.env.REACT_APP_API_BASE_URL;
-
+    const baseUrl = import.meta.env.VITE_API_BASE_URL;
+    console.log('Base URL is:', baseUrl);
 
     try {
       const response = await fetch(`${baseUrl}/api/contact`, {
