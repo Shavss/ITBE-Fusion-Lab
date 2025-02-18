@@ -4,7 +4,7 @@ import path from 'path';
 
 export default defineConfig(({ mode }) => {
   // Load environment variables based on the mode (development or production)
-  const env = process.env;
+  const env = import.meta.env;
 
   return {
     plugins: [react()],
@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => {
       port: 5001,  // Updated port as per your Docker requirement
       proxy: {
         '/api': {
-          target: env.VITE_API_BASE_URL || 'http://localhost:5001', // Use environment variable or fallback
+          target: env.VITE_BACKEND_URL || 'http://localhost:5001', // Use environment variable or fallback
           changeOrigin: true,
           secure: false,
         },
@@ -30,7 +30,7 @@ export default defineConfig(({ mode }) => {
     publicDir: 'public',
     assetsInclude: ['3dcitydb-web-map-2.0.0/**/*'],
     define: {
-      'process.env': env,  // Ensure process.env is defined
+      'import.meta.env': env,  // Ensure Vite environment variables are used correctly
     },
   };
 });
