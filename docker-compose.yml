@@ -4,11 +4,13 @@ services:
       context: ./test-project
       dockerfile: Dockerfile
       args:
-        VITE_API_BASE_URL: https://fusionlab2-d0fddybseka5awea.germanywestcentral-01.azurewebsites.net  # Pass the environment variable during build
+        VITE_API_BASE_URL: https://paketvision-d7bfakgjd3fgazfs.germanywestcentral-01.azurewebsites.net  # Correct frontend URL
+        VITE_BACKEND_URL: https://fusionlab2-d0fddybseka5awea.germanywestcentral-01.azurewebsites.net  # Added backend URL
     ports:
-      - "5001:80"
+      - "5001:80"  # Maps port 5001 on your machine to port 80 in the container
     environment:
-      - VITE_API_BASE_URL=https://fusionlab2-d0fddybseka5awea.germanywestcentral-01.azurewebsites.net
+      - VITE_API_BASE_URL=https://paketvision-d7bfakgjd3fgazfs.germanywestcentral-01.azurewebsites.net  # Correct frontend link
+      - VITE_BACKEND_URL=https://fusionlab2-d0fddybseka5awea.germanywestcentral-01.azurewebsites.net  # Added backend link
 
   backend:
     build:

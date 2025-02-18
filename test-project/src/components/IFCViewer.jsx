@@ -102,7 +102,7 @@ const IFCViewer = () => {
 
   const fetchUnresolvedRequests = async () => {
     try {
-      const baseUrl = import.meta.env.VITE_API_BASE_URL;
+      const baseUrl = import.meta.env.VITE_BACKEND_URL;
       const response = await fetch(`${baseUrl}/api/maintenance/unresolved`, {
         headers: {
           Authorization: `Bearer ${userToken}`,
@@ -121,7 +121,7 @@ const IFCViewer = () => {
 
   const submitMaintenanceRequest = async (elementId, elementName, userComment) => {
     try {
-      const baseUrl = import.meta.env.VITE_API_BASE_URL;
+      const baseUrl = import.meta.env.VITE_BACKEND_URL;
       const response = await fetch(`${baseUrl}/api/maintenance/create`, {
         method: "POST",
         headers: {

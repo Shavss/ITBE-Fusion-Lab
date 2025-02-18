@@ -18,7 +18,7 @@ const Dashboard = () => {
     if (!token) navigate('/login');
     const fetchUserProfile = async () => {
       try {
-        const baseUrl = import.meta.env.VITE_API_BASE_URL;
+        const baseUrl = import.meta.env.VITE_BACKEND_URL;
         const response = await fetch(`${baseUrl}/api/auth/profile`, {
           headers: { Authorization: `Bearer ${token}` },
         });
