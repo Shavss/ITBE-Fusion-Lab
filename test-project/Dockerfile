@@ -7,7 +7,7 @@ ARG VITE_BACKEND_URL
 ENV VITE_BACKEND_URL=$VITE_BACKEND_URL
 RUN npm install --legacy-peer-deps
 COPY . .
-RUN npm run build  # Build the React app with the provided backend URL
+RUN npm run build 
 
 FROM nginx:stable-alpine
 COPY --from=build /app/dist /usr/share/nginx/html
