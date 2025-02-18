@@ -28,7 +28,7 @@ jobs:
       with:
         push: true
         context: ./test-project  
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_dcb27323ffce4478af90e385f9614f8e }}/fusionlab-frontend:latest  # Use latest tag
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_dcb27323ffce4478af90e385f9614f8e }}/fusionlab-frontend:${{ github.sha }} # Use latest tag
         file: ./test-project/Dockerfile  
   deploy:
     runs-on: ubuntu-latest
