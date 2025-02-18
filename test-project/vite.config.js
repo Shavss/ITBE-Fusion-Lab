@@ -1,20 +1,17 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import dotenv from 'dotenv';
-dotenv.config();
-
 
 export default defineConfig(({ mode }) => {
-  // Load environment variables based on the mode (development or production)
+  const backendUrl = process.env.VITE_BACKEND_URL || 'http://localhost:5001';
 
   return {
     plugins: [react()],
     server: {
-      port: 5001,  // Updated port as per your Docker requirement
+      port: 5001,
       proxy: {
         '/api': {
-          target: process.env.VITE_BACKEND_URL,
+          target: backendUrl,
           changeOrigin: true,
           secure: false,
         },
@@ -32,7 +29,7 @@ export default defineConfig(({ mode }) => {
     publicDir: 'public',
     assetsInclude: ['3dcitydb-web-map-2.0.0/**/*'],
     define: {
-      'import.meta.env': env,  // Ensure Vite environment variables are used correctly
+      'import.meta.env.VITE_BACKEND_URL': JSON.stringify(backendUrl),  // Ensure Vite environment variables are set correctly
     },
   };
 });
