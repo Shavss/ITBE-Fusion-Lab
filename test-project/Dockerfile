@@ -1,5 +1,5 @@
 # Dockerfile for React Frontend with Environment Variables
-FROM node:20-alpine as build
+FROM node:20-alpine AS build
 
 WORKDIR /app
 COPY package*.json ./
@@ -8,10 +8,11 @@ ENV VITE_BACKEND_URL=$VITE_BACKEND_URL
 RUN npm install --legacy-peer-deps
 COPY . .
 
-# Ensure VITE_BACKEND_URL is set with a default fallback
+# Exit if VITE_BACKEND_URL is not set
 RUN if [ -z "$VITE_BACKEND_URL" ]; then echo "VITE_BACKEND_URL is not set" && exit 1; fi
 
-RUN npm run build  # Build the React app with the provided backend URL
+# Run npm build with explicit environment variable
+RUN VITE_BACKEND_URL=$VITE_BACKEND_URL npm run build
 
 FROM nginx:stable-alpine
 COPY --from=build /app/dist /usr/share/nginx/html
