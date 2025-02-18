@@ -6,7 +6,7 @@ COPY package*.json ./
 ARG VITE_API_BASE_URL  # Accept an argument during build
 RUN npm install --legacy-peer-deps
 COPY . .
-ENV VITE_API_BASE_URL=$VITE_API_BASE_URL 
+ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
 RUN npm run build
 
 FROM nginx:stable-alpine
