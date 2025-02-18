@@ -30,8 +30,6 @@ jobs:
         context: ./test-project  # Ensure the frontend is built from the test-project folder
         tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_dcb27323ffce4478af90e385f9614f8e }}/fusionlab-frontend:latest  # Use latest tag
         file: ./test-project/Dockerfile  # Dockerfile is in the test-project folder
-        build-args: VITE_BACKEND_URL=https://fusionlab2-d0fddybseka5awea.germanywestcentral-01.azurewebsites.net
-
   deploy:
     runs-on: ubuntu-latest
     needs: build
