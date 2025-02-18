@@ -3,11 +3,15 @@ FROM node:20-alpine as build
 
 WORKDIR /app
 COPY package*.json ./
-ARG VITE_BACKEND_URL 
+ARG VITE_BACKEND_URL  # Accept environment variable during build
 ENV VITE_BACKEND_URL=$VITE_BACKEND_URL
 RUN npm install --legacy-peer-deps
 COPY . .
-RUN npm run build 
+
+# Ensure VITE_BACKEND_URL is set with a default fallback
+RUN if [ -z "$VITE_BACKEND_URL" ]; then echo "VITE_BACKEND_URL is not set" && exit 1; fi
+
+RUN npm run build  # Build the React app with the provided backend URL
 
 FROM nginx:stable-alpine
 COPY --from=build /app/dist /usr/share/nginx/html
