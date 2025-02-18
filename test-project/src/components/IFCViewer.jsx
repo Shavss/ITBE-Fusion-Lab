@@ -94,7 +94,8 @@ const IFCViewer = () => {
 
   const fetchUnresolvedRequests = async () => {
     try {
-      const response = await fetch("http://localhost:5001/api/maintenance/unresolved", {
+      const baseUrl = process.env.REACT_APP_API_BASE_URL;
+      const response = await fetch(`${baseUrl}/api/maintenance/unresolved`, {
         headers: {
           Authorization: `Bearer ${userToken}`,
         },
@@ -112,7 +113,8 @@ const IFCViewer = () => {
 
   const submitMaintenanceRequest = async (elementId, elementName, userComment) => {
     try {
-      const response = await fetch("http://localhost:5001/api/maintenance/create", {
+      const baseUrl = process.env.REACT_APP_API_BASE_URL;
+      const response = await fetch(`${baseUrl}/api/maintenance/create`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
