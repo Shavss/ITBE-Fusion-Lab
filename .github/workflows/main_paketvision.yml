@@ -45,4 +45,4 @@ jobs:
         app-name: 'paketvision'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_165c30ef7e2c40e7a587c8e2716b2b1d }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_dcb27323ffce4478af90e385f9614f8e }}/fusionlab-frontend:latest'  # Use latest tag for deployment
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_dcb27323ffce4478af90e385f9614f8e }}/fusionlab-frontend:${{ github.sha }}'
