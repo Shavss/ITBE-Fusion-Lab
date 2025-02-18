@@ -1,6 +1,9 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 export default defineConfig(({ mode }) => {
   // Load environment variables based on the mode (development or production)
@@ -11,7 +14,7 @@ export default defineConfig(({ mode }) => {
       port: 5001,  // Updated port as per your Docker requirement
       proxy: {
         '/api': {
-          target: 'https://fusionlab2-d0fddybseka5awea.germanywestcentral-01.azurewebsites.net',
+          target: process.env.VITE_BACKEND_URL,
           changeOrigin: true,
           secure: false,
         },
