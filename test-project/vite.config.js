@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => {
       port: 5001,  // Updated port as per your Docker requirement
       proxy: {
         '/api': {
-          target: import.meta.env.VITE_BACKEND_URL,
+          target: 'https://fusionlab2-d0fddybseka5awea.germanywestcentral-01.azurewebsites.net',
           changeOrigin: true,
           secure: false,
         },
