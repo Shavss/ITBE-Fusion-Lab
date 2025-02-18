@@ -32,7 +32,6 @@ jobs:
         file: ./test-project/Dockerfile  # Dockerfile is in the test-project folder
         build-args: VITE_BACKEND_URL=https://fusionlab2-d0fddybseka5awea.germanywestcentral-01.azurewebsites.net
 
-
   deploy:
     runs-on: ubuntu-latest
     needs: build
