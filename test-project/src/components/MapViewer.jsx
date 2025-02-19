@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const MapViewer = () => {
-  const cityDbSceneLink = "http://ppavisionfl.eastus.azurecontainer.io:8000/3dwebclient/";
+  const cityDbSceneLink = "/3dwebclient/";
   const arcGisSceneLink = "https://tu-muenchen.maps.arcgis.com/apps/webappviewer3d/index.html?id=dca3455341f645dfa6fc157ef1a55239";
 
   const [viewerSrc, setViewerSrc] = useState(cityDbSceneLink);
