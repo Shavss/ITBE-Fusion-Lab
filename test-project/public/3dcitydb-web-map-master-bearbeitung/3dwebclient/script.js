@@ -1554,7 +1554,7 @@ document.getElementById("addKmlLayerButton").addEventListener("click", addKmlLay
 let kmlLayer = null;
 
 function addKmlLayer() {
-    var kmlUrl = "../examples/PPA_costum_web_map/data/city_model3/city_model_geometry_MasterJSON.json"; // Replace with your actual KML file name
+    var kmlUrl = "https://fusionlabitbe.blob.core.windows.net/assets/examples/PPA_costum_web_map/data/city_model3/city_model_geometry_MasterJSON.json"; // Replace with your actual KML file name
     var thematicDataUrl = "https://docs.google.com/spreadsheets/d/1kcwSQsUn54jl1nj_96zB50CD1KRZT70cIoSaF9MfwJ8/edit?usp=sharing"; // Thematic data URL for embedded data
 
     var options = {
@@ -1603,6 +1603,7 @@ function removeKmlLayer() {
 
 document.getElementById("removeKmlLayerButton").addEventListener("click", removeKmlLayer);
 
+
 //add Landuse Layer
 function addWMS() {
     function update(callback) {
@@ -1620,6 +1621,7 @@ function addWMS() {
         }
 
         let providerViewModel;
+        let pU= "/proxy/";
         providerViewModel = new Cesium.ProviderViewModel({
             name: "wms_layer",
             iconUrl: iconUrl,
@@ -1628,7 +1630,8 @@ function addWMS() {
                 return new Cesium.WebMapServiceImageryProvider({
                     url: new Cesium.Resource({
                         url: wmsUrl,
-                        proxy: addWmsViewModel.proxyUrl.trim().length === 0 ? null : new Cesium.DefaultProxy(addWmsViewModel.proxyUrl.trim())
+                        proxy: new Cesium.DefaultProxy(pU.trim())
+                        //proxy: addWmsViewModel.proxyUrl.trim().length === 0 ? null : new Cesium.DefaultProxy(addWmsViewModel.proxyUrl.trim())
                     }),
                     //layers: "PPA:008 roads",  // The layer name
                     layers: 'Landusage',
@@ -1637,7 +1640,6 @@ function addWMS() {
                         version: "1.1.0",
                         request: "GetMap",
                         format: "image/png",
-                        tiled: 'true',
                         //transparent: true,
                     }
                 });
@@ -1700,7 +1702,6 @@ function addNoiseMap() {
                         version: "1.1.0",
                         request: "GetMap",
                         format: "image/png",
-                        tiled: 'true',
                         //transparent: true,
                     }
                 });
@@ -1777,7 +1778,7 @@ document.getElementById("addWMSLayerButton").addEventListener("click", addWMS);*
 //adding new design
 let TilesLayerNewDesign = null;
 function addNewDesignLayer() {
-    var TilesUrl = "../examples/PPA_costum_web_map/data/new_Design_right_position/tileset/tileset.json"; // Replace with your actual KML file name
+    var TilesUrl = "https://fusionlabitbe.blob.core.windows.net/assets/examples/PPA_costum_web_map/data/new_Design_right_position/tileset/tileset.json"; // Replace with your actual KML file name
 
     var options = {
         url: TilesUrl,
@@ -1813,7 +1814,7 @@ document.getElementById("removeNewDesignLayerButton").addEventListener("click", 
 //add old model
 let TilesLayerOldDesign = null;
 function addOldDesignLayer() {
-    var TilesUrl = "../examples/PPA_costum_web_map/data/old_Design/tileset.json"; // Replace with your actual KML file name
+    var TilesUrl = "https://fusionlabitbe.blob.core.windows.net/assets/examples/PPA_costum_web_map/data/old_Design/tileset.json"; // Replace with your actual KML file name
 
     var options = {
         url: TilesUrl,
@@ -1849,7 +1850,7 @@ document.getElementById("removeOldDesignLayerButton").addEventListener("click", 
 //add point cloud
 let TilesLayerPointCloud = null;
 function addPointCloudLayer(){
-    var TilesUrl = '../examples/PPA_costum_web_map/data/point_cloud/tileset_downsampled/tileset.json'
+    var TilesUrl = 'https://fusionlabitbe.blob.core.windows.net/assets/examples/PPA_costum_web_map/data/point_cloud/tileset_downsampled/tileset.json'
 
     var options = {
         url: TilesUrl,
