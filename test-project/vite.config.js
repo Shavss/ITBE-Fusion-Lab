@@ -27,7 +27,7 @@ export default defineConfig(({ mode }) => {
       outDir: 'dist',
     },
     publicDir: 'public',
-    assetsInclude: ['3dcitydb-web-map-2.0.0/**/*'],
+    assetsInclude: ['3dcitydb-web-map-master-bearbeitung/**/*'],
     define: {
       'import.meta.env.VITE_BACKEND_URL': JSON.stringify(backendUrl),  // Ensure Vite environment variables are set correctly
     },
