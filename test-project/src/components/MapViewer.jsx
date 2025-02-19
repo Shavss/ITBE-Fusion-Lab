@@ -1,74 +1,56 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 const MapViewer = () => {
-  const cityDbSceneLink = "http://ppaiasok.eastus.azurecontainer.io:8000/3dwebclient/";
-  const arcGisSceneLink = "https://tu-muenchen.maps.arcgis.com/apps/webappviewer3d/index.html?id=dca3455341f645dfa6fc157ef1a55239";
+    const [activeViewer, setActiveViewer] = useState("3dcitydb"); // Default to 3D CityDB Viewer
 
-  const [viewerSrc, setViewerSrc] = useState(cityDbSceneLink);
+    const cityDbSceneLink = "../../3dcitydb-web-map-master-bearbeitung/3dwebclient/index.html";
+    const arcGisSceneLink = "https://tu-muenchen.maps.arcgis.com/apps/webappviewer3d/index.html?id=dca3455341f645dfa6fc157ef1a55239"; // Replace with your ArcGIS viewer link
 
-  return (
-    <div style={{ textAlign: "center", padding: "20px", position: "relative" }}>
-      <div style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "100%",
-        height: "90vh",
-        backgroundColor: "#f0f0f0",
-        position: "relative",
-        marginTop: "50px"
-      }}>
-        <iframe id="mapViewer" src={viewerSrc} title="Map Viewer" loading="lazy" style={{ width: "100%", height: "100%", border: "none" }}></iframe>
-      </div>
-      <div style={{
-        position: "absolute",
-        top: "50%",
-        right: "20px",  // Align to the right
-        display: "flex",
-        flexDirection: "column",  // Stack vertically
-        alignItems: "stretch",  // Ensures equal width
-        gap: "10px",  // Adds space between buttons
-        transform: "translateY(-50%)",
-        pointerEvents: "none",
-        }}>
-        <button
-            style={{
-            width: "180px",  // Ensures equal width
-            height: "50px",  // Ensures equal height
-            fontSize: "16px",
-            cursor: "pointer",
-            border: "none",
-            backgroundColor: "#303336",
-            color: "white",
-            borderRadius: "5px",
-            pointerEvents: "auto"
-            }}
-            onClick={() => setViewerSrc(cityDbSceneLink)}
-        >
-            Investigate Fusion
-        </button>
-        <button
-            style={{
-            width: "180px",  // Same width as above
-            height: "50px",  // Same height as above
-            fontSize: "16px",
-            cursor: "pointer",
-            border: "none",
-            backgroundColor: "#303336",
-            color: "white",
-            borderRadius: "5px",
-            pointerEvents: "auto"
-            }}
-            onClick={() => setViewerSrc(arcGisSceneLink)}
-        >
-            Investigate Analyses
-        </button>
+    return (
+        <div style={{ textAlign: "center", padding: "20px" }}>
+            {/* Buttons to Switch Viewers */}
+            <div style={{ marginBottom: "10px" }}>
+                <button onClick={() => setActiveViewer("3dcitydb")} style={buttonStyle}>
+                    Investigate Fusion
+                </button>
+                <button onClick={() => setActiveViewer("arcgis")} style={buttonStyle}>
+                    Investigate Analyses
+                </button>
+            </div>
+
+            {/* Map Viewer */}
+            <div
+                style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "100%",
+                    height: "80vh",
+                    backgroundColor: "#f0f0f0",
+                }}
+            >
+                <iframe
+                    src={activeViewer === "3dcitydb" ? cityDbSceneLink : arcGisSceneLink}
+                    style={{ width: "90%", height: "100%", border: "none" }}
+                    title="Map Viewer"
+                    loading="lazy"
+                ></iframe>
+            </div>
         </div>
+    );
+};
 
-
-      
-    </div>
-  );
+// Button Styles
+const buttonStyle = {
+    margin: "10px",
+    padding: "10px 20px",
+    fontSize: "16px",
+    cursor: "pointer",
+    border: "none",
+    backgroundColor: "#007BFF",
+    color: "white",
+    borderRadius: "5px",
 };
 
 export default MapViewer;
+
