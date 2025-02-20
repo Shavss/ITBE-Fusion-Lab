@@ -257,19 +257,19 @@ const Home = () => {
         {
             title: 'FOR PROPERTY MANAGERS',
             description:
-                'It Boost operational efficiency with self-guided touring and smart home automation solutions, advanced tools for tenant communication, rent collection, and property maintenance.',
+                'We boost operational efficiency with self-guided touring and smart home automation solutions, advanced tools for tenant communication, rent collection, and property maintenance.',
             image: '/img/for_property.png', 
         },
         {
             title: 'FOR BUSINESS OWNERS',
             description:
-                'The website serves as a collaborative hub, offering tools for stakeholder engagement, advertising, and smart dashboards to guide investment decisions and highlight opportunities within the masterplan.',
+                'We offer a collaborative hub, offering tools for engagement, advertising, and smart dashboards to guide investment decisions and highlight opportunities within the masterplan.',
             image: '/img/business.png', 
         },
         {
             title: 'FOR RENTERS',
             description:
-                'The platform acts as a central hub for neighborhood information, events, and news, while simplifying rental processes like payments, deposits, and maintenance requests. Search for available rentals and schedule your secure self-guided tour now.',
+                'We acts as a central hub for neighborhood information, events, and news, while simplifying rental processes like payments and maintenance requests.',
             image: '/img/for_renters.png',
         },
     ].map((card, index) => (
