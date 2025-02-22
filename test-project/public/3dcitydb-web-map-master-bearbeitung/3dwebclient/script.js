@@ -65,14 +65,16 @@ var cesiumViewerOptions = {
 }
 
 // If neither Bing Token nor ionToken is present, use the OpenStreetMap Geocoder Nominatim
-var ionToken = urlController.getUrlParaValue('ionToken', window.location.href, CitydbUtil);
-if (Cesium.defined(ionToken) && ionToken !== "") {
-    Cesium.Ion.defaultAccessToken = ionToken;
-}
-if ((!Cesium.defined(bingToken) || bingToken === "")
-    && (!Cesium.defined(ionToken) || ionToken === "")) {
-    cesiumViewerOptions.geocoder = new OpenStreetMapNominatimGeocoder();
-}
+//var ionToken = urlController.getUrlParaValue('ionToken', window.location.href, CitydbUtil);
+//if (Cesium.defined(ionToken) && ionToken !== "") {
+//    Cesium.Ion.defaultAccessToken = ionToken;
+//}
+//if ((!Cesium.defined(bingToken) || bingToken === "")
+  //  && (!Cesium.defined(ionToken) || ionToken === "")) {
+    //cesiumViewerOptions.geocoder = new OpenStreetMapNominatimGeocoder();
+//}
+var ionToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI4ODVlYTljOC1mNzkxLTQ1MDItOWNjZi0wNzMzODUwMjZlNTMiLCJpZCI6MjU3NTQ0LCJpYXQiOjE3MzI0MTUzMDl9.qcZiTrV29ks46fj0JHI1Mw2K83GrfpTjGBXAtUido6U";
+Cesium.Ion.defaultAccessToken = ionToken;
 
 var cesiumViewer = new Cesium.Viewer('cesiumContainer', cesiumViewerOptions);
 
