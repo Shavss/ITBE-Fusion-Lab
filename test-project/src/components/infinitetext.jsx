@@ -41,7 +41,7 @@ const ScrollingText = () => {
                     whiteSpace: 'nowrap',
                 }}
             >
-                HOUSE AMAZING HOUSE AMAZING HOUSE AMAZING HOUSE AMAZING HOUSE AMAZING HOUSE AMAZING
+                PAKETPOST AERAL PAKETPOST AERAL PAKETPOST AERAL PAKETPOST AERAL
             </div>
         </div>
     );
