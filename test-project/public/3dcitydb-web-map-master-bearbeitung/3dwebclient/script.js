@@ -1613,7 +1613,7 @@ function addWMS() {
 
     update(function () {
         const baseLayerPickerViewModel = cesiumViewer.baseLayerPicker.viewModel;
-        const wmsUrl = "http://ppavgeos.eastus.azurecontainer.io:8080/PPA/wms?service=WMS";
+        const wmsUrl = "https://mygeoserver-113575478716.europe-west3.run.app/wms";
 
         let iconUrl = addWmsViewModel.iconUrl.trim();
         if (!Cesium.defined(iconUrl) || iconUrl === "") {
@@ -1677,7 +1677,7 @@ function addNoiseMap() {
 
     update(function () {
         const baseLayerPickerViewModel = cesiumViewer.baseLayerPicker.viewModel;
-        const wmsUrl = "http://ppavgeos.eastus.azurecontainer.io:8080/PPA/wms?service=WMS";
+        const wmsUrl = "https://mygeoserver-113575478716.europe-west3.run.app/wms";
 
         let iconUrl = addWmsViewModel.iconUrl.trim();
         if (!Cesium.defined(iconUrl) || iconUrl === "") {
