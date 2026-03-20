@@ -3,78 +3,246 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TBE Fusion Lab</title>
+  <title>Paketpost Aerial Vision — Kacper Ryske</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
+      font-family: 'Inter', sans-serif;
+      background-color: #0a0e1a;
+      color: #e2e8f0;
+      min-height: 100vh;
       padding: 0 20px;
-      line-height: 1.6;
-      color: #111;
     }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 80px 0 100px;
+    }
+
+    /* Back link */
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      text-decoration: none;
+      margin-bottom: 48px;
+      transition: color 0.2s;
+    }
+    .back:hover { color: #a89cf7; }
+    .back svg { width: 12px; height: 12px; }
+
+    /* Header */
+    .label {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #6667AB;
+      margin-bottom: 12px;
+    }
+
     h1 {
-      margin-bottom: 0.4rem;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 12px;
     }
-    p {
-      font-size: 1.05rem;
+
+    .subtitle {
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 28px;
     }
+
+    /* Tags */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 36px;
+    }
+    .tag {
+      font-size: 0.68rem;
+      padding: 3px 10px;
+      border-radius: 3px;
+      background: rgba(124, 106, 247, 0.15);
+      border: 1px solid rgba(124, 106, 247, 0.3);
+      color: #a89cf7;
+      letter-spacing: 0.05em;
+    }
+
+    /* Description */
+    .description {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.5);
+      max-width: 680px;
+      margin-bottom: 36px;
+    }
+
+    /* Actions */
     .actions {
-      margin: 24px 0;
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
+      margin-bottom: 56px;
     }
-    .button {
-      display: inline-block;
-      padding: 10px 16px;
-      border-radius: 10px;
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 6px;
       text-decoration: none;
-      border: 1px solid #ccc;
-      color: #111;
+      font-size: 0.72rem;
       font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: all 0.2s;
     }
-    .button:hover {
-      background: #f5f5f5;
+    .btn-primary {
+      background: #7c6af7;
+      color: #ffffff;
+      border: 1px solid #7c6af7;
     }
-    .video {
-      margin-top: 24px;
-      aspect-ratio: 16 / 9;
+    .btn-primary:hover { background: #6a58e0; border-color: #6a58e0; }
+    .btn-secondary {
+      background: transparent;
+      color: rgba(255,255,255,0.6);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .btn-secondary:hover {
+      border-color: rgba(124,106,247,0.5);
+      color: #ffffff;
+    }
+    .btn svg { width: 15px; height: 15px; }
+
+    /* Divider */
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      margin-bottom: 48px;
+    }
+
+    /* Video */
+    .video-wrap {
       width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.06);
     }
-    iframe {
+    .video-wrap iframe {
       width: 100%;
       height: 100%;
       border: 0;
-      border-radius: 12px;
+      display: block;
     }
+
+    /* Footer */
+    .footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer span {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 0.08em;
+    }
+    .footer a {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.2);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
+    }
+    .footer a:hover { color: #a89cf7; }
   </style>
 </head>
 <body>
-  <h1>TBE Fusion Lab</h1>
-  <p>
-    Full-stack web application developed for TU Munich’s Fusion Lab, enabling
-    interactive integration and 3D visualisation of building performance and
-    IFC/BIM data using React, Node.js/Express, IFC.js, Three.js, and Azure.
-  </p>
+  <div class="container">
 
-  <div class="actions">
-    <a
-      class="button"
-      href="https://github.com/Shavss/ITBE-Fusion-Lab"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      View GitHub Repository
+    <!-- Back -->
+    <a class="back" href="https://shavss.github.io">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+      </svg>
+      Back to portfolio
     </a>
-  </div>
 
-  <div class="video">
-    <iframe
-      src="https://vimeo.com/1175405454?share=copy&fl=sv&fe=ci"
-      allow="autoplay; fullscreen; picture-in-picture"
-      allowfullscreen>
-    </iframe>
+    <!-- Header -->
+    <p class="label">Group Project — TU Munich</p>
+    <h1>Paketpost Aerial Vision</h1>
+    <p class="subtitle">Full-stack proptech application · 2024</p>
+
+    <!-- Tags -->
+    <div class="tags">
+      <span class="tag">MongoDB</span>
+      <span class="tag">Express</span>
+      <span class="tag">React</span>
+      <span class="tag">Node.js</span>
+      <span class="tag">Azure</span>
+      <span class="tag">Three.js</span>
+      <span class="tag">IFC.js</span>
+    </div>
+
+    <!-- Description -->
+    <p class="description">
+      Full-stack proptech web application built for a real Munich postal depot
+      redevelopment brief. Combines interactive 3D site visualisation with live
+      data overlays to support early-stage urban design decisions. Developed as
+      a university group project at TU Munich using the MERN stack with Azure
+      cloud hosting.
+    </p>
+
+    <!-- Actions -->
+    <div class="actions">
+      <a class="btn btn-primary" href="https://github.com/Shavss/ITBE-Fusion-Lab" target="_blank" rel="noopener noreferrer">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        View on GitHub
+      </a>
+      <a class="btn btn-secondary" href="https://shavss.github.io/#projects">
+        ← All Projects
+      </a>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Video -->
+    <div class="video-wrap">
+      <iframe
+        src="https://fusionlabitbe.blob.core.windows.net/assets/ITBEFINALFINAL.mp4"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        title="Paketpost Aerial Vision Demo">
+      </iframe>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <span>Kacper Ryske · 2024</span>
+      <a href="https://shavss.github.io">shavss.github.io</a>
+    </div>
+
   </div>
 </body>
 </html>
