@@ -24,7 +24,6 @@
       padding: 80px 0 100px;
     }
 
-    /* Back link */
     .back {
       display: inline-flex;
       align-items: center;
@@ -40,7 +39,6 @@
     .back:hover { color: #a89cf7; }
     .back svg { width: 12px; height: 12px; }
 
-    /* Header */
     .label {
       font-size: 0.7rem;
       letter-spacing: 0.15em;
@@ -64,7 +62,6 @@
       margin-bottom: 28px;
     }
 
-    /* Tags */
     .tags {
       display: flex;
       flex-wrap: wrap;
@@ -81,21 +78,11 @@
       letter-spacing: 0.05em;
     }
 
-    /* Description */
-    .description {
-      font-size: 0.9rem;
-      line-height: 1.8;
-      color: rgba(255,255,255,0.5);
-      max-width: 680px;
-      margin-bottom: 36px;
-    }
-
-    /* Actions */
     .actions {
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
-      margin-bottom: 56px;
+      margin-bottom: 48px;
     }
 
     .btn {
@@ -128,29 +115,30 @@
     }
     .btn svg { width: 15px; height: 15px; }
 
-    /* Divider */
-    .divider {
-      border: none;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      margin-bottom: 48px;
-    }
-
-    /* Video */
     .video-wrap {
       width: 100%;
       aspect-ratio: 16 / 9;
       border-radius: 12px;
       overflow: hidden;
       border: 1px solid rgba(255,255,255,0.06);
+      margin-bottom: 36px;
+      background: #060912;
     }
-    .video-wrap iframe {
+    .video-wrap video {
       width: 100%;
       height: 100%;
-      border: 0;
+      object-fit: cover;
       display: block;
     }
 
-    /* Footer */
+    .description {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.5);
+      max-width: 680px;
+      margin-bottom: 36px;
+    }
+
     .footer {
       margin-top: 64px;
       padding-top: 24px;
@@ -179,7 +167,6 @@
 <body>
   <div class="container">
 
-    <!-- Back -->
     <a class="back" href="https://shavss.github.io">
       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
@@ -187,12 +174,10 @@
       Back to portfolio
     </a>
 
-    <!-- Header -->
     <p class="label">Group Project — TU Munich</p>
     <h1>Paketpost Aerial Vision</h1>
     <p class="subtitle">Full-stack proptech application · 2024</p>
 
-    <!-- Tags -->
     <div class="tags">
       <span class="tag">MongoDB</span>
       <span class="tag">Express</span>
@@ -203,16 +188,6 @@
       <span class="tag">IFC.js</span>
     </div>
 
-    <!-- Description -->
-    <p class="description">
-      Full-stack proptech web application built for a real Munich postal depot
-      redevelopment brief. Combines interactive 3D site visualisation with live
-      data overlays to support early-stage urban design decisions. Developed as
-      a university group project at TU Munich using the MERN stack with Azure
-      cloud hosting.
-    </p>
-
-    <!-- Actions -->
     <div class="actions">
       <a class="btn btn-primary" href="https://github.com/Shavss/ITBE-Fusion-Lab" target="_blank" rel="noopener noreferrer">
         <svg fill="currentColor" viewBox="0 0 24 24">
@@ -225,19 +200,23 @@
       </a>
     </div>
 
-    <hr class="divider" />
-
     <!-- Video -->
     <div class="video-wrap">
-      <iframe
-        src="https://fusionlabitbe.blob.core.windows.net/assets/ITBEFINALFINAL.mp4"
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowfullscreen
-        title="Paketpost Aerial Vision Demo">
-      </iframe>
+      <video controls muted loop playsinline>
+        <source src="https://fusionlabitbe.blob.core.windows.net/assets/ITBEFINALFINAL.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
 
-    <!-- Footer -->
+    <!-- Description below video -->
+    <p class="description">
+      Full-stack proptech web application built for a real Munich postal depot
+      redevelopment brief. Combines interactive 3D site visualisation with live
+      data overlays to support early-stage urban design decisions. Developed as
+      a university group project at TU Munich using the MERN stack with Azure
+      cloud hosting.
+    </p>
+
     <div class="footer">
       <span>Kacper Ryske · 2024</span>
       <a href="https://shavss.github.io">shavss.github.io</a>
