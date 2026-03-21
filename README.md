@@ -1,6 +1,8 @@
 # ITBE-Fusion-Lab
 
-A full-stack web application developed as part of the MSc Information Technologies for the Built Environment (ITBE) programme at TU Munich. The project explores the integration of BIM data workflows with a modern web interface, featuring a React + Vite frontend, an Express/Node.js backend, and a MongoDB Atlas database — all containerised with Docker and deployed on Azure.
+**Paketpost Areal Vision** is an interactive urban development showcase platform built as part of the MSc Information Technologies for the Built Environment (ITBE) programme at TU Munich. The application presents a mixed-use architectural masterplan for the Paketpost site in Munich — a large-scale urban regeneration project featuring two iconic twisted high-rise towers ("Harmony Towers"), public plazas, and sustainable green design. The platform serves as a digital front-end for the development, targeting property managers, business owners, and prospective renters.
+
+The web application pairs a 3D IFC model viewer with rich editorial content, an interactive map, a news/blog section, and a contact and enquiry system. Users can explore the architectural design in real time directly in the browser, read about design concepts such as structural innovation, cultural identity, and green strategy, and get in touch with the development team. A protected dashboard with authentication allows administrators to manage property and maintenance records backed by MongoDB Atlas.
 
 Video: https://vimeo.com/1175405454?share=copy&fl=sv&fe=ci
 
@@ -18,6 +20,18 @@ Video: https://vimeo.com/1175405454?share=copy&fl=sv&fe=ci
 
 ---
 
+## Features
+
+- **3D IFC Viewer** — explore the Paketpost Areal building model interactively in the browser
+- **Design Concept Pages** — expandable sections covering design philosophy, structural system, cultural identity, and green strategy
+- **User Group Pathways** — tailored onboarding flows for property managers, business owners, and renters
+- **Blog / News** — latest project updates presented as editorial cards
+- **Interactive Map** — geographic context view of the development site
+- **Contact & Enquiry Form** — submissions stored in MongoDB via the Express API
+- **Authentication & Dashboard** — login-protected admin dashboard for property and maintenance data management
+
+---
+
 ## Project Structure
 
 ```
@@ -29,14 +43,34 @@ ITBE-Fusion-Lab/
 │   ├── server.js             # Entry point
 │   └── Dockerfile
 ├── test-project/             # React + Vite frontend
-│   ├── src/                  # Components, pages, and assets
-│   ├── public/
+│   ├── src/
+│   │   ├── pages/            # Home, IFCViewerPage, MapPage, Blog, Dashboard, Login, Contact, FormPage
+│   │   ├── components/       # Navbar, Viewer, FloatingButton, Expand, ScrollingText, etc.
+│   │   ├── data/             # Static blog post data
+│   │   └── styles/
+│   ├── public/               # Static assets (images, renders, logo)
 │   ├── nginx.conf            # Nginx config for production serving
 │   └── Dockerfile
 ├── docker-compose.yml        # Multi-service orchestration
-├── index.html                # Root HTML
-└── app.js                    # Top-level app entry
+├── index.html
+└── app.js
 ```
+
+---
+
+## Pages
+
+| Route              | Description                                           |
+|--------------------|-------------------------------------------------------|
+| `/`                | Home — hero, design concept, user groups, news, footer |
+| `/ifc-viewer`      | Interactive 3D IFC model viewer                       |
+| `/map`             | Location and site map                                 |
+| `/blog`            | News and project updates                              |
+| `/blog/first-bakery` | First blog entry detail page                        |
+| `/form`            | Enquiry / interest form                               |
+| `/contact`         | Contact page                                          |
+| `/login`           | Admin login                                           |
+| `/dashboard`       | Protected admin dashboard                             |
 
 ---
 
@@ -81,18 +115,18 @@ The backend exposes the following REST endpoints under `/api`:
    docker compose up --build
    ```
 
-   The frontend will be available at `http://localhost:5001` and the backend API at `http://localhost:5001/api`.
+   The app will be available at `http://localhost:5001`.
 
-### Running the Backend Manually
+### Running Manually (without Docker)
 
+**Backend:**
 ```bash
 cd backend
 npm install
 node server.js
 ```
 
-### Running the Frontend Manually
-
+**Frontend:**
 ```bash
 cd test-project
 npm install
@@ -103,12 +137,12 @@ npm run dev
 
 ## Environment Variables
 
-| Variable           | Location         | Description                        |
-|--------------------|------------------|------------------------------------|
-| `MONGO_URI`        | `backend/.env`   | MongoDB Atlas connection string    |
-| `PORT`             | `backend/.env`   | Backend server port (default 5001) |
-| `VITE_API_BASE_URL`| Docker build arg | Public frontend URL                |
-| `VITE_BACKEND_URL` | Docker build arg | Public backend API URL             |
+| Variable            | Location         | Description                        |
+|---------------------|------------------|------------------------------------|
+| `MONGO_URI`         | `backend/.env`   | MongoDB Atlas connection string    |
+| `PORT`              | `backend/.env`   | Backend server port (default 5001) |
+| `VITE_API_BASE_URL` | Docker build arg | Public frontend URL                |
+| `VITE_BACKEND_URL`  | Docker build arg | Public backend API URL             |
 
 ---
 
@@ -117,9 +151,15 @@ npm run dev
 The application is deployed on **Azure Web Apps** in the Germany West Central region:
 
 - **Frontend:** `https://paketvision-d7bfakgjd3fgazfs.germanywestcentral-01.azurewebsites.net`
-- **Backend:** `https://fusionlab2-d0fddybseka5awea.germanywestcentral-01.azurewebsites.net`
+- **Backend API:** `https://fusionlab2-d0fddybseka5awea.germanywestcentral-01.azurewebsites.net`
 
-Both services are built as Docker containers and pushed to Azure Container Registry before deployment.
+Both services are containerised and served via Docker.
+
+---
+
+## Academic Context
+
+This project was developed as part of the **MSc Information Technologies for the Built Environment** programme at the **Technical University of Munich (TUM)**. It demonstrates the integration of BIM workflows, 3D web visualisation (IFC), full-stack development, and cloud deployment within an architectural design context.
 
 ---
 
@@ -133,3 +173,4 @@ This project is licensed under the ISC License. See [LICENSE](./LICENSE) for det
 
 **Kacper** — MSc ITBE, Technical University of Munich  
 [GitHub Profile](https://github.com/Shavss)
+
