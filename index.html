@@ -217,13 +217,19 @@
 
 
     <!-- Description below video -->
-    <p class="description">
-      Full-stack proptech web application built for a real Munich postal depot
-      redevelopment brief. Combines interactive 3D site visualisation with live
-      data overlays to support early-stage urban design decisions. Developed as
-      a university group project at TU Munich using the MERN stack with Azure
-      cloud hosting.
-    </p>
+    <!-- Description below video -->
+    <div class="description">
+      <p style="margin-bottom: 1.2rem;">
+        A full-stack proptech platform built around a real urban regeneration brief — the redevelopment of Munich's historic Paketpost depot into a mixed-use quarter. The application serves as the digital face of the masterplan, combining a live in-browser 3D IFC model viewer with editorial content, an interactive site map, and a structured enquiry system for three distinct user groups: property managers, business owners, and prospective renters.
+      </p>
+      <p style="margin-bottom: 1.2rem;">
+        The frontend (React + Vite) delivers a scroll-driven landing experience presenting the architectural concept across five expandable design chapters — covering structural innovation, Bavarian cultural identity, green strategy, and the façade logic of the two signature "Harmony Towers". The IFC viewer, built with Three.js and IFC.js, allows visitors to explore the building model interactively without any plugin or download.
+      </p>
+      <p>
+        The backend (Node.js + Express) exposes a REST API for contact submissions, user authentication, and a protected admin dashboard for property and maintenance record management, all persisted in MongoDB Atlas. The full stack is containerised with Docker and deployed on Azure Web Apps, with the frontend served through Nginx.
+      </p>
+    </div>
+
 
     <div class="footer">
       <span>Kacper Ryske · 2024</span>
