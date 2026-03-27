@@ -6,6 +6,13 @@ The web application pairs a 3D IFC model viewer with rich editorial content, an 
 
 Video: https://vimeo.com/1175405454?share=copy&fl=sv&fe=ci
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Shavss/ITBE-Fusion-Lab/main/architecturediagram.drawio%20(1).png" alt="System Architecture Diagram" width="100%"/>
+</p>
+<p align="center">
+  <em>System architecture: Full-stack architecture spanning BIM authoring and geospatial processing through to containerised cloud deployment on Azure.</em>
+</p>
+
 ---
 
 ## Tech Stack
