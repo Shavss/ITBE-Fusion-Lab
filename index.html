@@ -139,6 +139,37 @@
       margin-bottom: 36px;
     }
 
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #6667AB;
+      margin-bottom: 16px;
+      margin-top: 48px;
+    }
+
+    .role-list {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.5);
+      max-width: 680px;
+      margin-bottom: 36px;
+    }
+
+    .role-list li {
+      margin-bottom: 8px;
+      list-style: none;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .role-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: rgba(124, 106, 247, 0.5);
+    }
+
     .footer {
       margin-top: 64px;
       padding-top: 24px;
@@ -217,16 +248,29 @@
 
 
     <!-- Description below video -->
-    <!-- Description below video -->
     <div class="description">
       <p style="margin-bottom: 1.2rem;">
-        A full-stack proptech platform built around a real urban regeneration brief — the redevelopment of Munich's historic Paketpost depot into a mixed-use quarter. The application serves as the digital face of the masterplan, combining a live in-browser 3D IFC model viewer with editorial content, an interactive site map, and a structured enquiry system for three distinct user groups: property managers, business owners, and prospective renters.
+        A full-stack proptech platform built around a real urban regeneration brief: the redevelopment of Munich's historic Paketpost depot into a mixed-use quarter. The platform was designed to serve people at different stages of their relationship with the building, from prospective buyers and renters through to existing residents.
       </p>
       <p style="margin-bottom: 1.2rem;">
-        The frontend (React + Vite) delivers a scroll-driven landing experience presenting the architectural concept across five expandable design chapters — covering structural innovation, Bavarian cultural identity, green strategy, and the façade logic of the two signature "Harmony Towers". The IFC viewer, built with Three.js and IFC.js, allows visitors to explore the building model interactively without any plugin or download.
+        For people exploring whether to buy or rent, the application offers a property discovery flow. Users fill out a form describing their ideal unit, and the platform filters available properties and locates them on a custom-built 3D viewer that fuses a GIS masterplan with a BIM model, so you can see exactly where in the development a shortlisted property sits. For existing residents, a maintenance feature gives each person access to the BIM model of their own flat in the browser. They can click on individual building elements and report issues directly against them.
+      </p>
+      <p style="margin-bottom: 1.2rem;">
+        The frontend (React + Vite) delivers a scroll-driven landing experience presenting the architectural concept across five expandable design chapters covering structural innovation, cultural identity, green strategy, and the facade logic of the two signature towers. The IFC viewer, built with Three.js and IFC.js, allows visitors to explore the building model interactively without any plugin or download.
       </p>
       <p>
         The backend (Node.js + Express) exposes a REST API for contact submissions, user authentication, and a protected admin dashboard for property and maintenance record management, all persisted in MongoDB Atlas. The full stack is containerised with Docker and deployed on Azure Web Apps, with the frontend served through Nginx.
+      </p>
+    </div>
+
+    <!-- My Role -->
+    <p class="section-label">My Role</p>
+    <div class="description">
+      <p style="margin-bottom: 1.2rem;">
+        I was responsible for the flat maintenance feature, the full-stack architecture of the web application, and the Azure deployment. The maintenance tool involved building the in-browser BIM viewer that lets residents interact with the IFC model of their flat, select individual elements, and submit issue reports linked to those elements.
+      </p>
+      <p>
+        Working on this project sharpened my appreciation for how much practical value lives in making BIM data accessible to non-architects. The people who will never open Revit are often the ones whose daily lives are most shaped by the buildings those models describe. It also gave me a much clearer understanding of how rich the semantic information inside an IFC file actually is, once you build something that lets you query it.
       </p>
     </div>
 
